@@ -770,12 +770,12 @@ namespace clothesStore.PL
         {
             try
             {
-                if (txt_barcode.Text != "" && e.KeyChar == 13)
+                if (e.KeyChar == 13 && txt_barcode.Text !=string.Empty )
                 {
 
 
                     dt51.Clear();
-                    dt51 = p.search_barcode(Convert.ToInt64(txt_barcode.Text));
+                        dt51 = p.search_barcode(Convert.ToInt64(txt_barcode.Text));
                     if (dt51.Rows.Count > 0)
                     {
 
@@ -788,6 +788,7 @@ namespace clothesStore.PL
                                 {
                                     MessageBox.Show(" الكميه المدخله لهذا الصنف غير متاحه", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     txt_barcode.Clear();
+                                    txt_barcode.Focus();
                                     return;
                                 }
                                 else

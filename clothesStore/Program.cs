@@ -22,7 +22,7 @@ namespace clothesStore
             Application.SetCompatibleTextRenderingDefault(false);
               //
             Application.Run(new Frm_NewLogin () );
-          //  Application.Run(new clothesStore.Serila.Home () );
+         //   Application.Run(new clothesStore.Serila.Home () );
             //  Application.Run(new Frm_UpdateSales () );
              // Application.Run(new Frm_UpdatePurchasesDoors () );
 

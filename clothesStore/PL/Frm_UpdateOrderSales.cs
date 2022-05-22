@@ -114,7 +114,7 @@ namespace clothesStore.PL
 
                     else
                     {
-                        decimal y = 0;
+                       // decimal y = 0;
                         decimal x = Convert.ToDecimal(txt_pay.Text);
                         txt_TotalPay.Text = x.ToString();
                     }

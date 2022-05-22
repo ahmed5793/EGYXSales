@@ -30,20 +30,20 @@ namespace clothesStore.PL
 
                 Txt_Barcode.Clear();
 
-                dt3.Clear();
+                    dt3.Clear();
                     dt3 = P.selectLastBarcode();
 
                     if (dt3.Rows.Count <= 0)
                     {
                         Txt_Barcode.Text = "100000";
 
-                        P.add_randomBarcode("100000");
+                        P.add_randomBarcode(100000);
                     }
                     else
                     {
-                        Txt_Barcode.Text = (Convert.ToInt32(dt3.Rows[0][0]) + 1).ToString();
+                        Txt_Barcode.Text = (Convert.ToInt64(dt3.Rows[0][0]) + 1).ToString();
 
-                        P.Update_Barcode(Convert.ToInt32(dt3.Rows[0][0]).ToString() + 1);
+                        P.Update_Barcode(Convert.ToInt64(dt3.Rows[0][0]) + 1);
 
                     }
                 
@@ -497,23 +497,30 @@ namespace clothesStore.PL
                 else if (Cmb_Category.Text != "" && txtProName.Text != "")
                 {
                     //CrateBarcode();
+                    DataTable dtid = new DataTable();
 
                     if (imagePath == "")
                     {
-                        imagePath = Application.StartupPath + @"\Resources" + @"\image-not-found-scaled-1150x647.png";
-
+                       // imagePath = Application.StartupPath + @"\Resources" + @"\image-not-found-scaled-1150x647.png";
+                        //  imagePath = null;
+                        dtid = P.addproudect(txtProName.Text, Convert.ToInt32(Cmb_Category.SelectedValue),
+                         decimal.Parse(Txt_Quantity.Text), decimal.Parse(Txt_SellPrice.Text),
+                         Convert.ToDecimal(Txt_PhurshasingPrice.Text), Convert.ToDecimal(Txt_minimun.Text),
+                         (Txt_Color.Text), Txt_Barcode.Text, null);
+                    }
+                    else
+                    {
+                        //convert image to byte save in db
+                        FileStream filestream = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
+                        Byte[] bytestream = new Byte[filestream.Length];
+                        filestream.Read(bytestream, 0, bytestream.Length);
+                        filestream.Close();
+                        dtid = P.addproudect(txtProName.Text, Convert.ToInt32(Cmb_Category.SelectedValue),
+                              decimal.Parse(Txt_Quantity.Text), decimal.Parse(Txt_SellPrice.Text),
+                              Convert.ToDecimal(Txt_PhurshasingPrice.Text), Convert.ToDecimal(Txt_minimun.Text),
+                              (Txt_Color.Text), Txt_Barcode.Text, bytestream);
                     }
 
-                    //convert image to byte save in db
-                    FileStream filestream = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
-                    Byte[] bytestream = new Byte[filestream.Length];
-                    filestream.Read(bytestream, 0, bytestream.Length);
-                    filestream.Close();
-                    DataTable dtid = new DataTable();
-                  dtid=  P.addproudect(txtProName.Text, Convert.ToInt32(Cmb_Category.SelectedValue),
-                        decimal.Parse(Txt_Quantity.Text), decimal.Parse(Txt_SellPrice.Text),
-                        Convert.ToDecimal(Txt_PhurshasingPrice.Text), Convert.ToDecimal(Txt_minimun.Text),
-                        (Txt_Color.Text), Txt_Barcode.Text,bytestream);
                     txtID.Text = dtid.Rows[0][0].ToString();
 
                     S.Add_StoreProduct(Convert.ToInt32(txtID.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text));
@@ -634,7 +641,7 @@ namespace clothesStore.PL
                     {
                         P.Updateproudect(Convert.ToInt32(txtID.Text), txtProName.Text, Convert.ToInt32(Cmb_Category.SelectedValue),
                        Convert.ToDecimal(Txt_SellPrice.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text),
-                      Convert.ToDecimal(Txt_minimun.Text), (Txt_Color.Text), Txt_Barcode.Text, (byte[])gridView1.GetFocusedRowCellValue("Image"));
+                      Convert.ToDecimal(Txt_minimun.Text), (Txt_Color.Text), Txt_Barcode.Text,null);
                     }
                     else
                     {
@@ -820,6 +827,10 @@ namespace clothesStore.PL
                         byte[] image = (byte[])gridView1.GetFocusedRowCellValue("Image");
                         MemoryStream f = new MemoryStream(image);
                         pictureLogo.Image = Image.FromStream(f);
+                    }
+                    else
+                    {
+                        pictureLogo.Image = null;
                     }
                   
                     txtID.Text = gridView1.GetFocusedRowCellValue("رقم الصنف").ToString();

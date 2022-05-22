@@ -169,7 +169,7 @@ namespace clothesStore.PL
                 MessageBox.Show(ex.Message);
             }
         }
-        string imagePath = "";
+       // string imagePath = "";
         private void btnChoose_Click(object sender, EventArgs e)
         {
           

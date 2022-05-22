@@ -277,12 +277,12 @@ namespace clothesStore.Bl
 
         }
 
-        internal void add_randomBarcode(string barcode)
+        internal void add_randomBarcode(long barcode)
         {
             DataAccessLayer da = new DataAccessLayer();
             da.open();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@barcode", SqlDbType.NVarChar);
+            param[0] = new SqlParameter("@barcode", SqlDbType.BigInt);
             param[0].Value = barcode;
             da.excutequery("add_randomBarcode", param);
             da.close();
@@ -302,17 +302,17 @@ namespace clothesStore.Bl
 
         }
 
-        internal void Update_Barcode(string barcode)
+        internal void Update_Barcode(long barcode)
         {
             DataAccessLayer da = new DataAccessLayer();
             da.open();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@Barcode", SqlDbType.NVarChar);
+            param[0] = new SqlParameter("@Barcode", SqlDbType.BigInt);
             param[0].Value = barcode;
             da.excutequery("Update_Barcode", param);
             da.close();
         }
-        internal DataTable search_barcode(Int64 Barcode)
+        internal DataTable search_barcode(long Barcode)
         {
 
 

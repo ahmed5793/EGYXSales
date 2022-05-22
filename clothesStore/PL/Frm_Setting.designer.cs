@@ -44,6 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSaveOrder = new DevExpress.XtraEditors.SimpleButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Cmb_PRintType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,9 +61,6 @@
             this.rbtnA4Sales = new System.Windows.Forms.RadioButton();
             this.rbtn8cmBuy = new System.Windows.Forms.RadioButton();
             this.rbtnA4Buy = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,6 +101,7 @@
             this.label9.Size = new System.Drawing.Size(99, 24);
             this.label9.TabIndex = 25;
             this.label9.Text = "لوجو الشركة";
+            this.label9.Visible = false;
             // 
             // pictureBox1
             // 
@@ -251,6 +252,37 @@
             this.tabPage1.Text = "اعدادت الطابعات";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(371, 241);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(38, 32);
+            this.simpleButton1.TabIndex = 28;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox1.Location = new System.Drawing.Point(415, 239);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(401, 32);
+            this.textBox1.TabIndex = 27;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(832, 243);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 22);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "مسار النسخة الاحتياطية";
             // 
             // label8
             // 
@@ -417,37 +449,6 @@
             this.rbtnA4Buy.TabIndex = 38;
             this.rbtnA4Buy.Text = "طباعة A4";
             this.rbtnA4Buy.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(832, 243);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 22);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "مسار النسخة الاحتياطية";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox1.Location = new System.Drawing.Point(415, 239);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(401, 32);
-            this.textBox1.TabIndex = 27;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(371, 241);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(38, 32);
-            this.simpleButton1.TabIndex = 28;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // Frm_Setting
             // 
