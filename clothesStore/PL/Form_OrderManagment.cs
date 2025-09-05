@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using clothesStore.Bl;
 using clothesStore.Rpt;
-
+using DevExpress.XtraReports.UI;
 
 namespace clothesStore.PL
 {
@@ -82,41 +82,68 @@ namespace clothesStore.PL
                     //sr.Show();
                     dt51.Clear();
                     dt51 = o.RportOrder(Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم الفاتوره")));
-                    clothesStore.DAL.DataOrderReport ds = new DAL.DataOrderReport();
-                    Rpt.Frm_RptDocumetViewer frm = new Frm_RptDocumetViewer();
-                    Rpt_PrintOrder rpts = new Rpt_PrintOrder();
-                    frm.documentViewer1.Refresh();
-                    ds.Tables["PrintOrder"].Clear();
+                    //clothesStore.DAL.DataOrderReport ds = new DAL.DataOrderReport();
+                    //Rpt.Frm_RptDocumetViewer frm = new Frm_RptDocumetViewer();
+                    //Rpt_PrintOrder rpts = new Rpt_PrintOrder();
+                    //frm.documentViewer1.Refresh();
+                    //ds.Tables["PrintOrder"].Clear();
 
+                    //for (int i = 0; i < dt51.Rows.Count; i++)
+                    //{
+                    //    ds.Tables["PrintOrder"].Rows.Add(dt51.Rows[i][0], dt51.Rows[i][1], dt51.Rows[i][2],
+                    //    dt51.Rows[i][3], dt51.Rows[i][4], dt51.Rows[i][5]
+                    //      , dt51.Rows[i][6], dt51.Rows[i][7], dt51.Rows[i][8],
+                    //     dt51.Rows[i][9], dt51.Rows[i][10], dt51.Rows[i][11], dt51.Rows[i][12]
+                    //     , dt51.Rows[i][13]);
+                    //}
+                    //SettingPrint st = new SettingPrint();
+                    //DataTable tbl = new DataTable();
+                    //tbl.Clear();
+                    //tbl = st.SelectSettingPrintOrder();
+                    //ds.Tables["PrintInformation"].Clear();
+                    //ds.Tables["PrintInformation"].Rows.Add(tbl.Rows[0][0], tbl.Rows[0][1], tbl.Rows[0][2],
+                    //    tbl.Rows[0][3], tbl.Rows[0][4]);
+
+
+                    ////rpts.SetDatabaseLogon("", "", ".", "EasySystem");
+                    //rpts.SetDataSource(ds);
+                    //rpts.SetParameterValue("@ID", Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم الفاتوره")));
+
+                    //frm.documentViewer1.DocumentSource = rpts;
+
+                    //System.Drawing.Printing.PrintDocument printDocument = new System.Drawing.Printing.PrintDocument();
+                    //rpts.PrintOptions.PrinterName = Properties.Settings.Default.PrinterName;
+                    //rpts.PrintToPrinter(1, true, 0, 0);
+                    clothesStore.DAL.DataOrderReport dss = new DAL.DataOrderReport();
+                    Rpt.Frm_RptDocumetViewer frms = new Frm_RptDocumetViewer();
+                    Rpt.PrintOrderRecit rpt = new PrintOrderRecit();
+                    frms.documentViewer1.Refresh();
+                    dss.Tables["PrintOrder"].Clear();
                     for (int i = 0; i < dt51.Rows.Count; i++)
                     {
-                        ds.Tables["PrintOrder"].Rows.Add(dt51.Rows[i][0], dt51.Rows[i][1], dt51.Rows[i][2],
-                        dt51.Rows[i][3], dt51.Rows[i][4], dt51.Rows[i][5]
-                          , dt51.Rows[i][6], dt51.Rows[i][7], dt51.Rows[i][8],
-                         dt51.Rows[i][9], dt51.Rows[i][10], dt51.Rows[i][11], dt51.Rows[i][12]
-                         , dt51.Rows[i][13]);
+                        dss.Tables["PrintOrder"].Rows.Add((dt51.Rows[i][0]), dt51.Rows[i][1], dt51.Rows[i][2],
+                        dt51.Rows[i][3], dt51.Rows[i][4], (dt51.Rows[i][5]), (dt51.Rows[i][6])
+                          , (dt51.Rows[i][7]), (dt51.Rows[i][8]), (dt51.Rows[i][9]),
+                          (dt51.Rows[i][10]), dt51.Rows[i][11], (dt51.Rows[i][12]), (dt51.Rows[i][13])
+                         , (dt51.Rows[i][14]), (dt51.Rows[i][15]),(dt51.Rows[i][16]), (dt51.Rows[i][17]));
                     }
-                    SettingPrint st = new SettingPrint();
-                    DataTable tbl = new DataTable();
-                    tbl.Clear();
-                    tbl = st.SelectSettingPrintOrder();
-                    ds.Tables["PrintInformation"].Clear();
-                    ds.Tables["PrintInformation"].Rows.Add(tbl.Rows[0][0], tbl.Rows[0][1], tbl.Rows[0][2],
-                        tbl.Rows[0][3], tbl.Rows[0][4]);
+                    SettingPrint sts = new SettingPrint();
+                    DataTable dt = new DataTable();
+                    dt.Clear();
+                    dt = sts.SelectSettingPrintOrder();
+                    dss.Tables["PrintInformation"].Clear();
+                    dss.Tables["PrintInformation"].Rows.Add(dt.Rows[0][0], dt.Rows[0][1], dt.Rows[0][2],
+                        dt.Rows[0][3], dt.Rows[0][4]);
+                    rpt.DataSource = dss;
+                    rpt.Parameters["ID"].Value = Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم الفاتوره"));
+                    frms.documentViewer1.DocumentSource = rpt;
+                    rpt.Parameters["ID"].Visible = false;
+                    frms.documentViewer1.Enabled = true;
+                    // frms.ShowDialog();
+                    rpt.PrinterName = Properties.Settings.Default.PrinterName;
+                    rpt.Print();
 
 
-                    //rpts.SetDatabaseLogon("", "", ".", "EasySystem");
-                    rpts.SetDataSource(ds);
-                    rpts.SetParameterValue("@ID", Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم الفاتوره")));
-
-                    frm.documentViewer1.DocumentSource = rpts;
-
-                    System.Drawing.Printing.PrintDocument printDocument = new System.Drawing.Printing.PrintDocument();
-                    rpts.PrintOptions.PrinterName = Properties.Settings.Default.PrinterName;
-                    rpts.PrintToPrinter(1, true, 0, 0);
-
-
-               
 
                 }
             }
@@ -252,49 +279,78 @@ namespace clothesStore.PL
                     {
                         if (Properties.Settings.Default.printType == "ريسيت")
                         {
-                            Rpt_PrintOrder r = new Rpt_PrintOrder();
-                            FrmSingleReport sr = new FrmSingleReport();
-                            sr.crystalReportViewer1.RefreshReport();
-                            //r.SetDatabaseLogon("", "", ".", "FEEDStore");
-                            //r.SetParameterValue("@ID", int.Parse(dataGridViewList.CurrentRow.Cells[0].Value.ToString()));
-                            //sr.crystalReportViewer1.ReportSource = r;
-                            //sr.Show();
+                            //Rpt_PrintOrder r = new Rpt_PrintOrder();
+                            //FrmSingleReport sr = new FrmSingleReport();
+                            //sr.crystalReportViewer1.RefreshReport();
+                            ////r.SetDatabaseLogon("", "", ".", "FEEDStore");
+                            ////r.SetParameterValue("@ID", int.Parse(dataGridViewList.CurrentRow.Cells[0].Value.ToString()));
+                            ////sr.crystalReportViewer1.ReportSource = r;
+                            ////sr.Show();
+                            //dt51.Clear();
+                            //dt51 = o.RportOrder(Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم الفاتوره")));
+                            //clothesStore.DAL.DataOrderReport ds = new DAL.DataOrderReport();
+                            //Rpt.Frm_RptDocumetViewer frm = new Frm_RptDocumetViewer();
+                            //Rpt_PrintOrder rpts = new Rpt_PrintOrder();
+                            //frm.documentViewer1.Refresh();
+                            //ds.Tables["PrintOrder"].Clear();
+
+                            //for (int i = 0; i < dt51.Rows.Count; i++)
+                            //{
+                            //    ds.Tables["PrintOrder"].Rows.Add(dt51.Rows[i][0], dt51.Rows[i][1], dt51.Rows[i][2],
+                            //    dt51.Rows[i][3], dt51.Rows[i][4], dt51.Rows[i][5]
+                            //      , dt51.Rows[i][6], dt51.Rows[i][7], dt51.Rows[i][8],
+                            //     dt51.Rows[i][9], dt51.Rows[i][10], dt51.Rows[i][11], dt51.Rows[i][12]
+                            //     , dt51.Rows[i][13]);
+                            //}
+                            //SettingPrint st = new SettingPrint();
+                            //DataTable tbl = new DataTable();
+                            //tbl.Clear();
+                            //tbl = st.SelectSettingPrintOrder();
+                            //ds.Tables["PrintInformation"].Clear();
+                            //ds.Tables["PrintInformation"].Rows.Add(tbl.Rows[0][0], tbl.Rows[0][1], tbl.Rows[0][2],
+                            //    tbl.Rows[0][3], tbl.Rows[0][4]);
+
+
+                            ////rpts.SetDatabaseLogon("", "", ".", "EasySystem");
+                            //rpts.SetDataSource(ds);
+                            //rpts.SetParameterValue("@ID", Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم الفاتوره")));
+
+                            //frm.documentViewer1.DocumentSource = rpts;
+
+                            //System.Drawing.Printing.PrintDocument printDocument = new System.Drawing.Printing.PrintDocument();
+                            //rpts.PrintOptions.PrinterName = Properties.Settings.Default.PrinterName;
+                            //rpts.PrintToPrinter(1, true, 0, 0);
+
                             dt51.Clear();
                             dt51 = o.RportOrder(Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم الفاتوره")));
-                            clothesStore.DAL.DataOrderReport ds = new DAL.DataOrderReport();
-                            Rpt.Frm_RptDocumetViewer frm = new Frm_RptDocumetViewer();
-                            Rpt_PrintOrder rpts = new Rpt_PrintOrder();
-                            frm.documentViewer1.Refresh();
-                            ds.Tables["PrintOrder"].Clear();
-
+                            clothesStore.DAL.DataOrderReport dss = new DAL.DataOrderReport();
+                            Rpt.Frm_RptDocumetViewer frms = new Frm_RptDocumetViewer();
+                            Rpt.PrintOrderRecit rpt = new PrintOrderRecit();
+                            frms.documentViewer1.Refresh();
+                            dss.Tables["PrintOrder"].Clear();
                             for (int i = 0; i < dt51.Rows.Count; i++)
                             {
-                                ds.Tables["PrintOrder"].Rows.Add(dt51.Rows[i][0], dt51.Rows[i][1], dt51.Rows[i][2],
-                                dt51.Rows[i][3], dt51.Rows[i][4], dt51.Rows[i][5]
-                                  , dt51.Rows[i][6], dt51.Rows[i][7], dt51.Rows[i][8],
-                                 dt51.Rows[i][9], dt51.Rows[i][10], dt51.Rows[i][11], dt51.Rows[i][12]
-                                 , dt51.Rows[i][13]);
+                                dss.Tables["PrintOrder"].Rows.Add((dt51.Rows[i][0]), dt51.Rows[i][1], dt51.Rows[i][2],
+                                dt51.Rows[i][3], dt51.Rows[i][4], (dt51.Rows[i][5]), (dt51.Rows[i][6])
+                                  , (dt51.Rows[i][7]), (dt51.Rows[i][8]), (dt51.Rows[i][9]),
+                                  (dt51.Rows[i][10]), dt51.Rows[i][11], (dt51.Rows[i][12]), (dt51.Rows[i][13])
+                                 , (dt51.Rows[i][14]), (dt51.Rows[i][15]), (dt51.Rows[i][16]), (dt51.Rows[i][17]));
                             }
-                            SettingPrint st = new SettingPrint();
-                            DataTable tbl = new DataTable();
-                            tbl.Clear();
-                            tbl = st.SelectSettingPrintOrder();
-                            ds.Tables["PrintInformation"].Clear();
-                            ds.Tables["PrintInformation"].Rows.Add(tbl.Rows[0][0], tbl.Rows[0][1], tbl.Rows[0][2],
-                                tbl.Rows[0][3], tbl.Rows[0][4]);
-
-
-                            //rpts.SetDatabaseLogon("", "", ".", "EasySystem");
-                            rpts.SetDataSource(ds);
-                            rpts.SetParameterValue("@ID", Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم الفاتوره")));
-
-                            frm.documentViewer1.DocumentSource = rpts;
-
-                            System.Drawing.Printing.PrintDocument printDocument = new System.Drawing.Printing.PrintDocument();
-                            rpts.PrintOptions.PrinterName = Properties.Settings.Default.PrinterName;
-                            rpts.PrintToPrinter(1, true, 0, 0);
-
-
+                            SettingPrint sts = new SettingPrint();
+                            DataTable dt = new DataTable();
+                            dt.Clear();
+                            dt = sts.SelectSettingPrintOrder();
+                            dss.Tables["PrintInformation"].Clear();
+                            dss.Tables["PrintInformation"].Rows.Add(dt.Rows[0][0], dt.Rows[0][1], dt.Rows[0][2],
+                                dt.Rows[0][3], dt.Rows[0][4]);
+                            rpt.DataSource = dss;
+                            rpt.Parameters["ID"].Value = Convert.ToInt32(gridView1.GetFocusedRowCellValue("رقم الفاتوره"));
+                            frms.documentViewer1.DocumentSource = rpt;
+                            rpt.Parameters["ID"].Visible = false;
+                            frms.documentViewer1.Enabled = true;
+                            // frms.ShowDialog();
+                            rpt.PrinterName = Properties.Settings.Default.PrinterName;
+                            rpt.Print();
                         }
 
                         else if (Properties.Settings.Default.printType == "A4")
@@ -312,8 +368,9 @@ namespace clothesStore.PL
                                 dt51.Rows[i][3], dt51.Rows[i][4], (dt51.Rows[i][5]), (dt51.Rows[i][6])
                                   , (dt51.Rows[i][7]), (dt51.Rows[i][8]), (dt51.Rows[i][9]),
                                   (dt51.Rows[i][10]), dt51.Rows[i][11], (dt51.Rows[i][12]), (dt51.Rows[i][13])
-                                 , (dt51.Rows[i][14]), (dt51.Rows[i][15]));
+                                 , (dt51.Rows[i][14]), (dt51.Rows[i][15]), (dt51.Rows[i][16]), (dt51.Rows[i][17]));
                             }
+
                             SettingPrint st = new SettingPrint();
                             DataTable tbl = new DataTable();
                             tbl.Clear();

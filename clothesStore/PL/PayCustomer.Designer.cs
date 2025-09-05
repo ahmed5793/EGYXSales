@@ -45,6 +45,8 @@
             this.rdbPartPay = new System.Windows.Forms.RadioButton();
             this.RdbAllPay = new System.Windows.Forms.RadioButton();
             this.btnPay = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_note = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -157,7 +159,7 @@
             this.label7.BackColor = System.Drawing.Color.Yellow;
             this.label7.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(77, 21);
+            this.label7.Location = new System.Drawing.Point(251, 21);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(102, 29);
@@ -172,10 +174,10 @@
             this.cmb_Stock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Stock.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Stock.FormattingEnabled = true;
-            this.cmb_Stock.Location = new System.Drawing.Point(25, 53);
+            this.cmb_Stock.Location = new System.Drawing.Point(6, 17);
             this.cmb_Stock.Name = "cmb_Stock";
             this.cmb_Stock.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmb_Stock.Size = new System.Drawing.Size(223, 37);
+            this.cmb_Stock.Size = new System.Drawing.Size(239, 37);
             this.cmb_Stock.TabIndex = 44;
             // 
             // label1
@@ -207,20 +209,22 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 166);
+            this.dataGridView1.Size = new System.Drawing.Size(708, 112);
             this.dataGridView1.TabIndex = 60;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txt_note);
             this.groupBox2.Controls.Add(this.cmb_Stock);
             this.groupBox2.Controls.Add(this.txt_prise);
             this.groupBox2.Controls.Add(this.rdbPartPay);
             this.groupBox2.Controls.Add(this.RdbAllPay);
-            this.groupBox2.Location = new System.Drawing.Point(16, 304);
+            this.groupBox2.Location = new System.Drawing.Point(16, 250);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(704, 115);
+            this.groupBox2.Size = new System.Drawing.Size(704, 169);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -228,7 +232,7 @@
             // 
             this.txt_prise.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txt_prise.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_prise.Location = new System.Drawing.Point(414, 61);
+            this.txt_prise.Location = new System.Drawing.Point(422, 64);
             this.txt_prise.MaxLength = 8;
             this.txt_prise.Name = "txt_prise";
             this.txt_prise.Size = new System.Drawing.Size(116, 27);
@@ -245,7 +249,7 @@
             this.rdbPartPay.AutoSize = true;
             this.rdbPartPay.BackColor = System.Drawing.Color.Yellow;
             this.rdbPartPay.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbPartPay.Location = new System.Drawing.Point(555, 62);
+            this.rdbPartPay.Location = new System.Drawing.Point(574, 64);
             this.rdbPartPay.Name = "rdbPartPay";
             this.rdbPartPay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rdbPartPay.Size = new System.Drawing.Size(122, 26);
@@ -260,7 +264,7 @@
             this.RdbAllPay.BackColor = System.Drawing.Color.Yellow;
             this.RdbAllPay.Checked = true;
             this.RdbAllPay.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RdbAllPay.Location = new System.Drawing.Point(528, 21);
+            this.RdbAllPay.Location = new System.Drawing.Point(547, 23);
             this.RdbAllPay.Name = "RdbAllPay";
             this.RdbAllPay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RdbAllPay.Size = new System.Drawing.Size(149, 26);
@@ -283,6 +287,29 @@
             this.btnPay.Text = "حفظ المدفوع";
             this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(602, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 22);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "ملاحظات";
+            // 
+            // txt_note
+            // 
+            this.txt_note.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_note.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_note.Location = new System.Drawing.Point(122, 104);
+            this.txt_note.Multiline = true;
+            this.txt_note.Name = "txt_note";
+            this.txt_note.Size = new System.Drawing.Size(416, 49);
+            this.txt_note.TabIndex = 65;
             // 
             // PayCustomer
             // 
@@ -330,5 +357,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Txt_SalesMan;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox txt_note;
     }
 }

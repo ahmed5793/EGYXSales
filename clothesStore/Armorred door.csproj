@@ -24,9 +24,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>EASY_POSS</ProductName>
-    <PublisherName>EASY_POSS</PublisherName>
-    <ApplicationRevision>78</ApplicationRevision>
+    <ProductName>EGYX_SALES</ProductName>
+    <PublisherName>EGYX_SALES</PublisherName>
+    <ApplicationRevision>94</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -419,6 +419,7 @@
     <Compile Include="Bl\Permession.cs" />
     <Compile Include="Bl\Proudect.cs" />
     <Compile Include="Bl\SettingPrint.cs" />
+    <Compile Include="Bl\Statues.cs" />
     <Compile Include="Bl\Stock.cs" />
     <Compile Include="Bl\Store.cs" />
     <Compile Include="Bl\Suppliers.cs" />
@@ -452,6 +453,10 @@
     <Compile Include="PL\Debit.Designer.cs">
       <DependentUpon>Debit.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Form1.cs" />
+    <Compile Include="PL\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -475,6 +480,12 @@
     </Compile>
     <Compile Include="PL\FormProudect.designer.cs">
       <DependentUpon>FormProudect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FormStatues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FormStatues.designer.cs">
+      <DependentUpon>FormStatues.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Form_addStockMoney.cs">
       <SubType>Form</SubType>
@@ -620,6 +631,12 @@
     <Compile Include="PL\FrmPreviewSales.Designer.cs">
       <DependentUpon>FrmPreviewSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmReportExpireDateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmReportExpireDateItem.Designer.cs">
+      <DependentUpon>frmReportExpireDateItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FrmSalesReb7.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -667,6 +684,10 @@
     </Compile>
     <Compile Include="PL\Frm_Category.Designer.cs">
       <DependentUpon>Frm_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_CONFIG.cs" />
+    <Compile Include="PL\FRM_CONFIG.designer.cs">
+      <DependentUpon>FRM_CONFIG.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Frm_Customers.cs">
       <SubType>Form</SubType>
@@ -1118,6 +1139,12 @@
     <Compile Include="PL\Validate_Users.designer.cs">
       <DependentUpon>Validate_Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -1158,6 +1185,12 @@
     </Compile>
     <Compile Include="Rpt\Frm_RptDocumetViewer.Designer.cs">
       <DependentUpon>Frm_RptDocumetViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rpt\PrintOrderRecit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\PrintOrderRecit.designer.cs">
+      <DependentUpon>PrintOrderRecit.cs</DependentUpon>
     </Compile>
     <Compile Include="Rpt\RptBudgetReview.cs">
       <SubType>Component</SubType>
@@ -1219,6 +1252,12 @@
       <DependentUpon>Rpt_PrintOrder.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Rpt\RPT_SmallBarcode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt\RPT_SmallBarcode.Designer.cs">
+      <DependentUpon>RPT_SmallBarcode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Serila\About.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1249,6 +1288,9 @@
     <EmbeddedResource Include="PL\Debit.resx">
       <DependentUpon>Debit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -1260,6 +1302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FormProudect.resx">
       <DependentUpon>FormProudect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FormStatues.resx">
+      <DependentUpon>FormStatues.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Form_addStockMoney.resx">
       <DependentUpon>Form_addStockMoney.cs</DependentUpon>
@@ -1333,6 +1378,9 @@
     <EmbeddedResource Include="PL\FrmPreviewSales.resx">
       <DependentUpon>FrmPreviewSales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmReportExpireDateItem.resx">
+      <DependentUpon>frmReportExpireDateItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\FrmSalesReb7.resx">
       <DependentUpon>FrmSalesReb7.cs</DependentUpon>
     </EmbeddedResource>
@@ -1356,6 +1404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Frm_Category.resx">
       <DependentUpon>Frm_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_CONFIG.resx">
+      <DependentUpon>FRM_CONFIG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Frm_Customers.resx">
       <DependentUpon>Frm_Customers.cs</DependentUpon>
@@ -1582,6 +1633,9 @@
     <EmbeddedResource Include="PL\Validate_Users.resx">
       <DependentUpon>Validate_Users.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -1595,6 +1649,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt\Frm_RptDocumetViewer.resx">
       <DependentUpon>Frm_RptDocumetViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\PrintOrderRecit.resx">
+      <DependentUpon>PrintOrderRecit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt\RptBudgetReview.resx">
       <DependentUpon>RptBudgetReview.cs</DependentUpon>
@@ -1628,6 +1685,9 @@
     <EmbeddedResource Include="Rpt\Rpt_PrintOrder.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_PrintOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt\RPT_SmallBarcode.resx">
+      <DependentUpon>RPT_SmallBarcode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Serila\About.resx">
       <DependentUpon>About.cs</DependentUpon>
@@ -1712,6 +1772,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Paomedia-Small-N-Flat-Shop.ico" />
+    <None Include="Resources\open23.svg" />
+    <None Include="Resources\newdatasource.svg" />
     <None Include="Resources\user_16x16.png" />
     <None Include="Resources\user_32x32.png" />
     <None Include="Resources\weightedpies.svg" />
@@ -1736,6 +1798,9 @@
     <None Include="Resources\bo_user1.svg" />
     <None Include="Resources\bouser_32x32.png" />
     <None Include="Resources\bouser_16x16.png" />
+    <None Include="Resources\apply_32x321.png" />
+    <None Include="Resources\apply_16x16.png" />
+    <None Include="Resources\business_report.svg" />
     <Content Include="Resources\CLOSE.png" />
     <None Include="Resources\warning_32x32.png" />
     <None Include="Resources\trash_32x32.png" />
@@ -1768,137 +1833,138 @@
     <None Include="Resources\deletedatasource_16x16.png" />
     <None Include="Resources\deletedatasource_32x321.png" />
     <None Include="Resources\deletedatasource_16x161.png" />
+    <None Include="Resources\financial1.svg" />
     <Content Include="Resources\images.jpg" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="log4net">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

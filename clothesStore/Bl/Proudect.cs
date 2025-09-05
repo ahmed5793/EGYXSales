@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using clothesStore.DAL;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using clothesStore.DAL;
-using DevExpress.XtraEditors.Filtering.Templates;
 
 namespace clothesStore.Bl
 {
     class Proudect
     {
         internal DataTable addproudect(String name, int ID_Category, decimal Quantity, decimal Sales_Price,
-                                  decimal Purshasing_Price, decimal minimun, string color, string Barcode, byte[] Image)
+                                  decimal Purshasing_Price, decimal minimun, string color, string Barcode, byte[] Image=null)
         {
             DataAccessLayer da = new DataAccessLayer();
    
@@ -38,6 +33,8 @@ namespace clothesStore.Bl
             param[7].Value = Barcode;
             param[8] = new SqlParameter("@Image", SqlDbType.Image);
             param[8].Value = Image;
+           
+
             DataTable dt = new DataTable();
             dt =   da.selected("Addproudect", param);
             da.close();
@@ -152,11 +149,11 @@ namespace clothesStore.Bl
             da.close();
         }
         internal void Updateproudect(int Id_Prod, String name, int ID_Category, decimal Sales_Price, decimal Buy_Price,
-                                     decimal Minimum, string Color, string Barcode, byte[] Image)
+                                     decimal Minimum, string Color, string Barcode, decimal Quantity, byte[] Image=null)
         {
             DataAccessLayer da = new DataAccessLayer();
             da.open();
-            SqlParameter[] param = new SqlParameter[9];
+            SqlParameter[] param = new SqlParameter[10];
             param[0] = new SqlParameter("@id_Prod", SqlDbType.Int);
             param[0].Value = Id_Prod;
             param[1] = new SqlParameter("@Name_Prod", SqlDbType.NVarChar, 150);
@@ -175,6 +172,9 @@ namespace clothesStore.Bl
             param[7].Value = Barcode;
             param[8] = new SqlParameter("@Image", SqlDbType.Image);
             param[8].Value = Image;
+            param[9] = new SqlParameter("@Quantity", SqlDbType.Decimal);
+            param[9].Value = Quantity;
+           
 
             da.excutequery("UpdateProudect", param);
             da.close();

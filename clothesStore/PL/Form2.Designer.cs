@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.txt_sales = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,6 +56,9 @@
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.remove = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonremove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ID_Item = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Item_Name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Category = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -73,8 +71,6 @@
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.Post = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonMins = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.remove = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonremove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_AfterDisc = new System.Windows.Forms.TextBox();
@@ -92,9 +88,9 @@
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMins)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -461,17 +457,17 @@
             // 
             // gridView2
             // 
-            this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 11.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.FocusedRow.FontSizeDelta = 1;
             this.gridView2.Appearance.FocusedRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView2.Appearance.FocusedRow.Options.UseFont = true;
-            this.gridView2.Appearance.GroupRow.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.GroupRow.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.GroupRow.FontSizeDelta = 1;
             this.gridView2.Appearance.GroupRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView2.Appearance.GroupRow.Options.UseFont = true;
             this.gridView2.Appearance.GroupRow.Options.UseTextOptions = true;
             this.gridView2.Appearance.GroupRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.HeaderPanel.FontSizeDelta = 1;
             this.gridView2.Appearance.HeaderPanel.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView2.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
@@ -480,7 +476,7 @@
             this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.Row.FontSizeDelta = 1;
             this.gridView2.Appearance.Row.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView2.Appearance.Row.Options.UseFont = true;
@@ -499,6 +495,8 @@
             this.gridView2.AppearancePrint.Row.Options.UseTextOptions = true;
             this.gridView2.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.remove,
+            this.gridColumn1,
             this.ID_Item,
             this.Item_Name,
             this.Category,
@@ -508,8 +506,7 @@
             this.Discount,
             this.AfterDiscount,
             this.neg,
-            this.Post,
-            this.remove});
+            this.Post});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -519,9 +516,36 @@
             this.gridView2.OptionsBehavior.ReadOnly = true;
             this.gridView2.OptionsCustomization.AllowGroup = false;
             this.gridView2.OptionsPrint.PrintPreview = true;
+            this.gridView2.OptionsView.ColumnAutoWidth = false;
+            this.gridView2.OptionsView.RowAutoHeight = true;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
             this.gridView2.RowDeleted += new DevExpress.Data.RowDeletedEventHandler(this.gridView2_RowDeleted);
+            // 
+            // remove
+            // 
+            this.remove.ColumnEdit = this.repositoryItemButtonremove;
+            this.remove.Name = "remove";
+            this.remove.Visible = true;
+            this.remove.VisibleIndex = 0;
+            this.remove.Width = 40;
+            // 
+            // repositoryItemButtonremove
+            // 
+            this.repositoryItemButtonremove.AutoHeight = false;
+            this.repositoryItemButtonremove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
+            this.repositoryItemButtonremove.Name = "repositoryItemButtonremove";
+            this.repositoryItemButtonremove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "الباركود";
+            this.gridColumn1.FieldName = "رقم الباركود";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 150;
             // 
             // ID_Item
             // 
@@ -547,14 +571,17 @@
             this.Item_Name.OptionsColumn.FixedWidth = true;
             this.Item_Name.OptionsColumn.ReadOnly = true;
             this.Item_Name.Visible = true;
-            this.Item_Name.VisibleIndex = 0;
-            this.Item_Name.Width = 257;
+            this.Item_Name.VisibleIndex = 2;
+            this.Item_Name.Width = 300;
             // 
             // Category
             // 
             this.Category.Caption = "النوع";
             this.Category.FieldName = "النوع";
             this.Category.Name = "Category";
+            this.Category.Visible = true;
+            this.Category.VisibleIndex = 3;
+            this.Category.Width = 150;
             // 
             // Price
             // 
@@ -569,8 +596,8 @@
             this.Price.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.Price.OptionsColumn.ReadOnly = true;
             this.Price.Visible = true;
-            this.Price.VisibleIndex = 1;
-            this.Price.Width = 186;
+            this.Price.VisibleIndex = 4;
+            this.Price.Width = 100;
             // 
             // quantity
             // 
@@ -586,8 +613,8 @@
             this.quantity.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.quantity.OptionsColumn.ReadOnly = true;
             this.quantity.Visible = true;
-            this.quantity.VisibleIndex = 2;
-            this.quantity.Width = 168;
+            this.quantity.VisibleIndex = 5;
+            this.quantity.Width = 100;
             // 
             // Total
             // 
@@ -602,7 +629,7 @@
             this.Total.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.Total.OptionsColumn.ReadOnly = true;
             this.Total.Visible = true;
-            this.Total.VisibleIndex = 3;
+            this.Total.VisibleIndex = 6;
             this.Total.Width = 90;
             // 
             // Discount
@@ -613,8 +640,8 @@
             this.Discount.FieldName = "الخصم";
             this.Discount.Name = "Discount";
             this.Discount.Visible = true;
-            this.Discount.VisibleIndex = 4;
-            this.Discount.Width = 128;
+            this.Discount.VisibleIndex = 7;
+            this.Discount.Width = 100;
             // 
             // AfterDiscount
             // 
@@ -624,8 +651,8 @@
             this.AfterDiscount.FieldName = "الاجمالي بعد الخصم";
             this.AfterDiscount.Name = "AfterDiscount";
             this.AfterDiscount.Visible = true;
-            this.AfterDiscount.VisibleIndex = 5;
-            this.AfterDiscount.Width = 109;
+            this.AfterDiscount.VisibleIndex = 8;
+            this.AfterDiscount.Width = 100;
             // 
             // neg
             // 
@@ -633,20 +660,11 @@
             this.neg.AppearanceCell.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
             this.neg.AppearanceCell.Options.UseBackColor = true;
             this.neg.AppearanceCell.Options.UseFont = true;
-            this.neg.Caption = "neg";
             this.neg.ColumnEdit = this.repositoryItemButtonEdit1;
-            this.neg.FieldName = "neg";
             this.neg.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
-            this.neg.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("neg.ImageOptions.SvgImage")));
             this.neg.Name = "neg";
-            this.neg.OptionsColumn.AllowEdit = false;
-            this.neg.OptionsColumn.AllowMove = false;
-            this.neg.OptionsColumn.AllowShowHide = false;
-            this.neg.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.neg.OptionsColumn.FixedWidth = true;
-            this.neg.OptionsColumn.ReadOnly = true;
             this.neg.Visible = true;
-            this.neg.VisibleIndex = 6;
+            this.neg.VisibleIndex = 9;
             this.neg.Width = 40;
             // 
             // repositoryItemButtonEdit1
@@ -663,19 +681,10 @@
             // 
             // Post
             // 
-            this.Post.Caption = "Post";
             this.Post.ColumnEdit = this.repositoryItemButtonMins;
-            this.Post.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
-            this.Post.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Post.ImageOptions.SvgImage")));
             this.Post.Name = "Post";
-            this.Post.OptionsColumn.AllowEdit = false;
-            this.Post.OptionsColumn.AllowMove = false;
-            this.Post.OptionsColumn.AllowShowHide = false;
-            this.Post.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.Post.OptionsColumn.FixedWidth = true;
-            this.Post.OptionsColumn.ReadOnly = true;
             this.Post.Visible = true;
-            this.Post.VisibleIndex = 7;
+            this.Post.VisibleIndex = 10;
             this.Post.Width = 40;
             // 
             // repositoryItemButtonMins
@@ -689,32 +698,6 @@
             this.repositoryItemButtonMins.LookAndFeel.UseDefaultLookAndFeel = false;
             this.repositoryItemButtonMins.Name = "repositoryItemButtonMins";
             this.repositoryItemButtonMins.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // remove
-            // 
-            this.remove.Caption = "remove";
-            this.remove.ColumnEdit = this.repositoryItemButtonremove;
-            this.remove.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
-            this.remove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("remove.ImageOptions.Image")));
-            this.remove.Name = "remove";
-            this.remove.OptionsColumn.AllowEdit = false;
-            this.remove.OptionsColumn.AllowMove = false;
-            this.remove.OptionsColumn.AllowShowHide = false;
-            this.remove.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.remove.OptionsColumn.FixedWidth = true;
-            this.remove.OptionsColumn.ReadOnly = true;
-            this.remove.Visible = true;
-            this.remove.VisibleIndex = 8;
-            this.remove.Width = 40;
-            // 
-            // repositoryItemButtonremove
-            // 
-            this.repositoryItemButtonremove.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.repositoryItemButtonremove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonremove.Name = "repositoryItemButtonremove";
-            this.repositoryItemButtonremove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // groupBox3
             // 
@@ -909,9 +892,9 @@
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMins)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -971,5 +954,6 @@
         public DevExpress.XtraEditors.SimpleButton simpleButton1;
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.ComboBox Cmb_product;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

@@ -28,25 +28,44 @@ namespace clothesStore.PL
             try
             {
 
-                Txt_Barcode.Clear();
+                Txt_Barcode.Text = string.Empty;
 
-                    dt3.Clear();
-                    dt3 = P.selectLastBarcode();
+                dt3.Clear();
+                dt3 = P.selectLastBarcode();
 
-                    if (dt3.Rows.Count <= 0)
-                    {
-                        Txt_Barcode.Text = "100000";
+                if (dt3.Rows.Count <= 0)
+                {
+                    string num = "10000";
 
-                        P.add_randomBarcode(100000);
-                    }
-                    else
-                    {
-                        Txt_Barcode.Text = (Convert.ToInt64(dt3.Rows[0][0]) + 1).ToString();
+                    int middleIndex = num.Length / 2;
+                    decimal prices = Convert.ToDecimal(Txt_SellPrice.Text);
+                    string price = !string.IsNullOrEmpty(Txt_SellPrice.Text) ? Math.Truncate(prices).ToString() : "0";
+                    string newBarcode = num.Insert(middleIndex, price);
+                    Txt_Barcode.Text = newBarcode;
 
-                        P.Update_Barcode(Convert.ToInt64(dt3.Rows[0][0]) + 1);
+                    // P.add_randomBarcode(Convert.ToInt32("100000"));
+                    P.add_randomBarcode(Convert.ToInt64(num));
+                }
+                else
+                {
+                    string num = (Convert.ToInt32(dt3.Rows[0][0]) + 1).ToString();
+                    // Txt_Barcode.Text = num;
+                    int middleIndex = num.Length / 2;
 
-                    }
-                
+                    decimal prices = Convert.ToDecimal(Txt_SellPrice.Text);
+                    string price = !string.IsNullOrEmpty(Txt_SellPrice.Text) ? Math.Truncate(prices).ToString() : "0";
+                    string newBarcode = num.Insert(middleIndex, price);
+
+
+
+                    // Txt_Barcode.Text = (Convert.ToInt32(dt3.Rows[0][0]) + 1).ToString();
+                    Txt_Barcode.Text = newBarcode;
+
+                    P.Update_Barcode(Convert.ToInt64(num));
+
+                }
+
+
 
             }
             catch (Exception EX)
@@ -65,7 +84,7 @@ namespace clothesStore.PL
           //  Txt_Barcode.Enabled=false;
             //simpleButton2.Hide();
             //Btn_PrintBarcode.Hide();
-            gridControl1.DataSource = P.selectProudect();
+
             //gridView1.Columns[8].Visible = false;
             //dataGridViewPR.Columns[6].Visible = false;
             //dataGridViewPR.Columns[10].Visible = false;
@@ -87,10 +106,12 @@ namespace clothesStore.PL
         //}
         void ComboCategory()
         {
-            Cmb_Category.DataSource = C.Select_ComboCategory();
-            Cmb_Category.DisplayMember = "Category_Name";
-            Cmb_Category.ValueMember = "Category_Id";
-            Cmb_Category.SelectedIndex = -1;
+            Cursor = Cursors.WaitCursor;
+            Cmb_Category.Properties.DataSource = C.Select_ComboCategory();
+            Cursor = Cursors.Default;
+            Cmb_Category.Properties.DisplayMember = "Category_Name";
+            Cmb_Category.Properties.ValueMember = "Category_Id";
+            //Cmb_Category.SelectedIndex = -1;
 
         }
         //void ComboLargeUnit()
@@ -126,12 +147,12 @@ namespace clothesStore.PL
         //    }
         //    Txt_Quantity.Text = total.ToString();
         //}
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnCategory_Click(object sender, EventArgs e)
         {
             Frm_Category Frm_Cat = new Frm_Category();
             Frm_Cat.ShowDialog();
             ComboCategory();
-            gridControl1.DataSource = P.selectProudect();
+          //  gridControl1.DataSource = P.selectProudect();
         }
 
         //private void simpleButton2_Click(object sender, EventArgs e)
@@ -143,8 +164,11 @@ namespace clothesStore.PL
         //}
         internal void clear()
         {
-            pictureLogo.BackgroundImage = Properties.Resources.image_not_found_scaled_1150x647;
-            pictureLogo.Image = Properties.Resources.image_not_found_scaled_1150x647;
+            //pictureLogo.BackgroundImage = Properties.Resources.image_not_found_scaled_1150x647;
+            //pictureLogo.Image = Properties.Resources.image_not_found_scaled_1150x647;
+
+            pictureLogo.BackgroundImage =null;
+            pictureLogo.Image = null;
             imagePath = "";
             txtProName.Text = "";
             Txt_Quantity.Text = "0";
@@ -155,13 +179,13 @@ namespace clothesStore.PL
             Txt_SellPrice.Text = "0";
             //Txt_PurshLargeUnit.Text = "0";
             //Txt_QtyLargeUnit.Text = "0";
-            Cmb_Category.SelectedIndex = -1;
+            Cmb_Category.EditValue = -1;
             //Cmb_LargeUnit.SelectedIndex = -1;
             //Cmb_SmallUnit.SelectedIndex = -1;
             //Cmb_Store.SelectedIndex = -1;
-            txtID.Clear();
+            RE.Text = string.Empty;
             //txt_search.Clear();
-            Txt_Barcode.Clear();
+            Txt_Barcode.Text = string.Empty;
             //dt2.Clear();
 
         }
@@ -503,10 +527,10 @@ namespace clothesStore.PL
                     {
                        // imagePath = Application.StartupPath + @"\Resources" + @"\image-not-found-scaled-1150x647.png";
                         //  imagePath = null;
-                        dtid = P.addproudect(txtProName.Text, Convert.ToInt32(Cmb_Category.SelectedValue),
+                        dtid = P.addproudect(txtProName.Text, Convert.ToInt32(Cmb_Category.EditValue),
                          decimal.Parse(Txt_Quantity.Text), decimal.Parse(Txt_SellPrice.Text),
                          Convert.ToDecimal(Txt_PhurshasingPrice.Text), Convert.ToDecimal(Txt_minimun.Text),
-                         (Txt_Color.Text), Txt_Barcode.Text, null);
+                         (Txt_Color.Text), Txt_Barcode.Text);
                     }
                     else
                     {
@@ -515,17 +539,17 @@ namespace clothesStore.PL
                         Byte[] bytestream = new Byte[filestream.Length];
                         filestream.Read(bytestream, 0, bytestream.Length);
                         filestream.Close();
-                        dtid = P.addproudect(txtProName.Text, Convert.ToInt32(Cmb_Category.SelectedValue),
+                        dtid = P.addproudect(txtProName.Text, Convert.ToInt32(Cmb_Category.EditValue),
                               decimal.Parse(Txt_Quantity.Text), decimal.Parse(Txt_SellPrice.Text),
                               Convert.ToDecimal(Txt_PhurshasingPrice.Text), Convert.ToDecimal(Txt_minimun.Text),
                               (Txt_Color.Text), Txt_Barcode.Text, bytestream);
                     }
 
-                    txtID.Text = dtid.Rows[0][0].ToString();
+                    RE.Text = dtid.Rows[0][0].ToString();
 
-                    S.Add_StoreProduct(Convert.ToInt32(txtID.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text));
+                    S.Add_StoreProduct(Convert.ToInt32(RE.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text));
 
-                    P.Add_MoveProduct(Convert.ToInt32(txtID.Text), Convert.ToInt32(Txt_Quantity.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text),
+                    P.Add_MoveProduct(Convert.ToInt32(RE.Text), Convert.ToInt32(Txt_Quantity.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text),
                         0,
                       decimal.Parse(Txt_SellPrice.Text), Convert.ToDecimal(Txt_Quantity.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text), decimal.Parse(Txt_SellPrice.Text), 
                       "مخزون اول المدة", DateTime.Now,
@@ -533,7 +557,7 @@ namespace clothesStore.PL
 
                     if (Convert.ToDecimal(Txt_Quantity.Text)>0)
                     {
-                        P.AddItemsFirstTerm(Convert.ToInt32(txtID.Text),txtProName.Text, Convert.ToInt32(Cmb_Category.SelectedValue),
+                        P.AddItemsFirstTerm(Convert.ToInt32(RE.Text),txtProName.Text, Convert.ToInt32(Cmb_Category.EditValue),
                         decimal.Parse(Txt_Quantity.Text), decimal.Parse(Txt_SellPrice.Text),
                         Convert.ToDecimal(Txt_PhurshasingPrice.Text));
                     }
@@ -639,9 +663,9 @@ namespace clothesStore.PL
                 {
                     if (imagePath=="")
                     {
-                        P.Updateproudect(Convert.ToInt32(txtID.Text), txtProName.Text, Convert.ToInt32(Cmb_Category.SelectedValue),
+                        P.Updateproudect(Convert.ToInt32(RE.Text), txtProName.Text, Convert.ToInt32(Cmb_Category.EditValue),
                        Convert.ToDecimal(Txt_SellPrice.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text),
-                      Convert.ToDecimal(Txt_minimun.Text), (Txt_Color.Text), Txt_Barcode.Text,null);
+                      Convert.ToDecimal(Txt_minimun.Text), (Txt_Color.Text), Txt_Barcode.Text, Convert.ToDecimal(Txt_Quantity.Text));
                     }
                     else
                     {
@@ -649,9 +673,9 @@ namespace clothesStore.PL
                         Byte[] bytestream = new Byte[filestream.Length];
                         filestream.Read(bytestream, 0, bytestream.Length);
                         filestream.Close();
-                        P.Updateproudect(Convert.ToInt32(txtID.Text), txtProName.Text, Convert.ToInt32(Cmb_Category.SelectedValue),
+                        P.Updateproudect(Convert.ToInt32(RE.Text), txtProName.Text, Convert.ToInt32(Cmb_Category.EditValue),
                        Convert.ToDecimal(Txt_SellPrice.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text),
-                       Convert.ToDecimal(Txt_minimun.Text), (Txt_Color.Text), Txt_Barcode.Text, bytestream);
+                       Convert.ToDecimal(Txt_minimun.Text), (Txt_Color.Text), Txt_Barcode.Text, Convert.ToDecimal(Txt_Quantity.Text), bytestream);
 
                     }
 
@@ -698,7 +722,11 @@ namespace clothesStore.PL
             Txt_Quantity.Enabled = true;
             Txt_Barcode.Enabled = true;
 
+            
+
         }
+
+     
 
         private void groupBox4_Enter(object sender, EventArgs e)
         {
@@ -740,7 +768,7 @@ namespace clothesStore.PL
             dt.Clear();
             if (Cmb_Category.Text != "")
             {
-                dt= C.Validate_CategoryName(Convert.ToInt32(Cmb_Category.SelectedValue));
+                dt= C.Validate_CategoryName(Convert.ToInt32(Cmb_Category.EditValue));
                 if (dt.Rows.Count == 0)
                 {
                     MessageBox.Show(" اسم التنصيف الذى قمت باادخالة غير مسجل ", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
@@ -820,7 +848,7 @@ namespace clothesStore.PL
                     Btn_save.Enabled = false;
                     btn_Update.Enabled = true;
                     Btn_Delete.Enabled = true;
-                    Txt_Quantity.Enabled = false;
+                  //  Txt_Quantity.Enabled = false;
                     //Txt_Barcode.Enabled = false;
                     if (gridView1.GetFocusedRowCellValue("Image").ToString() != "")
                     {
@@ -832,8 +860,10 @@ namespace clothesStore.PL
                     {
                         pictureLogo.Image = null;
                     }
-                  
-                    txtID.Text = gridView1.GetFocusedRowCellValue("رقم الصنف").ToString();
+
+                    ComboCategory();
+
+                    RE.Text = gridView1.GetFocusedRowCellValue("رقم الصنف").ToString();
                     Cmb_Category.Text = gridView1.GetFocusedRowCellValue("التصنيف").ToString();
                     txtProName.Text = gridView1.GetFocusedRowCellValue("إسم الصنف").ToString();
                     Txt_PhurshasingPrice.Text = gridView1.GetFocusedRowCellValue("سعر الشراء").ToString();
@@ -865,7 +895,7 @@ namespace clothesStore.PL
 
                 if (MessageBox.Show("هل تريد حذف الصنف", "عمليه حذف صنف", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
                 {
-                    P.deleteProudectinUpdate(Convert.ToInt32(txtID.Text));
+                    P.deleteProudectinUpdate(Convert.ToInt32(RE.Text));
 
 
                     MessageBox.Show("تم حذف الصنف بنجاح");
@@ -960,9 +990,9 @@ namespace clothesStore.PL
         string imagePath = "";
         private void btndelete_Click(object sender, EventArgs e)
         {
-            pictureLogo.BackgroundImage = Properties.Resources.image_not_found_scaled_1150x647;
-            pictureLogo.Image = Properties.Resources.image_not_found_scaled_1150x647;
-            imagePath = Application.StartupPath + @"\Resources" + @"\image-not-found-scaled-1150x647.png";
+            pictureLogo.BackgroundImage = null;
+            pictureLogo.Image = null;
+            imagePath = "";
         }
 
         private void btnChoose_Click(object sender, EventArgs e)
@@ -977,6 +1007,13 @@ namespace clothesStore.PL
                 pictureLogo.Image = null;
                 pictureLogo.ImageLocation = imagePath;
             }
+        }
+
+        private void SimpleButton1_Click_1(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            gridControl1.DataSource = P.selectProudect();
+            Cursor = Cursors.Default;
         }
     }
 }

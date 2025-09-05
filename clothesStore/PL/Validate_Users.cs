@@ -56,32 +56,32 @@ namespace clothesStore.PL
 
 
 
-                    dt2.Clear();
-                    dt2 = p.SelectUserProduct(cmb_Users1.Text);
-                    if (dt2.Rows.Count >= 1)
-                    {
-                        if (Convert.ToInt32(dt2.Rows[0][1]) == 0) { check_AddItems.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][1]) == 1) { check_AddItems.Checked = true; }
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][2]) == 0) { check_reportMinItem.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][2]) == 1) { check_reportMinItem.Checked = true; }
-                        ////////
-                        if (Convert.ToInt32(dt2.Rows[0][3]) == 0) { check_Balance.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][3]) == 1) { check_Balance.Checked = true; }
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][4]) == 0) { check_ReportBalance.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][4]) == 1) { check_ReportBalance.Checked = true; }
-                        /////////
+                    //dt2.Clear();
+                    //dt2 = p.SelectUserProduct(cmb_Users1.Text);
+                    //if (dt2.Rows.Count >= 1)
+                    //{
+                    //    if (Convert.ToInt32(dt2.Rows[0][1]) == 0) { check_AddItems.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][1]) == 1) { check_AddItems.Checked = true; }
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][2]) == 0) { check_reportMinItem.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][2]) == 1) { check_reportMinItem.Checked = true; }
+                    //    ////////
+                    //    if (Convert.ToInt32(dt2.Rows[0][3]) == 0) { check_Balance.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][3]) == 1) { check_Balance.Checked = true; }
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][4]) == 0) { check_ReportBalance.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][4]) == 1) { check_ReportBalance.Checked = true; }
+                    //    /////////
 
-                        if (Convert.ToInt32(dt2.Rows[0][5]) == 0) { check_Gard.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][5]) == 1) { check_Gard.Checked = true; }
-                        /////////
-                        ///
-                        if (Convert.ToInt32(dt2.Rows[0][6]) == 0) { check_7arka.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][6]) == 1) { check_7arka.Checked = true; }
-                        /////////
+                    //    if (Convert.ToInt32(dt2.Rows[0][5]) == 0) { check_Gard.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][5]) == 1) { check_Gard.Checked = true; }
+                    //    /////////
+                    //    ///
+                    //    if (Convert.ToInt32(dt2.Rows[0][6]) == 0) { check_7arka.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][6]) == 1) { check_7arka.Checked = true; }
+                    //    /////////
 
-                    }
+                    //}
 
                     dt2.Clear();
                     dt2 = p.SelectUserClient(cmb_Users1.Text);
@@ -119,81 +119,81 @@ namespace clothesStore.PL
                     }
                     dt2.Clear();
                     dt2 = p.SelectUserSuppliers(cmb_Users1.Text);
-                    if (dt2.Rows.Count >= 1)
-                    {
-                        if (Convert.ToInt32(dt2.Rows[0][1]) == 0) { check_AddSuppliers.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][1]) == 1) { check_AddSuppliers.Checked = true; }
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][2]) == 0) { check_ReportSuppliers.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][2]) == 1) { check_ReportSuppliers.Checked = true; }
-                        ////////
-                        if (Convert.ToInt32(dt2.Rows[0][3]) == 0) { check_DiscountSuppliers.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][3]) == 1) { check_DiscountSuppliers.Checked = true; }
+                    //if (dt2.Rows.Count >= 1)
+                    //{
+                    //    if (Convert.ToInt32(dt2.Rows[0][1]) == 0) { check_AddSuppliers.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][1]) == 1) { check_AddSuppliers.Checked = true; }
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][2]) == 0) { check_ReportSuppliers.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][2]) == 1) { check_ReportSuppliers.Checked = true; }
+                    //    ////////
+                    //    if (Convert.ToInt32(dt2.Rows[0][3]) == 0) { check_DiscountSuppliers.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][3]) == 1) { check_DiscountSuppliers.Checked = true; }
 
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][4]) == 0) { check_PaySuppliers.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][4]) == 1) { check_PaySuppliers.Checked = true; }
-                        /////////
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][4]) == 0) { check_PaySuppliers.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][4]) == 1) { check_PaySuppliers.Checked = true; }
+                    //    /////////
                   
-                        if (Convert.ToInt32(dt2.Rows[0][5]) == 0) { check_REportAccountSuppliers.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][5]) == 1) { check_REportAccountSuppliers.Checked = true; }
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][6]) == 0) { check_DepitSuppliers.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][6]) == 1) { check_DepitSuppliers.Checked = true; }
-                    }
-                    dt2.Clear();
-                    dt2 = p.selectUserOrder(cmb_Users1.Text);
-                    if (dt2.Rows.Count >= 1)
-                    {
-                        if (Convert.ToInt32(dt2.Rows[0][1]) == 0) { check_InvoiceOrder.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][1]) == 1) { check_InvoiceOrder.Checked = true; }
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][2]) == 0) { check_ReturnOrder.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][2]) == 1) { check_ReturnOrder.Checked = true; }
-                        ////////
-                        if (Convert.ToInt32(dt2.Rows[0][3]) == 0) { check_managmentOrder.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][3]) == 1) { check_managmentOrder.Checked = true; }
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][4]) == 0) { check_ReportReturnOrder.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][4]) == 1) { check_ReportReturnOrder.Checked = true; }
-                        /////////
-                        if (Convert.ToInt32(dt2.Rows[0][5]) == 0) { check_reb7Order.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][5]) == 1) { check_reb7Order.Checked = true; }
-                        //////
-                        ///
-                        if (Convert.ToInt32(dt2.Rows[0][6]) == 0) { check_UpdateOrder.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][6]) == 1) { check_UpdateOrder.Checked = true; }
+                    //    if (Convert.ToInt32(dt2.Rows[0][5]) == 0) { check_REportAccountSuppliers.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][5]) == 1) { check_REportAccountSuppliers.Checked = true; }
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][6]) == 0) { check_DepitSuppliers.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][6]) == 1) { check_DepitSuppliers.Checked = true; }
+                    //}
+                    //dt2.Clear();
+                    //dt2 = p.selectUserOrder(cmb_Users1.Text);
+                    //if (dt2.Rows.Count >= 1)
+                    //{
+                    //    if (Convert.ToInt32(dt2.Rows[0][1]) == 0) { check_InvoiceOrder.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][1]) == 1) { check_InvoiceOrder.Checked = true; }
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][2]) == 0) { check_ReturnOrder.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][2]) == 1) { check_ReturnOrder.Checked = true; }
+                    //    ////////
+                    //    if (Convert.ToInt32(dt2.Rows[0][3]) == 0) { check_managmentOrder.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][3]) == 1) { check_managmentOrder.Checked = true; }
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][4]) == 0) { check_ReportReturnOrder.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][4]) == 1) { check_ReportReturnOrder.Checked = true; }
+                    //    /////////
+                    //    if (Convert.ToInt32(dt2.Rows[0][5]) == 0) { check_reb7Order.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][5]) == 1) { check_reb7Order.Checked = true; }
+                    //    //////
+                    //    ///
+                    //    if (Convert.ToInt32(dt2.Rows[0][6]) == 0) { check_UpdateOrder.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][6]) == 1) { check_UpdateOrder.Checked = true; }
 
-                        ///
-                        if (Convert.ToInt32(dt2.Rows[0][7]) == 0) { check_ReturnOrderAllproduct.Checked = false; }
-                        else if (Convert.ToInt32(dt2.Rows[0][7]) == 1) { check_ReturnOrderAllproduct.Checked = true; }
+                    //    ///
+                    //    if (Convert.ToInt32(dt2.Rows[0][7]) == 0) { check_ReturnOrderAllproduct.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][7]) == 1) { check_ReturnOrderAllproduct.Checked = true; }
 
-                    }
-                    dt2.Clear();
-                    dt2 = p.selectUserPurshise(cmb_Users1.Text);
-                    if (dt2.Rows.Count >= 1)
-                    {
-                        if (Convert.ToInt32(dt2.Rows[0][1]) == 0) { check_InvoiceSupplier.Checked = false; }
+                    //}
+                    //dt2.Clear();
+                    //dt2 = p.selectUserPurshise(cmb_Users1.Text);
+                    //if (dt2.Rows.Count >= 1)
+                    //{
+                    //    if (Convert.ToInt32(dt2.Rows[0][1]) == 0) { check_InvoiceSupplier.Checked = false; }
 
-                        else if (Convert.ToInt32(dt2.Rows[0][1]) == 1) { check_InvoiceSupplier.Checked = true; }
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][2]) == 0) { check_ReturnSuppliers.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][1]) == 1) { check_InvoiceSupplier.Checked = true; }
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][2]) == 0) { check_ReturnSuppliers.Checked = false; }
 
-                        else if (Convert.ToInt32(dt2.Rows[0][2]) == 1) { check_ReturnSuppliers.Checked = true; }
-                        ////////
-                        if (Convert.ToInt32(dt2.Rows[0][3]) == 0) { check_ManagmentSuppliers.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][2]) == 1) { check_ReturnSuppliers.Checked = true; }
+                    //    ////////
+                    //    if (Convert.ToInt32(dt2.Rows[0][3]) == 0) { check_ManagmentSuppliers.Checked = false; }
 
-                        else if (Convert.ToInt32(dt2.Rows[0][3]) == 1) { check_ManagmentSuppliers.Checked = true; }
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][4]) == 0) { check_ReportReturnSuppliers.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][3]) == 1) { check_ManagmentSuppliers.Checked = true; }
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][4]) == 0) { check_ReportReturnSuppliers.Checked = false; }
 
-                        else if (Convert.ToInt32(dt2.Rows[0][4]) == 1) { check_ReportReturnSuppliers.Checked = true; }
-                        ///////
-                        if (Convert.ToInt32(dt2.Rows[0][5]) == 0) { check_RetrunPurshasesAllProduct.Checked = false; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][4]) == 1) { check_ReportReturnSuppliers.Checked = true; }
+                    //    ///////
+                    //    if (Convert.ToInt32(dt2.Rows[0][5]) == 0) { check_RetrunPurshasesAllProduct.Checked = false; }
 
-                        else if (Convert.ToInt32(dt2.Rows[0][5]) == 1) { check_RetrunPurshasesAllProduct.Checked = true; }
+                    //    else if (Convert.ToInt32(dt2.Rows[0][5]) == 1) { check_RetrunPurshasesAllProduct.Checked = true; }
 
-                    }
+                    //}
                     dt2.Clear();
                     dt2 = p.selectUserStock(cmb_Users1.Text);
                     if (dt2.Rows.Count >= 1)
@@ -285,50 +285,50 @@ namespace clothesStore.PL
         private void btn_save_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-                if (cmb_Users1.Text == "")
-                {
-                    MessageBox.Show("لا بد من تحديد إسم الموظف");
-                    return;
-                }
-                else
-                {
-                    int AddItem = 0, reportMinItem = 0, Balance = 0, ReportBalance = 0, gard=0,harka=0;
-                    if (check_AddItems.Checked == true){ AddItem = 1;}
-                    else if (check_AddItems.Checked == false){ AddItem = 0;}
-                    /////
-                    if (check_reportMinItem.Checked == true){ reportMinItem = 1;}
-                    else if (check_reportMinItem.Checked == false){ reportMinItem = 0;}
-                    /////
-                    if (check_Balance.Checked == true){ Balance = 1;}
-                    else if (check_Balance.Checked == false){ Balance = 0;}
-                    ////
-                    if (check_ReportBalance.Checked == true){ ReportBalance = 1;}
-                    else if (check_ReportBalance.Checked == false){ ReportBalance = 0;}
-                    ////////djaklsjdaklda
-                    if (check_Gard.Checked == true) { gard = 1; }
-                    else if (check_Gard.Checked == false) { gard = 0; }
-                    ////////
-                    if (check_7arka.Checked == true) { harka = 1; }
-                    else if (check_7arka.Checked == false) { harka = 0; }
-                    ////////
+            //try
+            //{
+            //    if (cmb_Users1.Text == "")
+            //    {
+            //        MessageBox.Show("لا بد من تحديد إسم الموظف");
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        int AddItem = 0, reportMinItem = 0, Balance = 0, ReportBalance = 0, gard=0,harka=0;
+            //        if (check_AddItems.Checked == true){ AddItem = 1;}
+            //        else if (check_AddItems.Checked == false){ AddItem = 0;}
+            //        /////
+            //        if (check_reportMinItem.Checked == true){ reportMinItem = 1;}
+            //        else if (check_reportMinItem.Checked == false){ reportMinItem = 0;}
+            //        /////
+            //        if (check_Balance.Checked == true){ Balance = 1;}
+            //        else if (check_Balance.Checked == false){ Balance = 0;}
+            //        ////
+            //        if (check_ReportBalance.Checked == true){ ReportBalance = 1;}
+            //        else if (check_ReportBalance.Checked == false){ ReportBalance = 0;}
+            //        ////////djaklsjdaklda
+            //        if (check_Gard.Checked == true) { gard = 1; }
+            //        else if (check_Gard.Checked == false) { gard = 0; }
+            //        ////////
+            //        if (check_7arka.Checked == true) { harka = 1; }
+            //        else if (check_7arka.Checked == false) { harka = 0; }
+            //        ////////
 
 
-                    p.UpdateUserProduct(cmb_Users1.Text, AddItem, reportMinItem, Balance, ReportBalance,gard, harka);
+            //        p.UpdateUserProduct(cmb_Users1.Text, AddItem, reportMinItem, Balance, ReportBalance,gard, harka);
 
-                    l.addMoveUser(Program.salesman,this.Text, $"تعديل في شاشه صلاحية المستخدمين للموظف {cmb_Users1.Text}");
+            //        l.addMoveUser(Program.salesman,this.Text, $"تعديل في شاشه صلاحية المستخدمين للموظف {cmb_Users1.Text}");
 
 
-                    MessageBox.Show(" تم حفظ الصلاحيات للمستخدم");
+            //        MessageBox.Show(" تم حفظ الصلاحيات للمستخدم");
 
-                }
-            }
-            catch (Exception ex)
-            {
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show(ex.Message);
-            }
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -379,160 +379,160 @@ namespace clothesStore.PL
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (cmb_Users1.Text == "")
-                {
-                    MessageBox.Show("لا بد من تحديد إسم الموظف");
-                    return;
-                }
-                else
-                {
-                    int AddSuppliers = 0, ReportSuppliers = 0, DiscountSuppliers = 0, PaySuppliers = 0, REportAccountSuppliers = 0,
-                        DepitSuppliers = 0;
+            //try
+            //{
+            //    if (cmb_Users1.Text == "")
+            //    {
+            //        MessageBox.Show("لا بد من تحديد إسم الموظف");
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        int AddSuppliers = 0, ReportSuppliers = 0, DiscountSuppliers = 0, PaySuppliers = 0, REportAccountSuppliers = 0,
+            //            DepitSuppliers = 0;
 
-                    if (check_AddSuppliers.Checked == true){ AddSuppliers = 1;}
+            //        if (check_AddSuppliers.Checked == true){ AddSuppliers = 1;}
 
-                    else if (check_AddSuppliers.Checked == false){ AddSuppliers = 0;}
-                    ///////
-                    if (check_ReportSuppliers.Checked == true){ ReportSuppliers = 1;}
+            //        else if (check_AddSuppliers.Checked == false){ AddSuppliers = 0;}
+            //        ///////
+            //        if (check_ReportSuppliers.Checked == true){ ReportSuppliers = 1;}
 
-                    else if (check_ReportSuppliers.Checked == false){ ReportSuppliers = 0;}
-                    ///////
-                    if (check_DiscountSuppliers.Checked == true){ DiscountSuppliers = 1;}
+            //        else if (check_ReportSuppliers.Checked == false){ ReportSuppliers = 0;}
+            //        ///////
+            //        if (check_DiscountSuppliers.Checked == true){ DiscountSuppliers = 1;}
 
-                    else if (check_DiscountSuppliers.Checked == false){ DiscountSuppliers = 0;}
-                    ////////
-                    if (check_PaySuppliers.Checked == true){ PaySuppliers = 1;}
+            //        else if (check_DiscountSuppliers.Checked == false){ DiscountSuppliers = 0;}
+            //        ////////
+            //        if (check_PaySuppliers.Checked == true){ PaySuppliers = 1;}
 
-                    else if (check_PaySuppliers.Checked == false){ PaySuppliers = 0;}
-                    ////////
-                    if (check_REportAccountSuppliers.Checked == true){ REportAccountSuppliers = 1;}
+            //        else if (check_PaySuppliers.Checked == false){ PaySuppliers = 0;}
+            //        ////////
+            //        if (check_REportAccountSuppliers.Checked == true){ REportAccountSuppliers = 1;}
 
-                    else if (check_REportAccountSuppliers.Checked == false){ REportAccountSuppliers = 0;}
-                    //////
-                    if (check_DepitSuppliers.Checked == true){ DepitSuppliers = 1;}
+            //        else if (check_REportAccountSuppliers.Checked == false){ REportAccountSuppliers = 0;}
+            //        //////
+            //        if (check_DepitSuppliers.Checked == true){ DepitSuppliers = 1;}
 
-                    else if (check_DepitSuppliers.Checked == false){ DepitSuppliers = 0;}
-                    //////
+            //        else if (check_DepitSuppliers.Checked == false){ DepitSuppliers = 0;}
+            //        //////
                  
-                    p.UpdateUserSuppliers(cmb_Users1.Text, AddSuppliers, ReportSuppliers, DiscountSuppliers, PaySuppliers, REportAccountSuppliers,
-                                         DepitSuppliers);
+            //        p.UpdateUserSuppliers(cmb_Users1.Text, AddSuppliers, ReportSuppliers, DiscountSuppliers, PaySuppliers, REportAccountSuppliers,
+            //                             DepitSuppliers);
 
 
-                    MessageBox.Show(" تم حفظ الصلاحيات للمستخدم");
-                }
-            }
-            catch (Exception ex)
-            {
+            //        MessageBox.Show(" تم حفظ الصلاحيات للمستخدم");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show(ex.Message);
-            }
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (cmb_Users1.Text == "")
-                {
-                    MessageBox.Show("لا بد من تحديد إسم المستخدم");
-                    return;
-                }
-                else
-                {
-                    int InvoiceOrder = 0, ReturnOrder = 0, managmentOrder = 0, reb7Order = 0, ReportReturnOrder = 0,
-                        updateOrder=0, Return_AllProduct = 0;
+            //try
+            //{
+            //    if (cmb_Users1.Text == "")
+            //    {
+            //        MessageBox.Show("لا بد من تحديد إسم المستخدم");
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        int InvoiceOrder = 0, ReturnOrder = 0, managmentOrder = 0, reb7Order = 0, ReportReturnOrder = 0,
+            //            updateOrder=0, Return_AllProduct = 0;
                        
 
-                    if (check_InvoiceOrder.Checked == true){ InvoiceOrder = 1;}
+            //        if (check_InvoiceOrder.Checked == true){ InvoiceOrder = 1;}
 
-                    else if (check_InvoiceOrder.Checked == false){ InvoiceOrder = 0;}
-                    ////////
-                    if (check_ReturnOrder.Checked == true){ ReturnOrder = 1;}
+            //        else if (check_InvoiceOrder.Checked == false){ InvoiceOrder = 0;}
+            //        ////////
+            //        if (check_ReturnOrder.Checked == true){ ReturnOrder = 1;}
 
-                    else if (check_ReturnOrder.Checked == false){ ReturnOrder = 0;}
-                    ///////
-                    if (check_managmentOrder.Checked == true){ managmentOrder = 1;}
+            //        else if (check_ReturnOrder.Checked == false){ ReturnOrder = 0;}
+            //        ///////
+            //        if (check_managmentOrder.Checked == true){ managmentOrder = 1;}
 
-                    else if (check_managmentOrder.Checked == false){ managmentOrder = 0;}
-                    ///////
-                    if (check_reb7Order.Checked == true){ reb7Order = 1;}
+            //        else if (check_managmentOrder.Checked == false){ managmentOrder = 0;}
+            //        ///////
+            //        if (check_reb7Order.Checked == true){ reb7Order = 1;}
 
-                    else if (check_reb7Order.Checked == false){ reb7Order = 0;}
-                    ////////
-                    if (check_ReportReturnOrder.Checked == true){ ReportReturnOrder = 1;}
+            //        else if (check_reb7Order.Checked == false){ reb7Order = 0;}
+            //        ////////
+            //        if (check_ReportReturnOrder.Checked == true){ ReportReturnOrder = 1;}
 
-                    else if (check_ReportReturnOrder.Checked == false){ ReportReturnOrder = 0;}
-                    /////////
-                    if (check_UpdateOrder.Checked == true) { updateOrder = 1; }
+            //        else if (check_ReportReturnOrder.Checked == false){ ReportReturnOrder = 0;}
+            //        /////////
+            //        if (check_UpdateOrder.Checked == true) { updateOrder = 1; }
 
-                    else if (check_UpdateOrder.Checked == false) { updateOrder = 0; }
-                    /////////
-                    if (check_ReturnOrderAllproduct.Checked == true) { Return_AllProduct = 1; }
+            //        else if (check_UpdateOrder.Checked == false) { updateOrder = 0; }
+            //        /////////
+            //        if (check_ReturnOrderAllproduct.Checked == true) { Return_AllProduct = 1; }
 
-                    else if (check_ReturnOrderAllproduct.Checked == false) { Return_AllProduct = 0; }
+            //        else if (check_ReturnOrderAllproduct.Checked == false) { Return_AllProduct = 0; }
 
-                    p.UpdateUserOrder(cmb_Users1.Text, InvoiceOrder, ReturnOrder, managmentOrder, ReportReturnOrder, 
-                        reb7Order, updateOrder, Return_AllProduct);
+            //        p.UpdateUserOrder(cmb_Users1.Text, InvoiceOrder, ReturnOrder, managmentOrder, ReportReturnOrder, 
+            //            reb7Order, updateOrder, Return_AllProduct);
 
-                    MessageBox.Show(" تم حفظ الصلاحيات للمستخدم");
-                }
-            }
-            catch (Exception ex)
-            {
+            //        MessageBox.Show(" تم حفظ الصلاحيات للمستخدم");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show(ex.Message);
-            }
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (cmb_Users1.Text == "")
-                {
-                    MessageBox.Show("لا بد من تحديد إسم الموظف");
-                    return;
-                }
-                else
-                {
-                    int InvoiceSupplier = 0, ReturnSuppliers = 0, mnagmentSuppliers = 0,ReportReturnSuppliers = 0,
-                        ReportReturnSuppliersAllproduct=0;
+            //try
+            //{
+            //    if (cmb_Users1.Text == "")
+            //    {
+            //        MessageBox.Show("لا بد من تحديد إسم الموظف");
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        int InvoiceSupplier = 0, ReturnSuppliers = 0, mnagmentSuppliers = 0,ReportReturnSuppliers = 0,
+            //            ReportReturnSuppliersAllproduct=0;
 
-                    if (check_InvoiceSupplier.Checked == true){ InvoiceSupplier = 1;}
+            //        if (check_InvoiceSupplier.Checked == true){ InvoiceSupplier = 1;}
 
-                    else if (check_InvoiceSupplier.Checked == false){ InvoiceSupplier = 0;}
-                    //////
-                    if (check_ReturnSuppliers.Checked == true){ ReturnSuppliers = 1;}
+            //        else if (check_InvoiceSupplier.Checked == false){ InvoiceSupplier = 0;}
+            //        //////
+            //        if (check_ReturnSuppliers.Checked == true){ ReturnSuppliers = 1;}
 
-                    else if (check_ReturnSuppliers.Checked == false){ ReturnSuppliers = 0;}
-                    /////
-                    if (check_ManagmentSuppliers.Checked == true){ mnagmentSuppliers = 1;}
+            //        else if (check_ReturnSuppliers.Checked == false){ ReturnSuppliers = 0;}
+            //        /////
+            //        if (check_ManagmentSuppliers.Checked == true){ mnagmentSuppliers = 1;}
 
-                    else if (check_ManagmentSuppliers.Checked == false){ mnagmentSuppliers = 0;}
-                    /////
-                    if (check_ReportReturnSuppliers.Checked == true){ ReportReturnSuppliers = 1;}
+            //        else if (check_ManagmentSuppliers.Checked == false){ mnagmentSuppliers = 0;}
+            //        /////
+            //        if (check_ReportReturnSuppliers.Checked == true){ ReportReturnSuppliers = 1;}
 
-                    else if (check_ReportReturnSuppliers.Checked == false){ ReportReturnSuppliers = 0;}
-                    ////////
+            //        else if (check_ReportReturnSuppliers.Checked == false){ ReportReturnSuppliers = 0;}
+            //        ////////
 
-                    if (check_ReturnOrderAllproduct.Checked == true) { ReportReturnSuppliersAllproduct = 1; }
+            //        if (check_ReturnOrderAllproduct.Checked == true) { ReportReturnSuppliersAllproduct = 1; }
 
-                    else if (check_ReturnOrderAllproduct.Checked == false) { ReportReturnSuppliersAllproduct = 0; }
-                    ///////
-                    p.UpdateUserPurshise(cmb_Users1.Text, InvoiceSupplier, ReturnSuppliers, mnagmentSuppliers,
-                        ReportReturnSuppliers, ReportReturnSuppliersAllproduct);
+            //        else if (check_ReturnOrderAllproduct.Checked == false) { ReportReturnSuppliersAllproduct = 0; }
+            //        ///////
+            //        p.UpdateUserPurshise(cmb_Users1.Text, InvoiceSupplier, ReturnSuppliers, mnagmentSuppliers,
+            //            ReportReturnSuppliers, ReportReturnSuppliersAllproduct);
 
-                    MessageBox.Show(" تم حفظ الصلاحيات للمستخدم");
-                }
-            }
-            catch (Exception ex)
-            {
+            //        MessageBox.Show(" تم حفظ الصلاحيات للمستخدم");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show(ex.Message);
-            }
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void simpleButton5_Click(object sender, EventArgs e)
@@ -750,6 +750,11 @@ namespace clothesStore.PL
 
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
 
         }
     }

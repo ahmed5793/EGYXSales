@@ -73,7 +73,7 @@ namespace clothesStore.PL
 
                     Cm.Update_CustomerTotalMoney(Convert.ToInt32(comboBox1.SelectedValue), mno);
                     Cm.Add_CustomerStatmentAccount(Convert.ToInt32(comboBox1.SelectedValue), Convert.ToDecimal(txt_Amount.Text),
-                      0, "اشعار خصم ", dateTimePicker1.Value, mno, Program.salesman);
+                      0, "اشعار خصم "+txt_note.Text, dateTimePicker1.Value, mno, Program.salesman);
 
                     l.addMoveUser(Program.salesman, this.Text, $"اشعار خصم للعميل {comboBox1.Text}");
 
@@ -89,7 +89,7 @@ namespace clothesStore.PL
                     decimal mno = Convert.ToDecimal(dt51.Rows[0][1]) + Convert.ToDecimal(txt_Amount.Text);
                     Cm.Update_CustomerTotalMoney(Convert.ToInt32(comboBox1.SelectedValue), mno);
                     Cm.Add_CustomerStatmentAccount(Convert.ToInt32(comboBox1.SelectedValue), 0,
-                      Convert.ToDecimal(txt_Amount.Text), "اشعار اضافة", dateTimePicker1.Value, mno ,Program.salesman);
+                      Convert.ToDecimal(txt_Amount.Text), "اشعار اضافة"+ txt_note.Text, dateTimePicker1.Value, mno ,Program.salesman);
                     l.addMoveUser(Program.salesman, this.Text, $"اشعار اضافة للعميل {comboBox1.Text}");
 
                     s.addSanad("سند قبض", Program.salesman, Program.salesman, Convert.ToDecimal(txt_Amount.Text),

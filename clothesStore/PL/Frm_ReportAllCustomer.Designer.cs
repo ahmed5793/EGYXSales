@@ -47,6 +47,7 @@
             this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gridControl1.Size = new System.Drawing.Size(863, 441);
             this.gridControl1.TabIndex = 131;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -54,17 +55,17 @@
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 17F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.FocusedRow.FontSizeDelta = 1;
             this.gridView1.Appearance.FocusedRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
-            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Arial", 17F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.GroupRow.FontSizeDelta = 1;
             this.gridView1.Appearance.GroupRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.GroupRow.Options.UseFont = true;
             this.gridView1.Appearance.GroupRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.GroupRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 16.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 17.25F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.HeaderPanel.FontSizeDelta = 1;
             this.gridView1.Appearance.HeaderPanel.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
@@ -73,7 +74,7 @@
             this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.Row.FontSizeDelta = 1;
             this.gridView1.Appearance.Row.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.Row.Options.UseFont = true;

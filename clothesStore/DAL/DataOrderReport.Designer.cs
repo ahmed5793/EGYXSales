@@ -346,6 +346,10 @@ namespace clothesStore.DAL {
             
             private global::System.Data.DataColumn columnTotalAfterDiscount;
             
+            private global::System.Data.DataColumn columnCustomerPrice;
+            
+            private global::System.Data.DataColumn columnBalance;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PrintOrderDataTable() {
@@ -509,6 +513,22 @@ namespace clothesStore.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CustomerPriceColumn {
+                get {
+                    return this.columnCustomerPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BalanceColumn {
+                get {
+                    return this.columnBalance;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -551,7 +571,7 @@ namespace clothesStore.DAL {
                         string NProd, 
                         decimal Qnt, 
                         decimal Price, 
-                        string Amou, 
+                        decimal Amou, 
                         decimal Discount, 
                         decimal TAmou, 
                         System.DateTime Date_Order, 
@@ -560,7 +580,9 @@ namespace clothesStore.DAL {
                         decimal pay, 
                         decimal rent, 
                         decimal TotalDiscount, 
-                        decimal TotalAfterDiscount) {
+                        decimal TotalAfterDiscount, 
+                        decimal CustomerPrice, 
+                        decimal Balance) {
                 PrintOrderRow rowPrintOrderRow = ((PrintOrderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_Order,
@@ -578,7 +600,9 @@ namespace clothesStore.DAL {
                         pay,
                         rent,
                         TotalDiscount,
-                        TotalAfterDiscount};
+                        TotalAfterDiscount,
+                        CustomerPrice,
+                        Balance};
                 rowPrintOrderRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPrintOrderRow);
                 return rowPrintOrderRow;
@@ -617,6 +641,8 @@ namespace clothesStore.DAL {
                 this.columnrent = base.Columns["rent"];
                 this.columnTotalDiscount = base.Columns["TotalDiscount"];
                 this.columnTotalAfterDiscount = base.Columns["TotalAfterDiscount"];
+                this.columnCustomerPrice = base.Columns["CustomerPrice"];
+                this.columnBalance = base.Columns["Balance"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -634,7 +660,7 @@ namespace clothesStore.DAL {
                 base.Columns.Add(this.columnQnt);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
-                this.columnAmou = new global::System.Data.DataColumn("Amou", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnAmou = new global::System.Data.DataColumn("Amou", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmou);
                 this.columnDiscount = new global::System.Data.DataColumn("Discount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDiscount);
@@ -654,6 +680,10 @@ namespace clothesStore.DAL {
                 base.Columns.Add(this.columnTotalDiscount);
                 this.columnTotalAfterDiscount = new global::System.Data.DataColumn("TotalAfterDiscount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalAfterDiscount);
+                this.columnCustomerPrice = new global::System.Data.DataColumn("CustomerPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerPrice);
+                this.columnBalance = new global::System.Data.DataColumn("Balance", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBalance);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1195,10 +1225,10 @@ namespace clothesStore.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Amou {
+            public decimal Amou {
                 get {
                     try {
-                        return ((string)(this[this.tablePrintOrder.AmouColumn]));
+                        return ((decimal)(this[this.tablePrintOrder.AmouColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Amou\' in table \'PrintOrder\' is DBNull.", e);
@@ -1350,6 +1380,38 @@ namespace clothesStore.DAL {
                 }
                 set {
                     this[this.tablePrintOrder.TotalAfterDiscountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal CustomerPrice {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablePrintOrder.CustomerPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerPrice\' in table \'PrintOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrintOrder.CustomerPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Balance {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablePrintOrder.BalanceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Balance\' in table \'PrintOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePrintOrder.BalanceColumn] = value;
                 }
             }
             
@@ -1543,6 +1605,30 @@ namespace clothesStore.DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalAfterDiscountNull() {
                 this[this.tablePrintOrder.TotalAfterDiscountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCustomerPriceNull() {
+                return this.IsNull(this.tablePrintOrder.CustomerPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCustomerPriceNull() {
+                this[this.tablePrintOrder.CustomerPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBalanceNull() {
+                return this.IsNull(this.tablePrintOrder.BalanceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBalanceNull() {
+                this[this.tablePrintOrder.BalanceColumn] = global::System.Convert.DBNull;
             }
         }
         

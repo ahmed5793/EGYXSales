@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using clothesStore.Bl;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using clothesStore.Bl;
-using System.Globalization;
 
 namespace clothesStore.PL
 {
@@ -335,7 +328,7 @@ namespace clothesStore.PL
                 sup.Add_SuppliersStatementAccount(Convert.ToInt32(comboBox1.EditValue), Convert.ToDecimal(txt_AfterDisc.Text),
                     Convert.ToDecimal(txt_pay.Text), "فاتورة مشتريات رقم " + " " + txt_num.Text, dateTimePicker1.Value, mno);
                 MessageBox.Show("تم اضافه الفاتوره بنجاح", "عمليه الاضافه", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                data();
+              //  data();
                 btn_save.Enabled = true;
 
 
@@ -411,6 +404,7 @@ namespace clothesStore.PL
                         r[2] = dt51.Rows[0][2];
                         r[3] = dt51.Rows[0][3];
                         r[4] = 1.00;
+                        r[8] = dt51.Rows[0][5];
                         r[6] = 0;
                         dt.Rows.Add(r);
                         Console.Beep();
@@ -454,7 +448,7 @@ namespace clothesStore.PL
         {
             try
             {
-
+                if (txt_num.Text == "") { MessageBox.Show("لابد من حفظ الفاتورة اولا "); return; }
 
                 if (gridView2.RowCount > 0)
                 {
@@ -533,16 +527,14 @@ namespace clothesStore.PL
             {
 
 
-                Frm_EditUnit Frm = new Frm_EditUnit();
+                Frm_EditQuantitySupplier Frm = new Frm_EditQuantitySupplier();
 
                 if (gridView2.RowCount > 0 && gridView2.SelectedRowsCount > 0)
                 {
                     //    Frm.cmb_Unit.DataSource = p.Select_UnitProduct(Convert.ToInt32(DgvSale.CurrentRow.Cells[0].Value));
                     //    Frm.cmb_Unit.DisplayMember = "Unit_Name";
-                   // Frm.cmb_Unit.ValueMember = "Id_Unit";
-
+                    //    Frm.cmb_Unit.ValueMember = "Id_Unit";
                     Frm.textBox1.Text = gridView2.GetFocusedRowCellValue(ID_Item).ToString();
-                   
                     Frm.Txt_Quantity.Text = gridView2.GetFocusedRowCellValue(quantity).ToString();
 
                     Frm.Txt_DisCount.Text = gridView2.GetFocusedRowCellValue(Discount).ToString();
@@ -555,18 +547,15 @@ namespace clothesStore.PL
                 if (Frm.Txt_Quantity.Text != "0" && Frm.txt_prise.Text != "" && Frm.txt_prise.Text != "0"
                     && Frm.Txt_DisCount.Text != "")
                 {
-
                     gridView2.SetFocusedRowCellValue(quantity, Frm.Txt_Quantity.Text);
                     gridView2.SetFocusedRowCellValue(Discount, Frm.Txt_DisCount.Text);
-                    gridView2.SetFocusedRowCellValue(Price, 
-                    Convert.ToDecimal(Frm.txt_prise.Text) - Convert.ToDecimal(Frm.Txt_DisCount.Text));
+                    gridView2.SetFocusedRowCellValue(Price, (Convert.ToDecimal(Frm.txt_prise.Text) - Convert.ToDecimal(Frm.Txt_DisCount.Text)));
                     calcalutordirect();
                     totaldirect();
                     calctotalinvoOrder();
                     TOTALFINALYDISCOUNT();
                     pay();
                     gridView2.RefreshData();
-
                     //DgvSale.CurrentRow.Cells[3].Value = Frm.cmb_Unit.Text;
                     //  int qu = Convert.ToInt32(gridView2.GetFocusedRowCellValue(quantity).ToString());
                     //  qu= Convert.ToInt32(Frm.Txt_Quantity.Text);
@@ -574,7 +563,9 @@ namespace clothesStore.PL
                     //disc  = Convert.ToDecimal(Frm.Txt_DisCount.Text);
                     //  decimal pri = Convert.ToDecimal(gridView2.GetFocusedRowCellValue(Price).ToString());
                     //pri  = Convert.ToDecimal(Frm.txt_prise.Text);
-                    //    DataTable dt3 = new DataTable();
+
+
+                    //DataTable dt3 = new DataTable();
                     //dt3.Clear();
                     //dt3 = p.SelectQuantityMinmun(Convert.ToInt32(gridView2.GetFocusedRowCellValue(ID_Item)));
                     //if (dt3.Rows.Count > 0)
@@ -781,7 +772,7 @@ namespace clothesStore.PL
                 Update_QtyUnit();
             }
 
-            if (e.Column.Caption == "neg")
+            if (e.Column.Name == "neg")
             {
                 for (int i = 0; i < gridView2.RowCount; i++)
                 {
@@ -795,13 +786,13 @@ namespace clothesStore.PL
 
                         decimal y = Convert.ToDecimal(row[4]);
 
-                        if (y >= Convert.ToDecimal(dt51.Rows[0][4]))
-                        {
-                            MessageBox.Show(" الكميه المدخله لهذا الصنف غير متاحه", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        else
-                        {
+                        //if (y >= Convert.ToDecimal(dt51.Rows[0][4]))
+                        //{
+                        //    MessageBox.Show(" الكميه المدخله لهذا الصنف غير متاحه", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //    return;
+                        //}
+                        //else
+                        //{
 
                             decimal x = 1;
                             row[4] = Convert.ToDecimal(row[4]) + x;
@@ -821,14 +812,14 @@ namespace clothesStore.PL
 
 
                             return;
-                        }
+                       // }
                     }
 
 
                 }
             }
 
-            if (e.Column.Caption == "Post")
+            if (e.Column.Name == "Post")
             {
                 for (int i = 0; i < gridView2.RowCount; i++)
                 {
@@ -870,7 +861,7 @@ namespace clothesStore.PL
 
                 }
             }
-            if (e.Column.Caption == "remove")
+            if (e.Column.Name == "remove")
             {
 
                 gridView2.DeleteSelectedRows();

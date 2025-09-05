@@ -127,6 +127,29 @@ namespace clothesStore.PL
                 MessageBox.Show(ex.StackTrace);
             }
         }
+        public void calcalutordirect()
+        {
+            for (int i = 0; i < gridView2.RowCount; i++)
+            {
+                DataRow row = gridView2.GetDataRow(i);
+                decimal mins = Convert.ToDecimal(row[3]) * Convert.ToInt32(row[4]);
+                row[6] = mins.ToString();
+            }
+        }
+
+
+
+        public void totaldirect()
+        {
+            for (int i = 0; i < gridView2.RowCount; i++)
+            {
+                DataRow row = gridView2.GetDataRow(i);
+                decimal amount = Convert.ToDecimal(row[6]);
+                decimal discount = Convert.ToDecimal(row[7]);
+                decimal total = amount - discount;
+                row[8] = total.ToString();
+            }
+        }
         public void TOTALFINALYDISCOUNT()
         {
             Decimal X = 0;
@@ -148,57 +171,19 @@ namespace clothesStore.PL
                 txt_AfterDisc.Text = Y.ToString();
             }
         }
-        public void calcalutordirect()
-        {
-            for (int i = 0; i < gridView2.RowCount; i++)
-            {
-                DataRow row = gridView2.GetDataRow(i);
-                decimal mins = Convert.ToDecimal(row[3]) * Convert.ToInt32(row[4]);
-                row[5] = mins.ToString();
-            }
-        }
-        public void totaldirect()
-        {
-            for (int i = 0; i < gridView2.RowCount; i++)
-            {
-                DataRow row = gridView2.GetDataRow(i);
-                decimal amount = Convert.ToDecimal(row[5]);
-                decimal discount = Convert.ToDecimal(row[6]);
-                decimal total = amount ;
-                row[7] = total.ToString();
-            }
-        }
         public void pay()
         {
-            if (comboBox1.Text=="مدفوع من العميل")
+            if (txt_AfterDisc.Text != string.Empty && txt_TotalPay.Text != string.Empty)
             {
-                if (txt_AfterDisc.Text != string.Empty)
-                {
-                    decimal totainv = Convert.ToDecimal(txt_AfterDisc.Text) - Convert.ToDecimal(txt_TotalPay.Text);
-                    txt_mark.Text = Math.Round(totainv, 1).ToString();
-                }
-                else if (txt_TotalPay.Text == string.Empty)
-                {
-                    decimal x = 0;
-                    decimal totainv = Convert.ToDecimal(txt_AfterDisc.Text) - x;
-                    txt_mark.Text = Math.Round(totainv, 1).ToString();
-                }
+                decimal totainv = Convert.ToDecimal(txt_AfterDisc.Text) - Convert.ToDecimal(txt_TotalPay.Text);
+                txt_mark.Text = Math.Round(totainv, 1).ToString();
             }
-            else if(comboBox1.Text== "مدفوع للعميل")
+            else if (txt_pay.Text == string.Empty)
             {
-                if (txt_AfterDisc.Text != string.Empty)
-                {
-                    decimal totainv = Convert.ToDecimal(txt_AfterDisc.Text) - Convert.ToDecimal(txt_TotalPay.Text);
-                    txt_mark.Text = Math.Round(totainv, 1).ToString();
-                }
-                else if (txt_TotalPay.Text == string.Empty)
-                {
-                    decimal x = 0;
-                    decimal totainv = Convert.ToDecimal(txt_AfterDisc.Text) - x;
-                    txt_mark.Text = Math.Round(totainv, 1).ToString();
-                }
+                decimal x = 0;
+                decimal totainv = Convert.ToDecimal(txt_AfterDisc.Text) - x;
+                txt_mark.Text = Math.Round(totainv, 1).ToString();
             }
-           
         }
         public void calctotalinvoOrder()
         {
@@ -206,10 +191,12 @@ namespace clothesStore.PL
             for (int i = 0; i < gridView2.RowCount; i++)
             {
                 DataRow row = gridView2.GetDataRow(i);
-                total += Convert.ToDecimal(row[7]);
+                total += Convert.ToDecimal(row[8]);
             }
             txt_invo.Text = Math.Round(total, 1).ToString();
         }
+
+
         void SelectdataTable()
         {
             dt.Columns.Add("رقم الصنف");//0
@@ -217,17 +204,16 @@ namespace clothesStore.PL
             dt.Columns.Add("النوع");//2
             dt.Columns.Add("السعر");//3
             dt.Columns.Add("الكميه"); //4
-            dt.Columns.Add("الأجمالي");//5
-            dt.Columns.Add("الخصم");//6
-            dt.Columns.Add("الاجمالي بعد الخصم");//7
+            dt.Columns.Add("سعر المستهلك"); //5
+            dt.Columns.Add("الأجمالي");//6
+            dt.Columns.Add("الخصم");//7
+            dt.Columns.Add("الاجمالي بعد الخصم");//8
             gridControl2.DataSource = dt;
         }
 
-
-
         //كود الاضافة
-       
-    public void DataRow(object sender, EventArgs e)
+
+        public void DataRow(object sender, EventArgs e)
         {
 
             try
@@ -721,10 +707,10 @@ namespace clothesStore.PL
                         DataRow row = gridView2.GetDataRow(i);
                         o.AddOrderDetails(Convert.ToInt32(txt_num.Text), Convert.ToInt32(row[0]),
                         (row[1].ToString()), Convert.ToDecimal(row[4]),
-                        Convert.ToDecimal(row[3]), Convert.ToDecimal(row[6]),
-                        Convert.ToDecimal(row[5]), Convert.ToDecimal(row[7]));
+                        Convert.ToDecimal(row[3]), Convert.ToDecimal(row[7]),
+                        Convert.ToDecimal(row[6]), Convert.ToDecimal(row[8]));
 
-                            dt51.Clear();
+                        dt51.Clear();
                             dt51 = o.SelectQuantityOFProductFromOrderReturn(Convert.ToInt32(txt_num.Text), Convert.ToInt32(row[0]));
                             if (dt51.Rows.Count > 0)
                             {
@@ -952,30 +938,30 @@ namespace clothesStore.PL
             try
             {
 
-           
-            Frm_EditUnit Frm = new Frm_EditUnit();
 
-            if (gridView2.RowCount > 0 && gridView2.SelectedRowsCount > 0)
-            {
+                Frm_EditUnit Frm = new Frm_EditUnit();
+
+                if (gridView2.RowCount > 0 && gridView2.SelectedRowsCount > 0)
+                {
                     //    Frm.cmb_Unit.DataSource = p.Select_UnitProduct(Convert.ToInt32(DgvSale.CurrentRow.Cells[0].Value));
                     //    Frm.cmb_Unit.DisplayMember = "Unit_Name";
                     //    Frm.cmb_Unit.ValueMember = "Id_Unit";
                     Frm.textBox1.Text = gridView2.GetFocusedRowCellValue(ID_Item).ToString();
-                    //Frm.Txt_Quantity.Text = gridView2.GetFocusedRowCellValue(quantity).ToString();
+                    Frm.Txt_Quantity.Text = gridView2.GetFocusedRowCellValue(quantity).ToString();
 
-                    //Frm.Txt_DisCount.Text = gridView2.GetFocusedRowCellValue(Discount).ToString();
+                    Frm.Txt_DisCount.Text = gridView2.GetFocusedRowCellValue(Discount).ToString();
 
-                    //Frm.txt_prise.Text = gridView2.GetFocusedRowCellValue(Price).ToString();
+                    Frm.txt_prise.Text = gridView2.GetFocusedRowCellValue(Price).ToString();
 
-                Frm.ShowDialog();
+                    Frm.ShowDialog();
 
-            }
-            if (Frm.Txt_Quantity.Text != "0" && Frm.txt_prise.Text != "" && Frm.txt_prise.Text != "0"
-                && Frm.Txt_DisCount.Text != "")
-            {
-                    gridView2.SetFocusedRowCellValue(quantity, Frm.Txt_Quantity.Text) ;
-                    gridView2.SetFocusedRowCellValue(Discount, Frm.Txt_DisCount.Text) ;
-                    gridView2.SetFocusedRowCellValue(Price, Convert.ToDecimal(Frm.txt_prise.Text)- Convert.ToDecimal(Frm.Txt_DisCount.Text));
+                }
+                if (Frm.Txt_Quantity.Text != "0" && Frm.txt_prise.Text != "" && Frm.txt_prise.Text != "0"
+                    && Frm.Txt_DisCount.Text != "")
+                {
+                    gridView2.SetFocusedRowCellValue(quantity, Frm.Txt_Quantity.Text);
+                    gridView2.SetFocusedRowCellValue(Discount, Convert.ToDecimal(Frm.Txt_DisCount.Text) * Convert.ToDecimal(Frm.Txt_Quantity.Text));
+                    gridView2.SetFocusedRowCellValue(Price, Convert.ToDecimal(Frm.txt_prise.Text)); //- Convert.ToDecimal(Frm.Txt_DisCount.Text));
                     calcalutordirect();
                     totaldirect();
                     calctotalinvoOrder();
@@ -991,18 +977,18 @@ namespace clothesStore.PL
                     //pri  = Convert.ToDecimal(Frm.txt_prise.Text);
 
 
-                //    DataTable dt3 = new DataTable();
-                //dt3.Clear();
-                //dt3 = p.SelectQuantityMinmun(Convert.ToInt32(gridView2.GetFocusedRowCellValue(ID_Item)));
-                //if (dt3.Rows.Count > 0)
-                //{
-                //    MessageBox.Show("عزيزيى المستخدم يرجي العلم بان هذا الصنف وصل للحد الادني", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //}
-               
-                Frm.Txt_Quantity.Clear();
-                Frm.Txt_DisCount.Clear();
-                Frm.txt_prise.Clear();
-            }
+                    //    DataTable dt3 = new DataTable();
+                    //dt3.Clear();
+                    //dt3 = p.SelectQuantityMinmun(Convert.ToInt32(gridView2.GetFocusedRowCellValue(ID_Item)));
+                    //if (dt3.Rows.Count > 0)
+                    //{
+                    //    MessageBox.Show("عزيزيى المستخدم يرجي العلم بان هذا الصنف وصل للحد الادني", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //}
+
+                    Frm.Txt_Quantity.Clear();
+                    Frm.Txt_DisCount.Clear();
+                    Frm.txt_prise.Clear();
+                }
             }
             catch (Exception ex)
             {
@@ -1126,7 +1112,7 @@ namespace clothesStore.PL
                         dt51.Rows[i][3], dt51.Rows[i][4], dt51.Rows[i][5]
                           , dt51.Rows[i][6], dt51.Rows[i][7], dt51.Rows[i][8],
                          dt51.Rows[i][9], dt51.Rows[i][10], dt51.Rows[i][11], dt51.Rows[i][12]
-                         , dt51.Rows[i][13]);
+                         , dt51.Rows[i][13], (dt51.Rows[i][14]), (dt51.Rows[i][15]), (dt51.Rows[i][16]), (dt51.Rows[i][17]));
                     }
                     SettingPrint st = new SettingPrint();
                     DataTable tbl = new DataTable();
@@ -1165,7 +1151,7 @@ namespace clothesStore.PL
                         dt51.Rows[i][3], dt51.Rows[i][4], (dt51.Rows[i][5]), (dt51.Rows[i][6])
                           , (dt51.Rows[i][7]), (dt51.Rows[i][8]), (dt51.Rows[i][9]),
                           (dt51.Rows[i][10]), dt51.Rows[i][11], (dt51.Rows[i][12]), (dt51.Rows[i][13])
-                         , (dt51.Rows[i][14]), (dt51.Rows[i][15]));
+                         , (dt51.Rows[i][14]), (dt51.Rows[i][15]), (dt51.Rows[i][16]), (dt51.Rows[i][17]));
                     }
                     SettingPrint st = new SettingPrint();
                     DataTable tbl = new DataTable();
@@ -1440,6 +1426,7 @@ namespace clothesStore.PL
 
         private void txt_NewPay_TextChanged(object sender, EventArgs e)
         {
+            
             if (txt_NewPay.Text == ".")
             {
                 txt_NewPay.Text = "0.";
@@ -1486,10 +1473,10 @@ namespace clothesStore.PL
 
         private void gridView2_RowCellClick_1(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            //if (e.Column.Name == "Item_Name")
-            //{
-            //    Update_QtyUnit();
-            //}
+            if (e.Column.Name == "Item_Name")
+            {
+                Update_QtyUnit();
+            }
 
             if (e.Column.Caption == "neg")
             {
@@ -1697,7 +1684,8 @@ namespace clothesStore.PL
                     r[2] = dt51.Rows[0][2];
                     r[3] = dt51.Rows[0][3];
                     r[4] = 1.00;
-                    r[6] = 0;
+                    r[5] = dt51.Rows[0][7] != null ? dt51.Rows[0][7] : 0;
+                    r[7] = 0;
                     dt.Rows.Add(r);
                     Console.Beep();
                     gridControl2.DataSource = dt;
@@ -1831,6 +1819,127 @@ namespace clothesStore.PL
                 MessageBox.Show(ex.Message);
                 MessageBox.Show(ex.StackTrace);
             }
+        }
+
+        private void gridView2_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            try
+            {
+
+
+
+                if (e.Column.Name == "Item_Name")
+                {
+                    Update_QtyUnit();
+                }
+
+                if (e.Column.Caption == "neg")
+                {
+
+                    for (int i = 0; i < gridView2.RowCount; i++)
+                    {
+                        dt51.Clear();
+                        dt51 = p.selectListProudect(Convert.ToInt32(gridView2.GetFocusedRowCellValue(ID_Item)));
+                        DataRow row = gridView2.GetDataRow(i);
+                        if (gridView2.GetFocusedRowCellValue(ID_Item).ToString() == row[0].ToString())
+                        {
+                            //MessageBox.Show("هذا الصنف متسجل حاليا");
+                            //return;
+
+                            decimal y = Convert.ToDecimal(row[4]);
+
+                            if (y >= Convert.ToDecimal(dt51.Rows[0][4]))
+                            {
+                                MessageBox.Show(" الكميه المدخله لهذا الصنف غير متاحه", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            else
+                            {
+
+                                decimal x = 1;
+                                row[4] = Convert.ToDecimal(row[4]) + x;
+                                Console.Beep();
+                                calcalutordirect();
+                                totaldirect();
+                                calctotalinvoOrder();
+                                TOTALFINALYDISCOUNT();
+                                pay();
+                                gridView2.RefreshData();
+                                //dt5.Clear();
+                                //dt5 = p.SelectQuantityMinmun(Convert.ToInt32(dt51.Rows[0][0]));
+                                //if (dt5.Rows.Count > 0)
+                                //{
+                                //    MessageBox.Show("عزيزيى المستخدم يرجي العلم بان هذا الصنف وصل للحد الادني", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                //}
+
+
+                                return;
+                            }
+                        }
+
+
+                    }
+                }
+
+                if (e.Column.Caption == "Post")
+                {
+                    for (int i = 0; i < gridView2.RowCount; i++)
+                    {
+                        DataRow row = gridView2.GetDataRow(i);
+                        if (gridView2.GetFocusedRowCellValue(ID_Item).ToString() == row[0].ToString())
+                        {
+                            //MessageBox.Show("هذا الصنف متسجل حاليا");
+                            //return;
+
+
+
+
+                            if (Convert.ToInt32(row[4]) == 1)
+                            {
+                                return;
+                            }
+
+                            decimal x = 1;
+                            row[4] = Convert.ToDecimal(row[4]) - x;
+                            Console.Beep();
+                            calcalutordirect();
+                            totaldirect();
+                            calctotalinvoOrder();
+                            TOTALFINALYDISCOUNT();
+                            pay();
+                            gridView2.RefreshData();
+
+                            //dt5.Clear();
+                            //dt5 = p.SelectQuantityMinmun(Convert.ToInt32(dt51.Rows[0][0]));
+                            //if (dt5.Rows.Count > 0)
+                            //{
+                            //    MessageBox.Show("عزيزيى المستخدم يرجي العلم بان هذا الصنف وصل للحد الادني", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            //}
+
+                            return;
+
+                        }
+
+
+                    }
+                }
+                if (e.Column.Caption == "remove")
+                {
+
+                    gridView2.DeleteSelectedRows();
+
+                    calctotalinvoOrder();
+                    TOTALFINALYDISCOUNT();
+                    pay();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace);
+            }
+
         }
     }
     }

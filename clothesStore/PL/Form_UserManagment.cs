@@ -15,6 +15,7 @@ namespace clothesStore.PL
     {
         Login l = new Login();
         Permession p = new Permession();
+        DataTable dt = new DataTable();
         public Form_UserManagment()
         {
            
@@ -22,6 +23,7 @@ namespace clothesStore.PL
             dataGridViewList.DataSource = l.SelectUsers();
             btn_delete.Enabled = false;
             btn_update.Enabled = false;
+            dataGridViewList.Columns[1].Visible = false;
             button1.Hide();
            
         }
@@ -32,14 +34,23 @@ namespace clothesStore.PL
             txt_User.Text = "";
             txt_Pass.Text = "";
             txt_PassRealy.Text = "";
-           
+            dataGridViewList.Columns[1].Visible = false;
+
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //dt.Clear();
+            //dt = l.SelectUsers();
             try
             {
+             
+                //if (dt.Rows.Count>1)
+                //{
+                //    MessageBox.Show("لا يمكن اضافة مستخدم اخر ");
+                //    return;
+                //}
                 if (txt_User.Text == string.Empty || txt_Pass.Text == string.Empty || txt_PassRealy.Text == string.Empty || txt_Fullname.Text == string.Empty)
                 {
                     MessageBox.Show("من فضلك ادخل البيانات كامله");
@@ -223,6 +234,11 @@ namespace clothesStore.PL
             btn_save.Show();
             button1.Hide();
             txt_User.Enabled = true;
+        }
+
+        private void dataGridViewList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

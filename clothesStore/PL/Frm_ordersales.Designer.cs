@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ordersales));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new DevExpress.XtraEditors.LookUpEdit();
             this.label9 = new System.Windows.Forms.Label();
@@ -71,7 +66,10 @@
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.remove = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonremove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.ID_Item = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Item_Name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Category = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Price = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -83,8 +81,6 @@
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.Post = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonMins = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.remove = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonremove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.Btn_Print = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBox1.Properties)).BeginInit();
@@ -93,9 +89,9 @@
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMins)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -675,6 +671,7 @@
             this.gridControl2.TabIndex = 129;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.gridControl2.Click += new System.EventHandler(this.gridControl2_Click);
             // 
             // gridView2
             // 
@@ -733,7 +730,9 @@
             this.gridView2.AppearancePrint.Row.Options.UseTextOptions = true;
             this.gridView2.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.remove,
             this.ID_Item,
+            this.gridColumn1,
             this.Item_Name,
             this.Category,
             this.Price,
@@ -742,8 +741,7 @@
             this.Discount,
             this.AfterDiscount,
             this.neg,
-            this.Post,
-            this.remove});
+            this.Post});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -753,8 +751,25 @@
             this.gridView2.OptionsBehavior.ReadOnly = true;
             this.gridView2.OptionsCustomization.AllowGroup = false;
             this.gridView2.OptionsPrint.PrintPreview = true;
+            this.gridView2.OptionsView.ColumnAutoWidth = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
+            // 
+            // remove
+            // 
+            this.remove.ColumnEdit = this.repositoryItemButtonremove;
+            this.remove.Name = "remove";
+            this.remove.Visible = true;
+            this.remove.VisibleIndex = 0;
+            this.remove.Width = 40;
+            // 
+            // repositoryItemButtonremove
+            // 
+            this.repositoryItemButtonremove.AutoHeight = false;
+            this.repositoryItemButtonremove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
+            this.repositoryItemButtonremove.Name = "repositoryItemButtonremove";
+            this.repositoryItemButtonremove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // ID_Item
             // 
@@ -768,6 +783,16 @@
             this.ID_Item.OptionsColumn.ReadOnly = true;
             this.ID_Item.Width = 20;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "باركود";
+            this.gridColumn1.FieldName = "باركود";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 150;
+            // 
             // Item_Name
             // 
             this.Item_Name.Caption = "اسم الصنف";
@@ -780,15 +805,17 @@
             this.Item_Name.OptionsColumn.FixedWidth = true;
             this.Item_Name.OptionsColumn.ReadOnly = true;
             this.Item_Name.Visible = true;
-            this.Item_Name.VisibleIndex = 0;
-            this.Item_Name.Width = 450;
+            this.Item_Name.VisibleIndex = 2;
+            this.Item_Name.Width = 300;
             // 
             // Category
             // 
             this.Category.Caption = "النوع";
             this.Category.FieldName = "النوع";
             this.Category.Name = "Category";
-            this.Category.Width = 100;
+            this.Category.Visible = true;
+            this.Category.VisibleIndex = 3;
+            this.Category.Width = 150;
             // 
             // Price
             // 
@@ -802,7 +829,7 @@
             this.Price.OptionsColumn.FixedWidth = true;
             this.Price.OptionsColumn.ReadOnly = true;
             this.Price.Visible = true;
-            this.Price.VisibleIndex = 1;
+            this.Price.VisibleIndex = 4;
             this.Price.Width = 100;
             // 
             // quantity
@@ -818,7 +845,7 @@
             this.quantity.OptionsColumn.FixedWidth = true;
             this.quantity.OptionsColumn.ReadOnly = true;
             this.quantity.Visible = true;
-            this.quantity.VisibleIndex = 2;
+            this.quantity.VisibleIndex = 5;
             this.quantity.Width = 100;
             // 
             // Total
@@ -833,24 +860,26 @@
             this.Total.OptionsColumn.FixedWidth = true;
             this.Total.OptionsColumn.ReadOnly = true;
             this.Total.Visible = true;
-            this.Total.VisibleIndex = 3;
+            this.Total.VisibleIndex = 6;
             this.Total.Width = 100;
             // 
             // Discount
             // 
             this.Discount.Caption = "الخصم";
-            this.Discount.FieldName = "الخصم على سعر الوحدة ";
+            this.Discount.FieldName = "الخصم";
             this.Discount.Name = "Discount";
             this.Discount.Visible = true;
-            this.Discount.VisibleIndex = 4;
-            this.Discount.Width = 147;
+            this.Discount.VisibleIndex = 7;
+            this.Discount.Width = 100;
             // 
             // AfterDiscount
             // 
             this.AfterDiscount.Caption = "بعد الخصم";
             this.AfterDiscount.FieldName = "الاجمالي بعد الخصم";
             this.AfterDiscount.Name = "AfterDiscount";
-            this.AfterDiscount.Width = 20;
+            this.AfterDiscount.Visible = true;
+            this.AfterDiscount.VisibleIndex = 8;
+            this.AfterDiscount.Width = 100;
             // 
             // neg
             // 
@@ -858,25 +887,14 @@
             this.neg.AppearanceCell.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.neg.AppearanceCell.Options.UseBackColor = true;
             this.neg.AppearanceCell.Options.UseFont = true;
-            this.neg.Caption = "neg";
             this.neg.ColumnEdit = this.repositoryItemButtonEdit1;
-            this.neg.FieldName = "neg";
-            this.neg.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
-            this.neg.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("neg.ImageOptions.SvgImage")));
             this.neg.Name = "neg";
-            this.neg.OptionsColumn.AllowEdit = false;
-            this.neg.OptionsColumn.AllowMove = false;
-            this.neg.OptionsColumn.AllowShowHide = false;
-            this.neg.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.neg.OptionsColumn.FixedWidth = true;
-            this.neg.OptionsColumn.ReadOnly = true;
             this.neg.Visible = true;
-            this.neg.VisibleIndex = 5;
+            this.neg.VisibleIndex = 9;
             this.neg.Width = 40;
             // 
             // repositoryItemButtonEdit1
             // 
-            this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
             this.repositoryItemButtonEdit1.LookAndFeel.SkinMaskColor = System.Drawing.Color.CornflowerBlue;
@@ -888,19 +906,11 @@
             // 
             // Post
             // 
-            this.Post.Caption = "Post";
             this.Post.ColumnEdit = this.repositoryItemButtonMins;
-            this.Post.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
-            this.Post.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Post.ImageOptions.SvgImage")));
+            this.Post.ImageOptions.Alignment = System.Drawing.StringAlignment.Far;
             this.Post.Name = "Post";
-            this.Post.OptionsColumn.AllowEdit = false;
-            this.Post.OptionsColumn.AllowMove = false;
-            this.Post.OptionsColumn.AllowShowHide = false;
-            this.Post.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.Post.OptionsColumn.FixedWidth = true;
-            this.Post.OptionsColumn.ReadOnly = true;
             this.Post.Visible = true;
-            this.Post.VisibleIndex = 6;
+            this.Post.VisibleIndex = 10;
             this.Post.Width = 40;
             // 
             // repositoryItemButtonMins
@@ -914,32 +924,6 @@
             this.repositoryItemButtonMins.LookAndFeel.UseDefaultLookAndFeel = false;
             this.repositoryItemButtonMins.Name = "repositoryItemButtonMins";
             this.repositoryItemButtonMins.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // remove
-            // 
-            this.remove.Caption = "remove";
-            this.remove.ColumnEdit = this.repositoryItemButtonremove;
-            this.remove.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
-            this.remove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("remove.ImageOptions.Image")));
-            this.remove.Name = "remove";
-            this.remove.OptionsColumn.AllowEdit = false;
-            this.remove.OptionsColumn.AllowMove = false;
-            this.remove.OptionsColumn.AllowShowHide = false;
-            this.remove.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.remove.OptionsColumn.FixedWidth = true;
-            this.remove.OptionsColumn.ReadOnly = true;
-            this.remove.Visible = true;
-            this.remove.VisibleIndex = 7;
-            this.remove.Width = 40;
-            // 
-            // repositoryItemButtonremove
-            // 
-            this.repositoryItemButtonremove.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            this.repositoryItemButtonremove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonremove.Name = "repositoryItemButtonremove";
-            this.repositoryItemButtonremove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // Btn_Print
             // 
@@ -1016,9 +1000,9 @@
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMins)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1076,5 +1060,6 @@
         public DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonremove;
         private DevExpress.XtraEditors.LookUpEdit comboBox1;
         public DevExpress.XtraEditors.SimpleButton Btn_Print;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

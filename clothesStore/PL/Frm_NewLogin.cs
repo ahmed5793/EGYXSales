@@ -1,20 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using clothesStore.Bl;
+using clothesStore.Serila;
+using System;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using System.Windows.Input;
-using System.Data.SqlClient;
-using System.IO;
-using Microsoft.SqlServer.Server;
-using System.Collections.Specialized;
-using clothesStore.Bl;
-using clothesStore.Serila;
 
 namespace clothesStore.PL
 {
@@ -821,7 +810,11 @@ namespace clothesStore.PL
                         MessageBox.Show("PLEASE INSERT PASSWORD");
                         return;
                     }
-
+                    if (txt_User.Text !="admin")
+                    {
+                        MessageBox.Show("sorry this user does not have permession to log into application");
+                        Application.Exit();
+                    }
                     else
                     {
 
@@ -935,6 +928,7 @@ namespace clothesStore.PL
             {
 
                 MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace);
 
             }
 
@@ -995,6 +989,15 @@ namespace clothesStore.PL
             
         }
 
-      
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void simpleButton5_Click_1(object sender, EventArgs e)
+        {
+            Form1 d = new Form1();
+            d.ShowDialog();
+        }
     }
     }

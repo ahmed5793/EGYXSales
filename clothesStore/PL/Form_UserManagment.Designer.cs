@@ -186,6 +186,7 @@
             this.dataGridViewList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewList.Size = new System.Drawing.Size(623, 255);
             this.dataGridViewList.TabIndex = 8;
+            this.dataGridViewList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewList_CellContentClick);
             this.dataGridViewList.DoubleClick += new System.EventHandler(this.dataGridViewList_DoubleClick);
             // 
             // button1

@@ -35,8 +35,17 @@ namespace clothesStore.PL
         private void btn_save_Click(object sender, EventArgs e)
         {
             try
-            {    
-                 if(txt_name.Text=="")
+            {
+                //dt.Clear();
+                //dt = cm.SelectCustomer();
+                //if (dt.Rows.Count >= 10)
+                //{
+                //    MessageBox.Show("لقد تم نفاذ إضافه العملاء المحدد بالنسبه للنسخه التجريبيه ");
+                //    //Application.Exit();
+                //    this.Close();
+                //    return;
+                //}
+                if (txt_name.Text=="")
                 {
                     MessageBox.Show("يرجي التاكد من اسم العميل");
                     return;

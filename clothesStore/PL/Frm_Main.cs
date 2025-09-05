@@ -170,7 +170,7 @@ namespace clothesStore.PL
         {
             //FrmSalesReb7 fsr = new FrmSalesReb7();
             //    //fsr.MdiParent = this;
-            //    fsr.Show();           
+           // fsr.Show();
 
             frm_ReportReveune rv = new frm_ReportReveune();
             rv.Show();
@@ -271,8 +271,9 @@ namespace clothesStore.PL
         private void Btn_ReportAllProduct_ItemClick(object sender, ItemClickEventArgs e)
         {
             Frm_AllProudect fap = new Frm_AllProudect();
-                //fap.MdiParent = this;
-                fap.Show();    
+         //   Frm_AllProduct fap = new Frm_AllProduct();
+            //fap.MdiParent = this;
+            fap.Show();    
         }
         private void Btn_prodtrans_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -719,6 +720,12 @@ namespace clothesStore.PL
             Form_DeletedPurshasing form_DeletedPurshasing = new Form_DeletedPurshasing();
 
             form_DeletedPurshasing.Show();
+        }
+
+        private void barButtonItem30_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            FormStatues frmstuta = new FormStatues();
+            frmstuta.Show();
         }
     }
 }

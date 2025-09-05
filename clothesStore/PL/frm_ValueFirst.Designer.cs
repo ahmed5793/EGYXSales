@@ -137,7 +137,7 @@ namespace clothesStore.PL
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(336, 39);
+            this.labelControl1.Location = new System.Drawing.Point(336, 35);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(139, 22);
             this.labelControl1.TabIndex = 0;
@@ -161,7 +161,7 @@ namespace clothesStore.PL
             this.labelControl3.Appearance.Options.UseBackColor = true;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(364, 41);
+            this.labelControl3.Location = new System.Drawing.Point(364, 37);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(95, 22);
             this.labelControl3.TabIndex = 183;

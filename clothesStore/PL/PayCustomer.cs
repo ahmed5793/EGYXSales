@@ -84,14 +84,14 @@ namespace clothesStore.PL
 
                         {                           
                             o.InsertPayCustomer(Convert.ToDecimal(dataGridView1.CurrentRow.Cells[1].Value), dateTimePicker1.Value,
-                                Convert.ToInt32(comboBox1.SelectedValue), Txt_SalesMan.Text);
+                                Convert.ToInt32(comboBox1.SelectedValue), Txt_SalesMan.Text,txt_note.Text);
                             s.add_insertStock(Convert.ToInt32(cmb_Stock.SelectedValue), Convert.ToDecimal(dataGridView1.CurrentRow.Cells[1].Value), dateTimePicker1.Value, Txt_SalesMan.Text, "  رصيد مضاف الى الخزنة من مدفوعات عميل",  "مدفوعات  عميل من" +" "+ comboBox1.Text);
                             s.InsertStockMove(Convert.ToDecimal(dataGridView1.CurrentRow.Cells[1].Value), dateTimePicker1.Value, "حساب عميل", $"مدفوعات عميل من {comboBox1.Text}", Convert.ToInt32(cmb_Stock.SelectedValue), Txt_SalesMan.Text, "دخول الي الخزينة");
 
                             decimal mno = Convert.ToDecimal(dt51.Rows[0][1]) - Convert.ToDecimal(dataGridView1.CurrentRow.Cells[1].Value);
                             Cm.Update_CustomerTotalMoney(Convert.ToInt32(comboBox1.SelectedValue), mno);
                             Cm.Add_CustomerStatmentAccount(Convert.ToInt32(comboBox1.SelectedValue), Convert.ToDecimal(dataGridView1.CurrentRow.Cells[1].Value),
-                                0, "مدفوعات عميل " + " " + comboBox1.Text, dateTimePicker1.Value, mno, Program.salesman);
+                                0, "مدفوعات عميل " + " " + comboBox1.Text + " " + txt_note.Text, dateTimePicker1.Value, mno, Program.salesman);
                             MessageBox.Show("تم دفع المبلغ بنجاح");
 
                             l.addMoveUser(Program.salesman, this.Text, $"مدفوعات من عميل {comboBox1.Text} مبلغ {dataGridView1.CurrentRow.Cells[1].Value}");
@@ -114,7 +114,7 @@ namespace clothesStore.PL
                         {
                             if (Convert.ToDecimal(txt_prise.Text) > 0)
                             {
-                                o.InsertPayCustomer(Convert.ToDecimal(txt_prise.Text), dateTimePicker1.Value, Convert.ToInt32(comboBox1.SelectedValue), Txt_SalesMan.Text);
+                                o.InsertPayCustomer(Convert.ToDecimal(txt_prise.Text), dateTimePicker1.Value, Convert.ToInt32(comboBox1.SelectedValue), Txt_SalesMan.Text,txt_note.Text);
                                 s.add_insertStock(Convert.ToInt32(cmb_Stock.SelectedValue), Convert.ToDecimal(txt_prise.Text), dateTimePicker1.Value, Txt_SalesMan.Text, "  رصيد مضاف الى الخزنة من مدفوعات عميل", "مدفوعات  عميل من" + " " + comboBox1.Text);
 
                                 s.InsertStockMove(Convert.ToDecimal(txt_prise.Text), dateTimePicker1.Value, "حساب عميل", $"مدفوعات عميل من {comboBox1.Text}", Convert.ToInt32(cmb_Stock.SelectedValue), Txt_SalesMan.Text, "دخول الي الخزينة");
@@ -122,7 +122,7 @@ namespace clothesStore.PL
                                 decimal mno = Convert.ToDecimal(dt51.Rows[0][1]) - Convert.ToDecimal(txt_prise.Text);
                                 Cm.Update_CustomerTotalMoney(Convert.ToInt32(comboBox1.SelectedValue), mno);
                                 Cm.Add_CustomerStatmentAccount(Convert.ToInt32(comboBox1.SelectedValue), Convert.ToDecimal(txt_prise.Text),
-                                    0, "مدفوعات عميل " + " " + comboBox1.Text, dateTimePicker1.Value, mno, Program.salesman);
+                                    0, "مدفوعات عميل " + " " + comboBox1.Text +" "+txt_note.Text, dateTimePicker1.Value, mno, Program.salesman);
                                 MessageBox.Show("تم دفع المبلغ بنجاح");
                                 l.addMoveUser(Program.salesman, this.Text, $"مدفوعات من عميل {comboBox1.Text} مبلغ {txt_prise.Text}");
 

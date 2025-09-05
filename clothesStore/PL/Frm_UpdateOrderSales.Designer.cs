@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_UpdateOrderSales));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txt_barcode = new System.Windows.Forms.TextBox();
@@ -58,6 +53,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cmb_Stock = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_Service = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_Na2l = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.txt_AfterDisc = new System.Windows.Forms.TextBox();
             this.txt_invo = new System.Windows.Forms.TextBox();
@@ -76,6 +75,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txt_NewPay = new System.Windows.Forms.TextBox();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID_Item = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -83,6 +85,7 @@
             this.Category = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Price = new DevExpress.XtraGrid.Columns.GridColumn();
             this.quantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Total = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Discount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.AfterDiscount = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -92,24 +95,24 @@
             this.repositoryItemButtonMins = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.remove = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonremove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.txt_Na2l = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_Service = new System.Windows.Forms.TextBox();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmb_search.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -469,6 +472,68 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // txt_Service
+            // 
+            this.txt_Service.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Service.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txt_Service.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Service.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Service.ForeColor = System.Drawing.Color.White;
+            this.txt_Service.Location = new System.Drawing.Point(6, 160);
+            this.txt_Service.Name = "txt_Service";
+            this.txt_Service.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_Service.Size = new System.Drawing.Size(151, 25);
+            this.txt_Service.TabIndex = 6;
+            this.txt_Service.Text = "0.0";
+            this.txt_Service.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Service.Visible = false;
+            this.txt_Service.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Service_KeyPress);
+            this.txt_Service.Leave += new System.EventHandler(this.txt_Service_Leave);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(189, 158);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 24);
+            this.label12.TabIndex = 78;
+            this.label12.Text = "تركيب";
+            this.label12.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(180, 124);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 24);
+            this.label11.TabIndex = 76;
+            this.label11.Text = "خدمة نقل";
+            this.label11.Visible = false;
+            // 
+            // txt_Na2l
+            // 
+            this.txt_Na2l.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Na2l.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_Na2l.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Na2l.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Na2l.ForeColor = System.Drawing.Color.White;
+            this.txt_Na2l.Location = new System.Drawing.Point(6, 125);
+            this.txt_Na2l.Name = "txt_Na2l";
+            this.txt_Na2l.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_Na2l.Size = new System.Drawing.Size(150, 25);
+            this.txt_Na2l.TabIndex = 65;
+            this.txt_Na2l.Text = "0.0";
+            this.txt_Na2l.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Na2l.Visible = false;
+            this.txt_Na2l.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Na2l_KeyPress);
+            this.txt_Na2l.Leave += new System.EventHandler(this.txt_Na2l_Leave);
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -796,7 +861,7 @@
             this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl4.Controls.Add(this.gridControl2);
+            this.groupControl4.Controls.Add(this.layoutControl1);
             this.groupControl4.Location = new System.Drawing.Point(4, 147);
             this.groupControl4.LookAndFeel.SkinName = "Office 2016 Black";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -805,11 +870,43 @@
             this.groupControl4.TabIndex = 132;
             this.groupControl4.Text = "اصناف الفاتورة";
             // 
+            // groupControl1
+            // 
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.btn_save);
+            this.groupControl1.Controls.Add(this.Btn_Print);
+            this.groupControl1.Location = new System.Drawing.Point(851, 435);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(283, 175);
+            this.groupControl1.TabIndex = 133;
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.gridControl2);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 25);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(1138, 251);
+            this.layoutControl1.TabIndex = 0;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1138, 251);
+            this.Root.TextVisible = false;
+            // 
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridControl2.Location = new System.Drawing.Point(0, 25);
+            this.gridControl2.Location = new System.Drawing.Point(12, 12);
             this.gridControl2.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             this.gridControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControl2.MainView = this.gridView2;
@@ -819,8 +916,8 @@
             this.repositoryItemButtonMins,
             this.repositoryItemButtonremove});
             this.gridControl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl2.Size = new System.Drawing.Size(1138, 251);
-            this.gridControl2.TabIndex = 129;
+            this.gridControl2.Size = new System.Drawing.Size(1114, 227);
+            this.gridControl2.TabIndex = 130;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -886,6 +983,7 @@
             this.Category,
             this.Price,
             this.quantity,
+            this.gridColumn1,
             this.Total,
             this.Discount,
             this.AfterDiscount,
@@ -901,8 +999,9 @@
             this.gridView2.OptionsBehavior.ReadOnly = true;
             this.gridView2.OptionsCustomization.AllowGroup = false;
             this.gridView2.OptionsPrint.PrintPreview = true;
+            this.gridView2.OptionsView.ColumnAutoWidth = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
-            this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick_1);
+            this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
             // 
             // ID_Item
             // 
@@ -914,7 +1013,7 @@
             this.ID_Item.OptionsColumn.AllowShowHide = false;
             this.ID_Item.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.ID_Item.OptionsColumn.ReadOnly = true;
-            this.ID_Item.Width = 90;
+            this.ID_Item.Width = 20;
             // 
             // Item_Name
             // 
@@ -929,18 +1028,18 @@
             this.Item_Name.OptionsColumn.ReadOnly = true;
             this.Item_Name.Visible = true;
             this.Item_Name.VisibleIndex = 0;
-            this.Item_Name.Width = 420;
+            this.Item_Name.Width = 350;
             // 
             // Category
             // 
             this.Category.Caption = "النوع";
             this.Category.FieldName = "النوع";
             this.Category.Name = "Category";
-            this.Category.Width = 110;
+            this.Category.Width = 100;
             // 
             // Price
             // 
-            this.Price.Caption = "السعر";
+            this.Price.Caption = "سعر البيع ";
             this.Price.FieldName = "السعر";
             this.Price.Name = "Price";
             this.Price.OptionsColumn.AllowEdit = false;
@@ -951,7 +1050,7 @@
             this.Price.OptionsColumn.ReadOnly = true;
             this.Price.Visible = true;
             this.Price.VisibleIndex = 1;
-            this.Price.Width = 110;
+            this.Price.Width = 150;
             // 
             // quantity
             // 
@@ -967,7 +1066,16 @@
             this.quantity.OptionsColumn.ReadOnly = true;
             this.quantity.Visible = true;
             this.quantity.VisibleIndex = 2;
-            this.quantity.Width = 110;
+            this.quantity.Width = 100;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "سعر المستهلك";
+            this.gridColumn1.FieldName = "سعر المستهلك";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 3;
+            this.gridColumn1.Width = 150;
             // 
             // Total
             // 
@@ -980,7 +1088,9 @@
             this.Total.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.Total.OptionsColumn.FixedWidth = true;
             this.Total.OptionsColumn.ReadOnly = true;
-            this.Total.Width = 149;
+            this.Total.Visible = true;
+            this.Total.VisibleIndex = 4;
+            this.Total.Width = 150;
             // 
             // Discount
             // 
@@ -988,17 +1098,17 @@
             this.Discount.FieldName = "الخصم";
             this.Discount.Name = "Discount";
             this.Discount.Visible = true;
-            this.Discount.VisibleIndex = 3;
-            this.Discount.Width = 210;
+            this.Discount.VisibleIndex = 5;
+            this.Discount.Width = 100;
             // 
             // AfterDiscount
             // 
-            this.AfterDiscount.Caption = "بعد الخصم";
+            this.AfterDiscount.Caption = "الاجمالي بعد الخصم";
             this.AfterDiscount.FieldName = "الاجمالي بعد الخصم";
             this.AfterDiscount.Name = "AfterDiscount";
             this.AfterDiscount.Visible = true;
-            this.AfterDiscount.VisibleIndex = 4;
-            this.AfterDiscount.Width = 100;
+            this.AfterDiscount.VisibleIndex = 6;
+            this.AfterDiscount.Width = 150;
             // 
             // neg
             // 
@@ -1019,7 +1129,7 @@
             this.neg.OptionsColumn.FixedWidth = true;
             this.neg.OptionsColumn.ReadOnly = true;
             this.neg.Visible = true;
-            this.neg.VisibleIndex = 5;
+            this.neg.VisibleIndex = 7;
             this.neg.Width = 40;
             // 
             // repositoryItemButtonEdit1
@@ -1048,7 +1158,7 @@
             this.Post.OptionsColumn.FixedWidth = true;
             this.Post.OptionsColumn.ReadOnly = true;
             this.Post.Visible = true;
-            this.Post.VisibleIndex = 6;
+            this.Post.VisibleIndex = 8;
             this.Post.Width = 40;
             // 
             // repositoryItemButtonMins
@@ -1077,89 +1187,25 @@
             this.remove.OptionsColumn.FixedWidth = true;
             this.remove.OptionsColumn.ReadOnly = true;
             this.remove.Visible = true;
-            this.remove.VisibleIndex = 7;
-            this.remove.Width = 40;
+            this.remove.VisibleIndex = 9;
+            this.remove.Width = 50;
             // 
             // repositoryItemButtonremove
             // 
             this.repositoryItemButtonremove.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.repositoryItemButtonremove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
             this.repositoryItemButtonremove.Name = "repositoryItemButtonremove";
             this.repositoryItemButtonremove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // groupControl1
+            // layoutControlItem1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.Controls.Add(this.btn_save);
-            this.groupControl1.Controls.Add(this.Btn_Print);
-            this.groupControl1.Location = new System.Drawing.Point(851, 435);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(283, 175);
-            this.groupControl1.TabIndex = 133;
-            // 
-            // txt_Na2l
-            // 
-            this.txt_Na2l.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Na2l.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_Na2l.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Na2l.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Na2l.ForeColor = System.Drawing.Color.White;
-            this.txt_Na2l.Location = new System.Drawing.Point(6, 125);
-            this.txt_Na2l.Name = "txt_Na2l";
-            this.txt_Na2l.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_Na2l.Size = new System.Drawing.Size(150, 25);
-            this.txt_Na2l.TabIndex = 65;
-            this.txt_Na2l.Text = "0.0";
-            this.txt_Na2l.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_Na2l.Visible = false;
-            this.txt_Na2l.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Na2l_KeyPress);
-            this.txt_Na2l.Leave += new System.EventHandler(this.txt_Na2l_Leave);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(180, 124);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 24);
-            this.label11.TabIndex = 76;
-            this.label11.Text = "خدمة نقل";
-            this.label11.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(189, 158);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 24);
-            this.label12.TabIndex = 78;
-            this.label12.Text = "تركيب";
-            this.label12.Visible = false;
-            // 
-            // txt_Service
-            // 
-            this.txt_Service.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Service.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txt_Service.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Service.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Service.ForeColor = System.Drawing.Color.White;
-            this.txt_Service.Location = new System.Drawing.Point(6, 160);
-            this.txt_Service.Name = "txt_Service";
-            this.txt_Service.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_Service.Size = new System.Drawing.Size(151, 25);
-            this.txt_Service.TabIndex = 6;
-            this.txt_Service.Text = "0.0";
-            this.txt_Service.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_Service.Visible = false;
-            this.txt_Service.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Service_KeyPress);
-            this.txt_Service.Leave += new System.EventHandler(this.txt_Service_Leave);
+            this.layoutControlItem1.Control = this.gridControl2;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1118, 231);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
             // Frm_UpdateOrderSales
             // 
@@ -1203,13 +1249,17 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1247,25 +1297,9 @@
         public System.Windows.Forms.TextBox txt_TotalPay;
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.TextBox Id_Stock;
-        public DevExpress.XtraGrid.GridControl gridControl2;
-        public DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        public DevExpress.XtraGrid.Columns.GridColumn ID_Item;
-        public DevExpress.XtraGrid.Columns.GridColumn Item_Name;
-        public DevExpress.XtraGrid.Columns.GridColumn Price;
-        public DevExpress.XtraGrid.Columns.GridColumn quantity;
-        public DevExpress.XtraGrid.Columns.GridColumn Total;
-        public DevExpress.XtraGrid.Columns.GridColumn Post;
-        public DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonMins;
-        public DevExpress.XtraGrid.Columns.GridColumn remove;
-        public DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonremove;
         public DevExpress.XtraEditors.LookUpEdit cmb_search;
         public System.Windows.Forms.ComboBox comboBox1;
         public DevExpress.XtraEditors.GroupControl groupControl4;
-        public DevExpress.XtraGrid.Columns.GridColumn Category;
-        public DevExpress.XtraGrid.Columns.GridColumn Discount;
-        public DevExpress.XtraGrid.Columns.GridColumn AfterDiscount;
-        public DevExpress.XtraGrid.Columns.GridColumn neg;
-        public DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.ComboBox Cmb_Category;
         public DevExpress.XtraEditors.SimpleButton simpleButton2;
@@ -1278,5 +1312,25 @@
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox txt_Na2l;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        public DevExpress.XtraGrid.GridControl gridControl2;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        public DevExpress.XtraGrid.Columns.GridColumn ID_Item;
+        public DevExpress.XtraGrid.Columns.GridColumn Item_Name;
+        private DevExpress.XtraGrid.Columns.GridColumn Category;
+        public DevExpress.XtraGrid.Columns.GridColumn Price;
+        public DevExpress.XtraGrid.Columns.GridColumn quantity;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        public DevExpress.XtraGrid.Columns.GridColumn Total;
+        private DevExpress.XtraGrid.Columns.GridColumn Discount;
+        private DevExpress.XtraGrid.Columns.GridColumn AfterDiscount;
+        private DevExpress.XtraGrid.Columns.GridColumn neg;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        public DevExpress.XtraGrid.Columns.GridColumn Post;
+        public DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonMins;
+        public DevExpress.XtraGrid.Columns.GridColumn remove;
+        public DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonremove;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

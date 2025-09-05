@@ -251,11 +251,11 @@ namespace clothesStore.Bl
 
 
 
-        internal void InsertPayCustomer( decimal pay,DateTime date,int idCast , string Sales_Man)
+        internal void InsertPayCustomer( decimal pay,DateTime date,int idCast , string Sales_Man,string Notes)
         {
             DataAccessLayer da = new DataAccessLayer();
             da.open();
-            SqlParameter[] param = new SqlParameter[4];
+            SqlParameter[] param = new SqlParameter[5];
             param[0] = new SqlParameter("@pay", SqlDbType.Decimal);
             param[0].Value = pay;
             param[1] = new SqlParameter("@date", SqlDbType.DateTime);
@@ -264,6 +264,8 @@ namespace clothesStore.Bl
             param[2].Value = idCast;
             param[3] = new SqlParameter("@Sale_Man", SqlDbType.NVarChar,50);
             param[3].Value = idCast;
+            param[4] = new SqlParameter("@Notes", SqlDbType.NVarChar, 50);
+            param[4].Value = Notes;
             da.excutequery("InsertPayCustomer", param);
             da.close();
         }

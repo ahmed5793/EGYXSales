@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using clothesStore.PL;
+using System;
 using System.Windows.Forms;
-using clothesStore.PL;
 
 namespace clothesStore
 {
@@ -20,11 +17,13 @@ namespace clothesStore
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-              //
-            Application.Run(new Frm_NewLogin () );
-         //   Application.Run(new clothesStore.Serila.Home () );
+            //
+           // Application.Run(new FRM_CONFIG () );
+          // Application.Run(new Frm_NewLogin () );
+            // Application.Run(new FormStatues () );
+             Application.Run(new clothesStore.Serila.Home () );
             //  Application.Run(new Frm_UpdateSales () );
-             // Application.Run(new Frm_UpdatePurchasesDoors () );
+            // Application.Run(new Frm_UpdatePurchasesDoors () );
 
 
 

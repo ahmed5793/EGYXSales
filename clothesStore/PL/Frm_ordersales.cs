@@ -3,6 +3,8 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using clothesStore.Rpt;
+using DevExpress.XtraReports.UI;
+
 namespace clothesStore.PL
 {
     public partial class Frm_ordersales : DevExpress.XtraEditors.XtraForm
@@ -125,6 +127,7 @@ namespace clothesStore.PL
         }
         void SelectdataTable()
         {
+           
             dt.Columns.Add("رقم الصنف");//0
             dt.Columns.Add("اسم الصنف");//1
             dt.Columns.Add("النوع");//2
@@ -133,6 +136,7 @@ namespace clothesStore.PL
             dt.Columns.Add("الأجمالي");//5
             dt.Columns.Add("الخصم");//6
             dt.Columns.Add("الاجمالي بعد الخصم");//7
+            dt.Columns.Add("باركود");//8
             gridControl2.DataSource = dt;
         }
         //void rezizse()
@@ -231,6 +235,7 @@ namespace clothesStore.PL
                     r[2] = dt51.Rows[0][2];
                     r[3] = dt51.Rows[0][3];
                     r[4] = 1.00;
+                    r[8] = dt51.Rows[0][5];
                     r[6] = 0;
                     dt.Rows.Add(r);
                     Console.Beep();
@@ -589,11 +594,11 @@ namespace clothesStore.PL
                     //    Frm.cmb_Unit.DisplayMember = "Unit_Name";
                     //    Frm.cmb_Unit.ValueMember = "Id_Unit";
                     Frm.textBox1.Text = gridView2.GetFocusedRowCellValue(ID_Item).ToString();
-                    //Frm.Txt_Quantity.Text = gridView2.GetFocusedRowCellValue(quantity).ToString();
+                    Frm.Txt_Quantity.Text = gridView2.GetFocusedRowCellValue(quantity).ToString();
 
-                    //Frm.Txt_DisCount.Text = gridView2.GetFocusedRowCellValue(Discount).ToString();
+                    Frm.Txt_DisCount.Text = gridView2.GetFocusedRowCellValue(Discount).ToString();
 
-                    //Frm.txt_prise.Text = gridView2.GetFocusedRowCellValue(Price).ToString();
+                    Frm.txt_prise.Text = gridView2.GetFocusedRowCellValue(Price).ToString();
 
                     Frm.ShowDialog();
 
@@ -670,6 +675,7 @@ namespace clothesStore.PL
             btn_save.Enabled = true;
             Btn_Print.Enabled = false;
             Cmb_Category.SelectedIndex = -1;
+            Cmb_product.DataSource = null;
 
         }
 
@@ -776,7 +782,7 @@ namespace clothesStore.PL
 
                     dt51.Clear();
                         dt51 = p.search_barcode(Convert.ToInt64(txt_barcode.Text));
-                    if (dt51.Rows.Count > 0)
+                    if (dt51.Rows.Count > 0&&Convert.ToInt32(dt51.Rows[0][4])>0)
                     {
 
                         for (int i = 0; i < gridView2.RowCount; i++)
@@ -828,6 +834,7 @@ namespace clothesStore.PL
                         r[2] = dt51.Rows[0][2];
                         r[3] = dt51.Rows[0][3];
                         r[4] = 1.00;
+                        r[8] = dt51.Rows[0][5];
                         r[6] = 0;
                         dt.Rows.Add(r);
                         Console.Beep();
@@ -981,7 +988,7 @@ namespace clothesStore.PL
                 Update_QtyUnit();
             }
 
-            if (e.Column.Caption == "neg")
+            if (e.Column.Name == "neg")
             {
 
                 for (int i = 0; i < gridView2.RowCount; i++)
@@ -1029,7 +1036,7 @@ namespace clothesStore.PL
                 }
             }
 
-            if (e.Column.Caption == "Post")
+            if (e.Column.Name == "Post")
             {
                 for (int i = 0; i < gridView2.RowCount; i++)
                 {
@@ -1071,7 +1078,7 @@ namespace clothesStore.PL
 
                 }
             }
-            if (e.Column.Caption == "remove")
+            if (e.Column.Name == "remove")
             {
 
                 gridView2.DeleteSelectedRows();
@@ -1102,49 +1109,81 @@ namespace clothesStore.PL
                 DataTable dt51 = new DataTable();
                 if (Properties.Settings.Default.printType == "ريسيت")
                 {
-                    Rpt_PrintOrder r = new Rpt_PrintOrder();
-                    FrmSingleReport sr = new FrmSingleReport();
-                    sr.crystalReportViewer1.RefreshReport();
-                    //r.SetDatabaseLogon("", "", ".", "FEEDStore");
-                    //r.SetParameterValue("@ID", int.Parse(dataGridViewList.CurrentRow.Cells[0].Value.ToString()));
-                    //sr.crystalReportViewer1.ReportSource = r;
-                    //sr.Show();
+                    //#region MyRegion
+
+                 
+                    //Rpt_PrintOrder r = new Rpt_PrintOrder();
+                    //FrmSingleReport sr = new FrmSingleReport();
+                    //sr.crystalReportViewer1.RefreshReport();
+                    ////r.SetDatabaseLogon("", "", ".", "FEEDStore");
+                    ////r.SetParameterValue("@ID", int.Parse(dataGridViewList.CurrentRow.Cells[0].Value.ToString()));
+                    ////sr.crystalReportViewer1.ReportSource = r;
+                    ////sr.Show();
+                    //dt51.Clear();
+                    //dt51 = o.RportOrder(Convert.ToInt32(txt_num.Text));
+                    //clothesStore.DAL.DataOrderReport ds = new DAL.DataOrderReport();
+                    //Rpt.Frm_RptDocumetViewer frm = new Frm_RptDocumetViewer();
+                    //Rpt_PrintOrder rpts = new Rpt_PrintOrder();
+                    //frm.documentViewer1.Refresh();
+                    //ds.Tables["PrintOrder"].Clear();
+
+                    //for (int i = 0; i < dt51.Rows.Count; i++)
+                    //{
+                    //    ds.Tables["PrintOrder"].Rows.Add(dt51.Rows[i][0], dt51.Rows[i][1], dt51.Rows[i][2],
+                    //    dt51.Rows[i][3], dt51.Rows[i][4], dt51.Rows[i][5]
+                    //      , dt51.Rows[i][6], dt51.Rows[i][7], dt51.Rows[i][8],
+                    //     dt51.Rows[i][9], dt51.Rows[i][10], dt51.Rows[i][11], dt51.Rows[i][12]
+                    //     , dt51.Rows[i][13]);
+                    //}
+                    //SettingPrint st = new SettingPrint();
+                    //DataTable tbl = new DataTable();
+                    //tbl.Clear();
+                    //tbl = st.SelectSettingPrintOrder();
+                    //ds.Tables["PrintInformation"].Clear();
+                    //ds.Tables["PrintInformation"].Rows.Add(tbl.Rows[0][0], tbl.Rows[0][1], tbl.Rows[0][2],
+                    //    tbl.Rows[0][3], tbl.Rows[0][4]);
+
+
+                    ////rpts.SetDatabaseLogon("", "", ".", "EasySystem");
+                    //rpts.SetDataSource(ds);
+                    //rpts.SetParameterValue("@ID", Convert.ToInt32(txt_num.Text));
+
+                    //frm.documentViewer1.DocumentSource = rpts;
+
+                    //System.Drawing.Printing.PrintDocument printDocument = new System.Drawing.Printing.PrintDocument();
+                    //rpts.PrintOptions.PrinterName = Properties.Settings.Default.PrinterName;
+                    //rpts.PrintToPrinter(1, true, 0, 0);
+                    //#endregion
                     dt51.Clear();
                     dt51 = o.RportOrder(Convert.ToInt32(txt_num.Text));
-                    clothesStore.DAL.DataOrderReport ds = new DAL.DataOrderReport();
-                    Rpt.Frm_RptDocumetViewer frm = new Frm_RptDocumetViewer();
-                    Rpt_PrintOrder rpts = new Rpt_PrintOrder();
-                    frm.documentViewer1.Refresh();
-                    ds.Tables["PrintOrder"].Clear();
-
+                    clothesStore.DAL.DataOrderReport dss = new DAL.DataOrderReport();
+                    Rpt.Frm_RptDocumetViewer frms = new Frm_RptDocumetViewer();
+                    Rpt.PrintOrderRecit rpt = new PrintOrderRecit();
+                    frms.documentViewer1.Refresh();
+                    dss.Tables["PrintOrder"].Clear();
                     for (int i = 0; i < dt51.Rows.Count; i++)
                     {
-                        ds.Tables["PrintOrder"].Rows.Add(dt51.Rows[i][0], dt51.Rows[i][1], dt51.Rows[i][2],
-                        dt51.Rows[i][3], dt51.Rows[i][4], dt51.Rows[i][5]
-                          , dt51.Rows[i][6], dt51.Rows[i][7], dt51.Rows[i][8],
-                         dt51.Rows[i][9], dt51.Rows[i][10], dt51.Rows[i][11], dt51.Rows[i][12]
-                         , dt51.Rows[i][13]);
+                        dss.Tables["PrintOrder"].Rows.Add((dt51.Rows[i][0]), dt51.Rows[i][1], dt51.Rows[i][2],
+                        dt51.Rows[i][3], dt51.Rows[i][4], (dt51.Rows[i][5]), (dt51.Rows[i][6])
+                          , (dt51.Rows[i][7]), (dt51.Rows[i][8]), (dt51.Rows[i][9]),
+                          (dt51.Rows[i][10]), dt51.Rows[i][11], (dt51.Rows[i][12]), (dt51.Rows[i][13])
+                         , (dt51.Rows[i][14]), (dt51.Rows[i][15]));
                     }
-                    SettingPrint st = new SettingPrint();
-                    DataTable tbl = new DataTable();
-                    tbl.Clear();
-                    tbl = st.SelectSettingPrintOrder();
-                    ds.Tables["PrintInformation"].Clear();
-                    ds.Tables["PrintInformation"].Rows.Add(tbl.Rows[0][0], tbl.Rows[0][1], tbl.Rows[0][2],
-                        tbl.Rows[0][3], tbl.Rows[0][4]);
-
-
-                    //rpts.SetDatabaseLogon("", "", ".", "EasySystem");
-                    rpts.SetDataSource(ds);
-                    rpts.SetParameterValue("@ID", Convert.ToInt32(txt_num.Text));
-
-                    frm.documentViewer1.DocumentSource = rpts;
-
-                    System.Drawing.Printing.PrintDocument printDocument = new System.Drawing.Printing.PrintDocument();
-                    rpts.PrintOptions.PrinterName = Properties.Settings.Default.PrinterName;
-                    rpts.PrintToPrinter(1, true, 0, 0);
-
-
+                    SettingPrint sts = new SettingPrint();
+                    DataTable dt = new DataTable();
+                    dt.Clear();
+                    dt = sts.SelectSettingPrintOrder();
+                    dss.Tables["PrintInformation"].Clear();
+                    dss.Tables["PrintInformation"].Rows.Add(dt.Rows[0][0], dt.Rows[0][1], dt.Rows[0][2],
+                        dt.Rows[0][3], dt.Rows[0][4]);
+                    rpt.DataSource = dss;
+                    rpt.Parameters["ID"].Value = Convert.ToInt32(txt_num.Text);
+                    frms.documentViewer1.DocumentSource = rpt;
+                    rpt.Parameters["ID"].Visible = false;
+                    frms.documentViewer1.Enabled = true;
+                    // frms.ShowDialog();
+                    rpt.PrinterName = Properties.Settings.Default.PrinterName;
+                    rpt.Print();
                 }
 
                 else if (Properties.Settings.Default.printType == "A4")
@@ -1185,6 +1224,7 @@ namespace clothesStore.PL
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace);
             }
         }
 
@@ -1194,6 +1234,11 @@ namespace clothesStore.PL
         }
 
         private void comboBox1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridControl2_Click(object sender, EventArgs e)
         {
 
         }
