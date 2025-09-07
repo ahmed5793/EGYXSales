@@ -1636,7 +1636,6 @@
     <EmbeddedResource Include="PL\XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
