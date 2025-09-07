@@ -19,9 +19,9 @@ namespace clothesStore
             Application.SetCompatibleTextRenderingDefault(false);
             //
            // Application.Run(new FRM_CONFIG () );
-          // Application.Run(new Frm_NewLogin () );
+           Application.Run(new Frm_NewLogin () );
             // Application.Run(new FormStatues () );
-             Application.Run(new clothesStore.Serila.Home () );
+            // Application.Run(new clothesStore.Serila.Home () );
             //  Application.Run(new Frm_UpdateSales () );
             // Application.Run(new Frm_UpdatePurchasesDoors () );
 

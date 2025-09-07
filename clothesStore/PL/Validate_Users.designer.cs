@@ -29,6 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Validate_Users));
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.check_ReturnOrderAllproduct = new System.Windows.Forms.CheckBox();
+            this.check_UpdateOrder = new System.Windows.Forms.CheckBox();
+            this.check_ReturnOrder = new System.Windows.Forms.CheckBox();
+            this.check_reb7Order = new System.Windows.Forms.CheckBox();
+            this.check_InvoiceOrder = new System.Windows.Forms.CheckBox();
+            this.check_ReportReturnOrder = new System.Windows.Forms.CheckBox();
+            this.check_managmentOrder = new System.Windows.Forms.CheckBox();
+            this.check_PaySuppliers = new System.Windows.Forms.CheckBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.check_RetrunPurshasesAllProduct = new System.Windows.Forms.CheckBox();
+            this.check_ManagmentSuppliers = new System.Windows.Forms.CheckBox();
+            this.check_ReturnSuppliers = new System.Windows.Forms.CheckBox();
+            this.check_InvoiceSupplier = new System.Windows.Forms.CheckBox();
+            this.check_ReportReturnSuppliers = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -41,6 +58,15 @@
             this.check_SettingPrint = new System.Windows.Forms.CheckBox();
             this.check_ManagmentUser = new System.Windows.Forms.CheckBox();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_save = new DevExpress.XtraEditors.SimpleButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.check_7arka = new System.Windows.Forms.CheckBox();
+            this.check_Gard = new System.Windows.Forms.CheckBox();
+            this.check_reportMinItem = new System.Windows.Forms.CheckBox();
+            this.check_AddItems = new System.Windows.Forms.CheckBox();
+            this.check_ReportBalance = new System.Windows.Forms.CheckBox();
+            this.check_Balance = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -51,6 +77,16 @@
             this.Check_PayClient = new System.Windows.Forms.CheckBox();
             this.check_ReportAccountCliet = new System.Windows.Forms.CheckBox();
             this.Check_DiscountClient = new System.Windows.Forms.CheckBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.check_DepitSuppliers = new System.Windows.Forms.CheckBox();
+            this.check_REportAccountSuppliers = new System.Windows.Forms.CheckBox();
+            this.check_DiscountSuppliers = new System.Windows.Forms.CheckBox();
+            this.check_ReportSuppliers = new System.Windows.Forms.CheckBox();
+            this.check_AddSuppliers = new System.Windows.Forms.CheckBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.Reception = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.check_Ehlakatelasol = new System.Windows.Forms.CheckBox();
@@ -64,21 +100,273 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.cmb_Users1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.groupBox4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.Reception.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.check_ReturnOrderAllproduct);
+            this.groupBox4.Controls.Add(this.check_UpdateOrder);
+            this.groupBox4.Controls.Add(this.check_ReturnOrder);
+            this.groupBox4.Controls.Add(this.check_reb7Order);
+            this.groupBox4.Controls.Add(this.check_InvoiceOrder);
+            this.groupBox4.Controls.Add(this.check_ReportReturnOrder);
+            this.groupBox4.Controls.Add(this.check_managmentOrder);
+            this.groupBox4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(5, 20);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1009, 282);
+            this.groupBox4.TabIndex = 64;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "صلاحية المستخدمين داخل قسم المبيعات ";
+            // 
+            // check_ReturnOrderAllproduct
+            // 
+            this.check_ReturnOrderAllproduct.AutoSize = true;
+            this.check_ReturnOrderAllproduct.BackColor = System.Drawing.Color.Black;
+            this.check_ReturnOrderAllproduct.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_ReturnOrderAllproduct.ForeColor = System.Drawing.Color.White;
+            this.check_ReturnOrderAllproduct.Location = new System.Drawing.Point(229, 80);
+            this.check_ReturnOrderAllproduct.Name = "check_ReturnOrderAllproduct";
+            this.check_ReturnOrderAllproduct.Size = new System.Drawing.Size(254, 33);
+            this.check_ReturnOrderAllproduct.TabIndex = 78;
+            this.check_ReturnOrderAllproduct.Text = "شاشة مرتجع فاتورة بالكامل";
+            this.check_ReturnOrderAllproduct.UseVisualStyleBackColor = false;
+            // 
+            // check_UpdateOrder
+            // 
+            this.check_UpdateOrder.AutoSize = true;
+            this.check_UpdateOrder.BackColor = System.Drawing.Color.Black;
+            this.check_UpdateOrder.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_UpdateOrder.ForeColor = System.Drawing.Color.White;
+            this.check_UpdateOrder.Location = new System.Drawing.Point(544, 180);
+            this.check_UpdateOrder.Name = "check_UpdateOrder";
+            this.check_UpdateOrder.Size = new System.Drawing.Size(195, 33);
+            this.check_UpdateOrder.TabIndex = 77;
+            this.check_UpdateOrder.Text = "شاشة تعديل الفاتورة";
+            this.check_UpdateOrder.UseVisualStyleBackColor = false;
+            // 
+            // check_ReturnOrder
+            // 
+            this.check_ReturnOrder.AutoSize = true;
+            this.check_ReturnOrder.BackColor = System.Drawing.Color.Black;
+            this.check_ReturnOrder.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_ReturnOrder.ForeColor = System.Drawing.Color.White;
+            this.check_ReturnOrder.Location = new System.Drawing.Point(530, 80);
+            this.check_ReturnOrder.Name = "check_ReturnOrder";
+            this.check_ReturnOrder.Size = new System.Drawing.Size(209, 33);
+            this.check_ReturnOrder.TabIndex = 76;
+            this.check_ReturnOrder.Text = "شاشة مرتجع المبيعات";
+            this.check_ReturnOrder.UseVisualStyleBackColor = false;
+            // 
+            // check_reb7Order
+            // 
+            this.check_reb7Order.AutoSize = true;
+            this.check_reb7Order.BackColor = System.Drawing.Color.Black;
+            this.check_reb7Order.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_reb7Order.ForeColor = System.Drawing.Color.White;
+            this.check_reb7Order.Location = new System.Drawing.Point(6, 80);
+            this.check_reb7Order.Name = "check_reb7Order";
+            this.check_reb7Order.Size = new System.Drawing.Size(193, 33);
+            this.check_reb7Order.TabIndex = 76;
+            this.check_reb7Order.Text = "شاشةارباح المبيعات";
+            this.check_reb7Order.UseVisualStyleBackColor = false;
+            this.check_reb7Order.CheckedChanged += new System.EventHandler(this.check_reb7Order_CheckedChanged);
+            // 
+            // check_InvoiceOrder
+            // 
+            this.check_InvoiceOrder.AutoSize = true;
+            this.check_InvoiceOrder.BackColor = System.Drawing.Color.Black;
+            this.check_InvoiceOrder.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_InvoiceOrder.ForeColor = System.Drawing.Color.White;
+            this.check_InvoiceOrder.Location = new System.Drawing.Point(797, 80);
+            this.check_InvoiceOrder.Name = "check_InvoiceOrder";
+            this.check_InvoiceOrder.Size = new System.Drawing.Size(196, 33);
+            this.check_InvoiceOrder.TabIndex = 73;
+            this.check_InvoiceOrder.Text = "شاشة فاتورة مبيعات";
+            this.check_InvoiceOrder.UseVisualStyleBackColor = false;
+            // 
+            // check_ReportReturnOrder
+            // 
+            this.check_ReportReturnOrder.AutoSize = true;
+            this.check_ReportReturnOrder.BackColor = System.Drawing.Color.Black;
+            this.check_ReportReturnOrder.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_ReportReturnOrder.ForeColor = System.Drawing.Color.White;
+            this.check_ReportReturnOrder.Location = new System.Drawing.Point(219, 180);
+            this.check_ReportReturnOrder.Name = "check_ReportReturnOrder";
+            this.check_ReportReturnOrder.Size = new System.Drawing.Size(264, 33);
+            this.check_ReportReturnOrder.TabIndex = 75;
+            this.check_ReportReturnOrder.Text = "شاشة تقارير مرتجع المبيعات";
+            this.check_ReportReturnOrder.UseVisualStyleBackColor = false;
+            // 
+            // check_managmentOrder
+            // 
+            this.check_managmentOrder.AutoSize = true;
+            this.check_managmentOrder.BackColor = System.Drawing.Color.Black;
+            this.check_managmentOrder.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_managmentOrder.ForeColor = System.Drawing.Color.White;
+            this.check_managmentOrder.Location = new System.Drawing.Point(797, 180);
+            this.check_managmentOrder.Name = "check_managmentOrder";
+            this.check_managmentOrder.Size = new System.Drawing.Size(194, 33);
+            this.check_managmentOrder.TabIndex = 73;
+            this.check_managmentOrder.Text = "شاشة ادارة المبيعات";
+            this.check_managmentOrder.UseVisualStyleBackColor = false;
+            // 
+            // check_PaySuppliers
+            // 
+            this.check_PaySuppliers.AutoSize = true;
+            this.check_PaySuppliers.BackColor = System.Drawing.Color.Black;
+            this.check_PaySuppliers.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_PaySuppliers.ForeColor = System.Drawing.Color.White;
+            this.check_PaySuppliers.Location = new System.Drawing.Point(774, 151);
+            this.check_PaySuppliers.Name = "check_PaySuppliers";
+            this.check_PaySuppliers.Size = new System.Drawing.Size(149, 33);
+            this.check_PaySuppliers.TabIndex = 61;
+            this.check_PaySuppliers.Text = "مدفوعات مورد";
+            this.check_PaySuppliers.UseVisualStyleBackColor = false;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tabPage5.Controls.Add(this.simpleButton4);
+            this.tabPage5.Controls.Add(this.groupBox5);
+            this.tabPage5.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage5.Location = new System.Drawing.Point(4, 33);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1020, 401);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "المشتريات";
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton4.Appearance.BackColor = System.Drawing.Color.Black;
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton4.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton4.Appearance.Options.UseBackColor = true;
+            this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.Appearance.Options.UseForeColor = true;
+            this.simpleButton4.Appearance.Options.UseTextOptions = true;
+            this.simpleButton4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.simpleButton4.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.simpleButton4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(417, 342);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(213, 38);
+            this.simpleButton4.TabIndex = 189;
+            this.simpleButton4.Text = "حفظ البيانات للمستخدم";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.check_RetrunPurshasesAllProduct);
+            this.groupBox5.Controls.Add(this.check_ManagmentSuppliers);
+            this.groupBox5.Controls.Add(this.check_ReturnSuppliers);
+            this.groupBox5.Controls.Add(this.check_InvoiceSupplier);
+            this.groupBox5.Controls.Add(this.check_ReportReturnSuppliers);
+            this.groupBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(6, 11);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1011, 289);
+            this.groupBox5.TabIndex = 59;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "صلاحية المستخدمين داخل قائمة إدارة الاصناف";
+            // 
+            // check_RetrunPurshasesAllProduct
+            // 
+            this.check_RetrunPurshasesAllProduct.AutoSize = true;
+            this.check_RetrunPurshasesAllProduct.BackColor = System.Drawing.Color.Black;
+            this.check_RetrunPurshasesAllProduct.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_RetrunPurshasesAllProduct.ForeColor = System.Drawing.Color.White;
+            this.check_RetrunPurshasesAllProduct.Location = new System.Drawing.Point(104, 64);
+            this.check_RetrunPurshasesAllProduct.Name = "check_RetrunPurshasesAllProduct";
+            this.check_RetrunPurshasesAllProduct.Size = new System.Drawing.Size(213, 33);
+            this.check_RetrunPurshasesAllProduct.TabIndex = 82;
+            this.check_RetrunPurshasesAllProduct.Text = "مرتجع الفاتورة بالكامل";
+            this.check_RetrunPurshasesAllProduct.UseVisualStyleBackColor = false;
+            // 
+            // check_ManagmentSuppliers
+            // 
+            this.check_ManagmentSuppliers.AutoSize = true;
+            this.check_ManagmentSuppliers.BackColor = System.Drawing.Color.Black;
+            this.check_ManagmentSuppliers.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_ManagmentSuppliers.ForeColor = System.Drawing.Color.White;
+            this.check_ManagmentSuppliers.Location = new System.Drawing.Point(796, 153);
+            this.check_ManagmentSuppliers.Name = "check_ManagmentSuppliers";
+            this.check_ManagmentSuppliers.Size = new System.Drawing.Size(162, 33);
+            this.check_ManagmentSuppliers.TabIndex = 81;
+            this.check_ManagmentSuppliers.Text = "اداارة المشتريات";
+            this.check_ManagmentSuppliers.UseVisualStyleBackColor = false;
+            // 
+            // check_ReturnSuppliers
+            // 
+            this.check_ReturnSuppliers.AutoSize = true;
+            this.check_ReturnSuppliers.BackColor = System.Drawing.Color.Black;
+            this.check_ReturnSuppliers.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_ReturnSuppliers.ForeColor = System.Drawing.Color.White;
+            this.check_ReturnSuppliers.Location = new System.Drawing.Point(532, 64);
+            this.check_ReturnSuppliers.Name = "check_ReturnSuppliers";
+            this.check_ReturnSuppliers.Size = new System.Drawing.Size(161, 33);
+            this.check_ReturnSuppliers.TabIndex = 79;
+            this.check_ReturnSuppliers.Text = "مرتجع مشتريات";
+            this.check_ReturnSuppliers.UseVisualStyleBackColor = false;
+            // 
+            // check_InvoiceSupplier
+            // 
+            this.check_InvoiceSupplier.AutoSize = true;
+            this.check_InvoiceSupplier.BackColor = System.Drawing.Color.Black;
+            this.check_InvoiceSupplier.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_InvoiceSupplier.ForeColor = System.Drawing.Color.White;
+            this.check_InvoiceSupplier.Location = new System.Drawing.Point(796, 64);
+            this.check_InvoiceSupplier.Name = "check_InvoiceSupplier";
+            this.check_InvoiceSupplier.Size = new System.Drawing.Size(159, 33);
+            this.check_InvoiceSupplier.TabIndex = 77;
+            this.check_InvoiceSupplier.Text = "فاتورة مشتريات";
+            this.check_InvoiceSupplier.UseVisualStyleBackColor = false;
+            // 
+            // check_ReportReturnSuppliers
+            // 
+            this.check_ReportReturnSuppliers.AutoSize = true;
+            this.check_ReportReturnSuppliers.BackColor = System.Drawing.Color.Black;
+            this.check_ReportReturnSuppliers.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_ReportReturnSuppliers.ForeColor = System.Drawing.Color.White;
+            this.check_ReportReturnSuppliers.Location = new System.Drawing.Point(466, 153);
+            this.check_ReportReturnSuppliers.Name = "check_ReportReturnSuppliers";
+            this.check_ReportReturnSuppliers.Size = new System.Drawing.Size(227, 33);
+            this.check_ReportReturnSuppliers.TabIndex = 78;
+            this.check_ReportReturnSuppliers.Text = "تقارير مرتجع المشتريات";
+            this.check_ReportReturnSuppliers.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.Reception);
             this.tabControl1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(5, 87);
@@ -99,7 +387,6 @@
             this.tabPage6.Size = new System.Drawing.Size(1020, 401);
             this.tabPage6.TabIndex = 8;
             this.tabPage6.Text = "البيانات الاساسية";
-            this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
             // groupBox8
             // 
@@ -131,7 +418,6 @@
             this.check_UserSales.TabIndex = 94;
             this.check_UserSales.Text = "شاشة تقرير مبيعات مستخدم";
             this.check_UserSales.UseVisualStyleBackColor = false;
-            this.check_UserSales.Visible = false;
             // 
             // check_DeleteAllData
             // 
@@ -245,6 +531,136 @@
             this.simpleButton7.TabIndex = 193;
             this.simpleButton7.Text = "حفظ البيانات للمستخدم";
             this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tabPage1.Controls.Add(this.btn_save);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 33);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1020, 401);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "ادارة الاصناف";
+            // 
+            // btn_save
+            // 
+            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_save.Appearance.BackColor = System.Drawing.Color.Black;
+            this.btn_save.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Appearance.Options.UseBackColor = true;
+            this.btn_save.Appearance.Options.UseFont = true;
+            this.btn_save.Appearance.Options.UseForeColor = true;
+            this.btn_save.Appearance.Options.UseTextOptions = true;
+            this.btn_save.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.btn_save.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.btn_save.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
+            this.btn_save.Location = new System.Drawing.Point(399, 339);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(213, 38);
+            this.btn_save.TabIndex = 186;
+            this.btn_save.Text = "حفظ البيانات للمستخدم";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.check_7arka);
+            this.groupBox1.Controls.Add(this.check_Gard);
+            this.groupBox1.Controls.Add(this.check_reportMinItem);
+            this.groupBox1.Controls.Add(this.check_AddItems);
+            this.groupBox1.Controls.Add(this.check_ReportBalance);
+            this.groupBox1.Controls.Add(this.check_Balance);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(5, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1007, 217);
+            this.groupBox1.TabIndex = 60;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "صلاحية المستخدمين داخل قسم إدارة الاصناف";
+            // 
+            // check_7arka
+            // 
+            this.check_7arka.AutoSize = true;
+            this.check_7arka.BackColor = System.Drawing.Color.Black;
+            this.check_7arka.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_7arka.ForeColor = System.Drawing.Color.White;
+            this.check_7arka.Location = new System.Drawing.Point(765, 162);
+            this.check_7arka.Name = "check_7arka";
+            this.check_7arka.Size = new System.Drawing.Size(178, 33);
+            this.check_7arka.TabIndex = 64;
+            this.check_7arka.Text = "شاشة حركه صنف";
+            this.check_7arka.UseVisualStyleBackColor = false;
+            // 
+            // check_Gard
+            // 
+            this.check_Gard.AutoSize = true;
+            this.check_Gard.BackColor = System.Drawing.Color.Black;
+            this.check_Gard.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_Gard.ForeColor = System.Drawing.Color.White;
+            this.check_Gard.Location = new System.Drawing.Point(217, 158);
+            this.check_Gard.Name = "check_Gard";
+            this.check_Gard.Size = new System.Drawing.Size(137, 33);
+            this.check_Gard.TabIndex = 63;
+            this.check_Gard.Text = "جرد الاصناف";
+            this.check_Gard.UseVisualStyleBackColor = false;
+            // 
+            // check_reportMinItem
+            // 
+            this.check_reportMinItem.AutoSize = true;
+            this.check_reportMinItem.BackColor = System.Drawing.Color.Black;
+            this.check_reportMinItem.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_reportMinItem.ForeColor = System.Drawing.Color.White;
+            this.check_reportMinItem.Location = new System.Drawing.Point(147, 74);
+            this.check_reportMinItem.Name = "check_reportMinItem";
+            this.check_reportMinItem.Size = new System.Drawing.Size(207, 33);
+            this.check_reportMinItem.TabIndex = 62;
+            this.check_reportMinItem.Text = "شاشة تقارير النواقص";
+            this.check_reportMinItem.UseVisualStyleBackColor = false;
+            // 
+            // check_AddItems
+            // 
+            this.check_AddItems.AutoSize = true;
+            this.check_AddItems.BackColor = System.Drawing.Color.Black;
+            this.check_AddItems.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_AddItems.ForeColor = System.Drawing.Color.White;
+            this.check_AddItems.Location = new System.Drawing.Point(741, 74);
+            this.check_AddItems.Name = "check_AddItems";
+            this.check_AddItems.Size = new System.Drawing.Size(206, 33);
+            this.check_AddItems.TabIndex = 61;
+            this.check_AddItems.Text = "شاشة اضافة الاصناف";
+            this.check_AddItems.UseVisualStyleBackColor = false;
+            // 
+            // check_ReportBalance
+            // 
+            this.check_ReportBalance.AutoSize = true;
+            this.check_ReportBalance.BackColor = System.Drawing.Color.Black;
+            this.check_ReportBalance.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_ReportBalance.ForeColor = System.Drawing.Color.White;
+            this.check_ReportBalance.Location = new System.Drawing.Point(485, 158);
+            this.check_ReportBalance.Name = "check_ReportBalance";
+            this.check_ReportBalance.Size = new System.Drawing.Size(199, 33);
+            this.check_ReportBalance.TabIndex = 60;
+            this.check_ReportBalance.Text = "تقارير تسوية الرصيد";
+            this.check_ReportBalance.UseVisualStyleBackColor = false;
+            // 
+            // check_Balance
+            // 
+            this.check_Balance.AutoSize = true;
+            this.check_Balance.BackColor = System.Drawing.Color.Black;
+            this.check_Balance.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_Balance.ForeColor = System.Drawing.Color.White;
+            this.check_Balance.Location = new System.Drawing.Point(441, 74);
+            this.check_Balance.Name = "check_Balance";
+            this.check_Balance.Size = new System.Drawing.Size(243, 33);
+            this.check_Balance.TabIndex = 59;
+            this.check_Balance.Text = "شاشة تسوية رصيد لصنف";
+            this.check_Balance.UseVisualStyleBackColor = false;
             // 
             // tabPage2
             // 
@@ -391,6 +807,158 @@
             this.Check_DiscountClient.TabIndex = 6;
             this.Check_DiscountClient.Text = "شاشة اشعار خصم واضافة العميل";
             this.Check_DiscountClient.UseVisualStyleBackColor = false;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tabPage3.Controls.Add(this.simpleButton2);
+            this.tabPage3.Controls.Add(this.groupBox10);
+            this.tabPage3.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.ForeColor = System.Drawing.Color.Black;
+            this.tabPage3.Location = new System.Drawing.Point(4, 33);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1020, 401);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "الموردين";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.Black;
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton2.Appearance.Options.UseBackColor = true;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseForeColor = true;
+            this.simpleButton2.Appearance.Options.UseTextOptions = true;
+            this.simpleButton2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.simpleButton2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.simpleButton2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(448, 325);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(213, 47);
+            this.simpleButton2.TabIndex = 188;
+            this.simpleButton2.Text = "حفظ البيانات للمستخدم";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox10.Controls.Add(this.check_DepitSuppliers);
+            this.groupBox10.Controls.Add(this.check_REportAccountSuppliers);
+            this.groupBox10.Controls.Add(this.check_DiscountSuppliers);
+            this.groupBox10.Controls.Add(this.check_PaySuppliers);
+            this.groupBox10.Controls.Add(this.check_ReportSuppliers);
+            this.groupBox10.Controls.Add(this.check_AddSuppliers);
+            this.groupBox10.ForeColor = System.Drawing.Color.Black;
+            this.groupBox10.Location = new System.Drawing.Point(6, 31);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(1007, 238);
+            this.groupBox10.TabIndex = 64;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "صلاحية المستخدمين داخل قسم الموردين";
+            // 
+            // check_DepitSuppliers
+            // 
+            this.check_DepitSuppliers.AutoSize = true;
+            this.check_DepitSuppliers.BackColor = System.Drawing.Color.Black;
+            this.check_DepitSuppliers.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_DepitSuppliers.ForeColor = System.Drawing.Color.White;
+            this.check_DepitSuppliers.Location = new System.Drawing.Point(174, 151);
+            this.check_DepitSuppliers.Name = "check_DepitSuppliers";
+            this.check_DepitSuppliers.Size = new System.Drawing.Size(169, 33);
+            this.check_DepitSuppliers.TabIndex = 64;
+            this.check_DepitSuppliers.Text = "مديونية الموردين";
+            this.check_DepitSuppliers.UseVisualStyleBackColor = false;
+            // 
+            // check_REportAccountSuppliers
+            // 
+            this.check_REportAccountSuppliers.AutoSize = true;
+            this.check_REportAccountSuppliers.BackColor = System.Drawing.Color.Black;
+            this.check_REportAccountSuppliers.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_REportAccountSuppliers.ForeColor = System.Drawing.Color.White;
+            this.check_REportAccountSuppliers.Location = new System.Drawing.Point(478, 151);
+            this.check_REportAccountSuppliers.Name = "check_REportAccountSuppliers";
+            this.check_REportAccountSuppliers.Size = new System.Drawing.Size(177, 33);
+            this.check_REportAccountSuppliers.TabIndex = 63;
+            this.check_REportAccountSuppliers.Text = "كشف حساب مورد";
+            this.check_REportAccountSuppliers.UseVisualStyleBackColor = false;
+            // 
+            // check_DiscountSuppliers
+            // 
+            this.check_DiscountSuppliers.AutoSize = true;
+            this.check_DiscountSuppliers.BackColor = System.Drawing.Color.Black;
+            this.check_DiscountSuppliers.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_DiscountSuppliers.ForeColor = System.Drawing.Color.White;
+            this.check_DiscountSuppliers.Location = new System.Drawing.Point(95, 60);
+            this.check_DiscountSuppliers.Name = "check_DiscountSuppliers";
+            this.check_DiscountSuppliers.Size = new System.Drawing.Size(248, 33);
+            this.check_DiscountSuppliers.TabIndex = 62;
+            this.check_DiscountSuppliers.Text = "اشعار خصم واضافة للمورد";
+            this.check_DiscountSuppliers.UseVisualStyleBackColor = false;
+            // 
+            // check_ReportSuppliers
+            // 
+            this.check_ReportSuppliers.AutoSize = true;
+            this.check_ReportSuppliers.BackColor = System.Drawing.Color.Black;
+            this.check_ReportSuppliers.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_ReportSuppliers.ForeColor = System.Drawing.Color.White;
+            this.check_ReportSuppliers.Location = new System.Drawing.Point(442, 60);
+            this.check_ReportSuppliers.Name = "check_ReportSuppliers";
+            this.check_ReportSuppliers.Size = new System.Drawing.Size(213, 33);
+            this.check_ReportSuppliers.TabIndex = 61;
+            this.check_ReportSuppliers.Text = "تقارير بيانات الموردين";
+            this.check_ReportSuppliers.UseVisualStyleBackColor = false;
+            // 
+            // check_AddSuppliers
+            // 
+            this.check_AddSuppliers.AutoSize = true;
+            this.check_AddSuppliers.BackColor = System.Drawing.Color.Black;
+            this.check_AddSuppliers.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check_AddSuppliers.ForeColor = System.Drawing.Color.White;
+            this.check_AddSuppliers.Location = new System.Drawing.Point(755, 60);
+            this.check_AddSuppliers.Name = "check_AddSuppliers";
+            this.check_AddSuppliers.Size = new System.Drawing.Size(168, 33);
+            this.check_AddSuppliers.TabIndex = 60;
+            this.check_AddSuppliers.Text = "اضافة مورد جديد";
+            this.check_AddSuppliers.UseVisualStyleBackColor = false;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tabPage4.Controls.Add(this.simpleButton3);
+            this.tabPage4.Controls.Add(this.groupBox4);
+            this.tabPage4.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage4.Location = new System.Drawing.Point(4, 33);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1020, 401);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "المبيعات";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.Black;
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton3.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton3.Appearance.Options.UseBackColor = true;
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Appearance.Options.UseForeColor = true;
+            this.simpleButton3.Appearance.Options.UseTextOptions = true;
+            this.simpleButton3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.simpleButton3.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.simpleButton3.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(430, 347);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(213, 38);
+            this.simpleButton3.TabIndex = 189;
+            this.simpleButton3.Text = "حفظ البيانات للمستخدم";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // Reception
             // 
@@ -590,13 +1158,25 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "صلاحية المستخدمين";
             this.Load += new System.EventHandler(this.Validate_Users_Load);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
             this.Reception.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -606,25 +1186,62 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
         public System.Windows.Forms.ComboBox cmb_Users1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage Reception;
         public System.Windows.Forms.CheckBox Check_DepitClient;
+        public System.Windows.Forms.CheckBox check_PaySuppliers;
+        private System.Windows.Forms.GroupBox groupBox10;
+        public System.Windows.Forms.CheckBox check_ReportSuppliers;
+        public System.Windows.Forms.CheckBox check_AddSuppliers;
         public System.Windows.Forms.CheckBox Check_PayClient;
         public System.Windows.Forms.CheckBox check_ReportAccountCliet;
+        public System.Windows.Forms.CheckBox check_REportAccountSuppliers;
+        public System.Windows.Forms.CheckBox check_DiscountSuppliers;
+        public System.Windows.Forms.CheckBox check_InvoiceOrder;
+        public System.Windows.Forms.CheckBox check_ReturnOrder;
+        public System.Windows.Forms.CheckBox check_reb7Order;
+        public System.Windows.Forms.CheckBox check_ReportReturnOrder;
+        public System.Windows.Forms.CheckBox check_managmentOrder;
         public System.Windows.Forms.CheckBox Check_DiscountClient;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.CheckBox check_DepitSuppliers;
+        private DevExpress.XtraEditors.SimpleButton btn_save;
+        private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.CheckBox check_reportMinItem;
+        public System.Windows.Forms.CheckBox check_AddItems;
+        public System.Windows.Forms.CheckBox check_ReportBalance;
+        public System.Windows.Forms.CheckBox check_Balance;
         public System.Windows.Forms.CheckBox check_AddClient;
         public System.Windows.Forms.CheckBox check_AddMasrof;
         public System.Windows.Forms.CheckBox check_TransferStock;
         public System.Windows.Forms.CheckBox check_ReportsMoney;
         public System.Windows.Forms.CheckBox check_AddStock;
+        public System.Windows.Forms.CheckBox check_ManagmentSuppliers;
+        public System.Windows.Forms.CheckBox check_ReturnSuppliers;
+        public System.Windows.Forms.CheckBox check_InvoiceSupplier;
+        public System.Windows.Forms.CheckBox check_ReportReturnSuppliers;
+        public System.Windows.Forms.CheckBox check_7arka;
+        public System.Windows.Forms.CheckBox check_Gard;
         public System.Windows.Forms.CheckBox check_SarfPay;
         public System.Windows.Forms.CheckBox check_ClientData;
+        public System.Windows.Forms.CheckBox check_UpdateOrder;
+        public System.Windows.Forms.CheckBox check_ReturnOrderAllproduct;
+        public System.Windows.Forms.CheckBox check_RetrunPurshasesAllProduct;
+        public System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.GroupBox groupBox8;
         public System.Windows.Forms.CheckBox check_UserMove;

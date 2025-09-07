@@ -810,11 +810,11 @@ namespace clothesStore.PL
                         MessageBox.Show("PLEASE INSERT PASSWORD");
                         return;
                     }
-                    if (txt_User.Text !="admin")
-                    {
-                        MessageBox.Show("sorry this user does not have permession to log into application");
-                        Application.Exit();
-                    }
+                    //if (txt_User.Text !="admin")
+                    //{
+                    //    MessageBox.Show("sorry this user does not have permession to log into application");
+                    //    Application.Exit();
+                    //}
                     else
                     {
 

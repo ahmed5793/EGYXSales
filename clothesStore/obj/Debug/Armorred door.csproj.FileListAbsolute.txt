@@ -2213,3 +2213,4 @@ E:\workss\SalesApp\appStore\clothesStore\bin\Debug\FlashControlV71.dll
 E:\workss\SalesApp\appStore\clothesStore\obj\Debug\clothesStore.Rpt.RPT_SmallBarcode.resources
 E:\workss\SalesApp\appStore\clothesStore\obj\Debug\clothesStore.PL.FRM_CONFIG.resources
 E:\workss\SalesApp\appStore\clothesStore\obj\Debug\clothesStore.PL.Form1.resources
+E:\workss\SalesApp\appStore\clothesStore\obj\Debug\clothesStore.exe.licenses
