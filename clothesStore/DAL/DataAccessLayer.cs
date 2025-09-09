@@ -14,19 +14,19 @@ namespace clothesStore.DAL
         SqlConnection con;
         internal DataAccessLayer()
         {
-            //if (Properties.Settings.Default.Mode == "SQL")
-            //{
-            //    con = new SqlConnection($"Data Source={Properties.Settings.Default.Server}; database={Properties.Settings.Default.Database};User Id={Properties.Settings.Default.ID};Password={Properties.Settings.Default.Password};MultipleActiveResultSets=True;Max Pool Size=200;");
-            //   // "Data Source=SQL5088.site4now.net;Initial Catalog=db_a54a03_egyxsales;User Id=db_a54a03_egyxsales_admin;Password=Titonasser1994
+            if (Properties.Settings.Default.Mode == "SQL")
+            {
+                con = new SqlConnection($"Data Source={Properties.Settings.Default.Server}; database={Properties.Settings.Default.Database};User Id={Properties.Settings.Default.ID};Password={Properties.Settings.Default.Password};MultipleActiveResultSets=True;Max Pool Size=200;");
+                // "Data Source=SQL5088.site4now.net;Initial Catalog=db_a54a03_egyxsales;User Id=db_a54a03_egyxsales_admin;Password=Titonasser1994
 
-            //}
-            //else
-            //{
-            //    con = new SqlConnection($"server ={Properties.Settings.Default.Server}; database={Properties.Settings.Default.Database};integrated security=true");
+            }
+            else
+            {
+                con = new SqlConnection($"server ={Properties.Settings.Default.Server}; database={Properties.Settings.Default.Database};integrated security=true");
 
-            //}
+            }
 
-            con = new SqlConnection($"server =.; database=EasyPos;integrated security=true");
+            //   con = new SqlConnection($"server =.; database=EasyPos;integrated security=true");
 
 
         }

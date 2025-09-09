@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_UpdatePurchases));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Cmb_Category = new System.Windows.Forms.ComboBox();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Cmb_product = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmb_search = new DevExpress.XtraEditors.LookUpEdit();
             this.Txt_supName = new System.Windows.Forms.TextBox();
@@ -63,6 +63,9 @@
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.remove = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonremove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ID_Item = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Item_Name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Category = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -75,8 +78,6 @@
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.Post = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonMins = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.remove = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonremove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.cmb_Stock = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_new = new DevExpress.XtraEditors.SimpleButton();
@@ -86,20 +87,15 @@
             this.Txt_TotalPay = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Cmb_Category = new System.Windows.Forms.ComboBox();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.label14 = new System.Windows.Forms.Label();
-            this.Cmb_product = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmb_search.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMins)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -132,6 +128,73 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "بيانات الفاتورة";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(1053, 97);
+            this.label12.Name = "label12";
+            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label12.Size = new System.Drawing.Size(62, 22);
+            this.label12.TabIndex = 131;
+            this.label12.Text = "التصنيف";
+            // 
+            // Cmb_Category
+            // 
+            this.Cmb_Category.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cmb_Category.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Cmb_Category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Cmb_Category.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_Category.FormattingEnabled = true;
+            this.Cmb_Category.Location = new System.Drawing.Point(784, 94);
+            this.Cmb_Category.Name = "Cmb_Category";
+            this.Cmb_Category.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Cmb_Category.Size = new System.Drawing.Size(246, 26);
+            this.Cmb_Category.TabIndex = 130;
+            this.Cmb_Category.SelectionChangeCommitted += new System.EventHandler(this.Cmb_Category_SelectionChangeCommitted);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(725, 127);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(39, 36);
+            this.simpleButton2.TabIndex = 129;
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_1);
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(1050, 137);
+            this.label14.Name = "label14";
+            this.label14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label14.Size = new System.Drawing.Size(80, 22);
+            this.label14.TabIndex = 128;
+            this.label14.Text = "إسم الصنف";
+            // 
+            // Cmb_product
+            // 
+            this.Cmb_product.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cmb_product.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Cmb_product.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Cmb_product.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_product.FormattingEnabled = true;
+            this.Cmb_product.Location = new System.Drawing.Point(784, 134);
+            this.Cmb_product.Name = "Cmb_product";
+            this.Cmb_product.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Cmb_product.Size = new System.Drawing.Size(246, 26);
+            this.Cmb_product.TabIndex = 127;
             // 
             // label8
             // 
@@ -189,7 +252,7 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButton1.Appearance.BackColor = System.Drawing.Color.White;
             this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.White;
             this.simpleButton1.Appearance.BorderColor = System.Drawing.Color.White;
@@ -553,18 +616,18 @@
             this.gridView2.Appearance.FocusedCell.Options.UseBackColor = true;
             this.gridView2.Appearance.FocusedCell.Options.UseFont = true;
             this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.FocusedRow.FontSizeDelta = 1;
             this.gridView2.Appearance.FocusedRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView2.Appearance.FocusedRow.Options.UseFont = true;
-            this.gridView2.Appearance.GroupRow.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.GroupRow.Font = new System.Drawing.Font("Arial", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.GroupRow.FontSizeDelta = 1;
             this.gridView2.Appearance.GroupRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView2.Appearance.GroupRow.Options.UseFont = true;
             this.gridView2.Appearance.GroupRow.Options.UseTextOptions = true;
             this.gridView2.Appearance.GroupRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.HeaderPanel.FontSizeDelta = 1;
             this.gridView2.Appearance.HeaderPanel.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView2.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
@@ -573,7 +636,7 @@
             this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Arial", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.Row.FontSizeDelta = 1;
             this.gridView2.Appearance.Row.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView2.Appearance.Row.Options.UseFont = true;
@@ -592,6 +655,8 @@
             this.gridView2.AppearancePrint.Row.Options.UseTextOptions = true;
             this.gridView2.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.remove,
+            this.gridColumn1,
             this.ID_Item,
             this.Item_Name,
             this.Category,
@@ -601,8 +666,7 @@
             this.Discount,
             this.AfterDiscount,
             this.neg,
-            this.Post,
-            this.remove});
+            this.Post});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -612,8 +676,34 @@
             this.gridView2.OptionsBehavior.ReadOnly = true;
             this.gridView2.OptionsCustomization.AllowGroup = false;
             this.gridView2.OptionsPrint.PrintPreview = true;
+            this.gridView2.OptionsView.ColumnAutoWidth = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
+            // 
+            // remove
+            // 
+            this.remove.ColumnEdit = this.repositoryItemButtonremove;
+            this.remove.Name = "remove";
+            this.remove.Visible = true;
+            this.remove.VisibleIndex = 0;
+            this.remove.Width = 40;
+            // 
+            // repositoryItemButtonremove
+            // 
+            this.repositoryItemButtonremove.AutoHeight = false;
+            this.repositoryItemButtonremove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
+            this.repositoryItemButtonremove.Name = "repositoryItemButtonremove";
+            this.repositoryItemButtonremove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "رقم الباركود";
+            this.gridColumn1.FieldName = "رقم الباركود";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 200;
             // 
             // ID_Item
             // 
@@ -639,14 +729,15 @@
             this.Item_Name.OptionsColumn.FixedWidth = true;
             this.Item_Name.OptionsColumn.ReadOnly = true;
             this.Item_Name.Visible = true;
-            this.Item_Name.VisibleIndex = 0;
-            this.Item_Name.Width = 170;
+            this.Item_Name.VisibleIndex = 2;
+            this.Item_Name.Width = 500;
             // 
             // Category
             // 
             this.Category.Caption = "النوع";
             this.Category.FieldName = "النوع";
             this.Category.Name = "Category";
+            this.Category.Width = 250;
             // 
             // Price
             // 
@@ -662,8 +753,8 @@
             this.Price.OptionsColumn.FixedWidth = true;
             this.Price.OptionsColumn.ReadOnly = true;
             this.Price.Visible = true;
-            this.Price.VisibleIndex = 1;
-            this.Price.Width = 90;
+            this.Price.VisibleIndex = 3;
+            this.Price.Width = 150;
             // 
             // quantity
             // 
@@ -680,8 +771,8 @@
             this.quantity.OptionsColumn.FixedWidth = true;
             this.quantity.OptionsColumn.ReadOnly = true;
             this.quantity.Visible = true;
-            this.quantity.VisibleIndex = 2;
-            this.quantity.Width = 90;
+            this.quantity.VisibleIndex = 4;
+            this.quantity.Width = 150;
             // 
             // Total
             // 
@@ -696,7 +787,7 @@
             this.Total.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.Total.OptionsColumn.FixedWidth = true;
             this.Total.OptionsColumn.ReadOnly = true;
-            this.Total.Width = 90;
+            this.Total.Width = 150;
             // 
             // Discount
             // 
@@ -706,8 +797,8 @@
             this.Discount.FieldName = "الخصم";
             this.Discount.Name = "Discount";
             this.Discount.Visible = true;
-            this.Discount.VisibleIndex = 3;
-            this.Discount.Width = 76;
+            this.Discount.VisibleIndex = 5;
+            this.Discount.Width = 140;
             // 
             // AfterDiscount
             // 
@@ -717,8 +808,8 @@
             this.AfterDiscount.FieldName = "الاجمالي بعد الخصم";
             this.AfterDiscount.Name = "AfterDiscount";
             this.AfterDiscount.Visible = true;
-            this.AfterDiscount.VisibleIndex = 4;
-            this.AfterDiscount.Width = 95;
+            this.AfterDiscount.VisibleIndex = 6;
+            this.AfterDiscount.Width = 180;
             // 
             // neg
             // 
@@ -726,20 +817,10 @@
             this.neg.AppearanceCell.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
             this.neg.AppearanceCell.Options.UseBackColor = true;
             this.neg.AppearanceCell.Options.UseFont = true;
-            this.neg.Caption = "neg";
             this.neg.ColumnEdit = this.repositoryItemButtonEdit1;
-            this.neg.FieldName = "neg";
-            this.neg.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
-            this.neg.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("neg.ImageOptions.SvgImage")));
             this.neg.Name = "neg";
-            this.neg.OptionsColumn.AllowEdit = false;
-            this.neg.OptionsColumn.AllowMove = false;
-            this.neg.OptionsColumn.AllowShowHide = false;
-            this.neg.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.neg.OptionsColumn.FixedWidth = true;
-            this.neg.OptionsColumn.ReadOnly = true;
             this.neg.Visible = true;
-            this.neg.VisibleIndex = 5;
+            this.neg.VisibleIndex = 7;
             this.neg.Width = 40;
             // 
             // repositoryItemButtonEdit1
@@ -756,19 +837,10 @@
             // 
             // Post
             // 
-            this.Post.Caption = "Post";
             this.Post.ColumnEdit = this.repositoryItemButtonMins;
-            this.Post.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
-            this.Post.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Post.ImageOptions.SvgImage")));
             this.Post.Name = "Post";
-            this.Post.OptionsColumn.AllowEdit = false;
-            this.Post.OptionsColumn.AllowMove = false;
-            this.Post.OptionsColumn.AllowShowHide = false;
-            this.Post.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.Post.OptionsColumn.FixedWidth = true;
-            this.Post.OptionsColumn.ReadOnly = true;
             this.Post.Visible = true;
-            this.Post.VisibleIndex = 6;
+            this.Post.VisibleIndex = 8;
             this.Post.Width = 40;
             // 
             // repositoryItemButtonMins
@@ -782,32 +854,6 @@
             this.repositoryItemButtonMins.LookAndFeel.UseDefaultLookAndFeel = false;
             this.repositoryItemButtonMins.Name = "repositoryItemButtonMins";
             this.repositoryItemButtonMins.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // remove
-            // 
-            this.remove.Caption = "remove";
-            this.remove.ColumnEdit = this.repositoryItemButtonremove;
-            this.remove.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
-            this.remove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("remove.ImageOptions.Image")));
-            this.remove.Name = "remove";
-            this.remove.OptionsColumn.AllowEdit = false;
-            this.remove.OptionsColumn.AllowMove = false;
-            this.remove.OptionsColumn.AllowShowHide = false;
-            this.remove.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.remove.OptionsColumn.FixedWidth = true;
-            this.remove.OptionsColumn.ReadOnly = true;
-            this.remove.Visible = true;
-            this.remove.VisibleIndex = 7;
-            this.remove.Width = 40;
-            // 
-            // repositoryItemButtonremove
-            // 
-            this.repositoryItemButtonremove.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.repositoryItemButtonremove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonremove.Name = "repositoryItemButtonremove";
-            this.repositoryItemButtonremove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // cmb_Stock
             // 
@@ -983,73 +1029,6 @@
             this.groupBox3.TabIndex = 142;
             this.groupBox3.TabStop = false;
             // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(1053, 97);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label12.Size = new System.Drawing.Size(62, 22);
-            this.label12.TabIndex = 131;
-            this.label12.Text = "التصنيف";
-            // 
-            // Cmb_Category
-            // 
-            this.Cmb_Category.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cmb_Category.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.Cmb_Category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Cmb_Category.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_Category.FormattingEnabled = true;
-            this.Cmb_Category.Location = new System.Drawing.Point(784, 94);
-            this.Cmb_Category.Name = "Cmb_Category";
-            this.Cmb_Category.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Cmb_Category.Size = new System.Drawing.Size(246, 26);
-            this.Cmb_Category.TabIndex = 130;
-            this.Cmb_Category.SelectionChangeCommitted += new System.EventHandler(this.Cmb_Category_SelectionChangeCommitted);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(725, 127);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(39, 36);
-            this.simpleButton2.TabIndex = 129;
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_1);
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(1050, 137);
-            this.label14.Name = "label14";
-            this.label14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label14.Size = new System.Drawing.Size(80, 22);
-            this.label14.TabIndex = 128;
-            this.label14.Text = "إسم الصنف";
-            // 
-            // Cmb_product
-            // 
-            this.Cmb_product.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cmb_product.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.Cmb_product.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Cmb_product.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_product.FormattingEnabled = true;
-            this.Cmb_product.Location = new System.Drawing.Point(784, 134);
-            this.Cmb_product.Name = "Cmb_product";
-            this.Cmb_product.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Cmb_product.Size = new System.Drawing.Size(246, 26);
-            this.Cmb_product.TabIndex = 127;
-            // 
             // Frm_UpdatePurchases
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -1091,9 +1070,9 @@
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonMins)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonremove)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1161,5 +1140,6 @@
         public DevExpress.XtraEditors.SimpleButton simpleButton2;
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.ComboBox Cmb_product;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }
