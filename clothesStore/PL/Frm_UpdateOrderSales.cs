@@ -133,7 +133,7 @@ namespace clothesStore.PL
             {
                 DataRow row = gridView2.GetDataRow(i);
                 decimal mins = Convert.ToDecimal(row[3]) * Convert.ToInt32(row[4]);
-                row[6] = mins.ToString();
+                row[5] = mins.ToString();
             }
         }
 
@@ -144,10 +144,10 @@ namespace clothesStore.PL
             for (int i = 0; i < gridView2.RowCount; i++)
             {
                 DataRow row = gridView2.GetDataRow(i);
-                decimal amount = Convert.ToDecimal(row[6]);
-                decimal discount = Convert.ToDecimal(row[7]);
-                decimal total = amount - discount;
-                row[8] = total.ToString();
+                decimal amount = Convert.ToDecimal(row[5]);
+                decimal discount = Convert.ToDecimal(row[6]);
+                decimal total = amount;
+                row[7] = total.ToString();
             }
         }
         public void TOTALFINALYDISCOUNT()
@@ -173,9 +173,9 @@ namespace clothesStore.PL
         }
         public void pay()
         {
-            if (txt_AfterDisc.Text != string.Empty && txt_TotalPay.Text != string.Empty)
+            if (txt_AfterDisc.Text != string.Empty && txt_pay.Text != string.Empty)
             {
-                decimal totainv = Convert.ToDecimal(txt_AfterDisc.Text) - Convert.ToDecimal(txt_TotalPay.Text);
+                decimal totainv = Convert.ToDecimal(txt_AfterDisc.Text) - Convert.ToDecimal(txt_pay.Text);
                 txt_mark.Text = Math.Round(totainv, 1).ToString();
             }
             else if (txt_pay.Text == string.Empty)
@@ -191,7 +191,7 @@ namespace clothesStore.PL
             for (int i = 0; i < gridView2.RowCount; i++)
             {
                 DataRow row = gridView2.GetDataRow(i);
-                total += Convert.ToDecimal(row[8]);
+                total += Convert.ToDecimal(row[7]);
             }
             txt_invo.Text = Math.Round(total, 1).ToString();
         }
@@ -204,10 +204,9 @@ namespace clothesStore.PL
             dt.Columns.Add("النوع");//2
             dt.Columns.Add("السعر");//3
             dt.Columns.Add("الكميه"); //4
-            dt.Columns.Add("سعر المستهلك"); //5
-            dt.Columns.Add("الأجمالي");//6
-            dt.Columns.Add("الخصم");//7
-            dt.Columns.Add("الاجمالي بعد الخصم");//8
+            dt.Columns.Add("الأجمالي");//5
+            dt.Columns.Add("الخصم");//6
+            dt.Columns.Add("الاجمالي بعد الخصم");//7
             gridControl2.DataSource = dt;
         }
 
@@ -1676,6 +1675,8 @@ namespace clothesStore.PL
                         }
 
                     }
+
+              
                     //if (dt51.Rows.Count>0)
                     //{
                     DataRow r = dt.NewRow();
@@ -1685,7 +1686,8 @@ namespace clothesStore.PL
                     r[3] = dt51.Rows[0][3];
                     r[4] = 1.00;
                     r[5] = dt51.Rows[0][7] != null ? dt51.Rows[0][7] : 0;
-                    r[7] = 0;
+                    r[8] = dt51.Rows[0][5];
+                    r[6] = 0;
                     dt.Rows.Add(r);
                     Console.Beep();
                     gridControl2.DataSource = dt;
@@ -1778,6 +1780,7 @@ namespace clothesStore.PL
                         r[2] = dt51.Rows[0][2];
                         r[3] = dt51.Rows[0][3];
                         r[4] = 1.00;
+                        r[8] = dt51.Rows[0][5];
                         r[6] = 0;
                         dt.Rows.Add(r);
                         Console.Beep();

@@ -679,7 +679,7 @@ namespace clothesStore.PL
                    Convert.ToDecimal(row[6]), Convert.ToDecimal(row[7]),
                    row[1].ToString());
 
-                    p.Add_MoveProduct(Convert.ToInt32(row[0]), Convert.ToInt32(row[4]), Convert.ToDecimal(row[3]), 0,
+                    p.Add_MoveProduct(Convert.ToInt32(row[0]), Convert.ToDecimal(row[4]), Convert.ToDecimal(row[3]), 0,
                          0, 0, Convert.ToDecimal(row[3]), 0, "فاتورة مشتريات رقم " + " " + txt_num.Text,
                          dateTimePicker1.Value, Program.salesman, "دخول");
 

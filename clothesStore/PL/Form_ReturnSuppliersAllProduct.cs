@@ -346,7 +346,7 @@ namespace clothesStore.PL
 
 
                             p.Add_MoveProduct(Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value), 0, 0,
-                                Convert.ToInt32(dataGridView1.Rows[i].Cells[4].Value),
+                                Convert.ToDecimal(dataGridView1.Rows[i].Cells[4].Value),
                           Convert.ToDecimal(dataGridView1.Rows[i].Cells[3].Value), 0, 0, 0, "مرتجع مشتريات فاتورة رقم" + " " + txt_IdOrder.Text
                           , dateTimePicker1.Value, Program.salesman, "خروج");
                         }

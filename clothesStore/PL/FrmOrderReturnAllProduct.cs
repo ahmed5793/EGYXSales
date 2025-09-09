@@ -393,7 +393,7 @@ namespace clothesStore.PL
                                  Convert.ToDecimal(dataGridView1.Rows[i].Cells[4].Value));
                             
                             p.Add_MoveProduct(Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value),
-                       Convert.ToInt32(dataGridView1.Rows[i].Cells[4].Value),
+                       Convert.ToDecimal(dataGridView1.Rows[i].Cells[4].Value),
                        Convert.ToDecimal(dataGridView1.Rows[i].Cells[3].Value), 0,0, 0, 0, 0, 
                        "مرتجع مبيعات فاتورة رقم " + " " + txt_IDOrder.Text, dateTimePicker1.Value, Program.salesman, "دخول");
 
