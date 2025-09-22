@@ -43,6 +43,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxShockwaveFlashObjects.dll" size="18432">
+      <assemblyIdentity name="AxShockwaveFlashObjects" version="1.0.0.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6VFGhQbgA3aeudVZktXkQw4ylnPGyK6IF8Q1yNCbuR4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu_UI_v1.4.dll" size="227840">
       <assemblyIdentity name="Bunifu_UI_v1.4" version="1.3.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -55,86 +67,62 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="clothesStore.exe" size="6541312">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="clothesStore.exe" size="6533632">
       <assemblyIdentity name="clothesStore" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>g7wnOnN81ivmEMk+y3DnP/Bu8vLl0Ik6JmdMLQHIj5w=</dsig:DigestValue>
+        <dsig:DigestValue>MbMspe/6O7DzC8pcfN2yJ0YFqcPee++5ChfOCKv/09E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.CrystalReports.Design.dll" size="86016">
-      <assemblyIdentity name="CrystalDecisions.CrystalReports.Design" version="13.0.4000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.CrystalReports.Engine.dll" size="373248">
+      <assemblyIdentity name="CrystalDecisions.CrystalReports.Engine" version="13.0.4000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JQfhdegzOEyyxK9HPY+kqRdFS0q9ytKZbkNxpdP/4Bo=</dsig:DigestValue>
+        <dsig:DigestValue>wURIk0I4NMNFnOz2WbTahOtpN4zcQZOI3LZtMFAtlvM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.CrystalReports.Engine.dll" size="380928">
-      <assemblyIdentity name="CrystalDecisions.CrystalReports.Engine" version="13.0.3500.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.ReportSource.dll" size="74752">
+      <assemblyIdentity name="CrystalDecisions.ReportSource" version="13.0.4000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pVdTpotaMniXcWDjultqwApvOnO4wcdLMZkFcjd/uRo=</dsig:DigestValue>
+        <dsig:DigestValue>ZsYI3FTiDGVvhAfEhllt0Q5BQzF1nyC93/hMgXZgGEo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.ReportSource.dll" size="86016">
-      <assemblyIdentity name="CrystalDecisions.ReportSource" version="13.0.3500.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.Shared.dll" size="876032">
+      <assemblyIdentity name="CrystalDecisions.Shared" version="13.0.4000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RD/MMZ0T2pdH/eIk7hgrFavbsLT/vMYFUbjWgV1b1ro=</dsig:DigestValue>
+        <dsig:DigestValue>GIxCxOrvO/9RqpMS0X9+Mpl++l/Gkm/20WRlfW0eyBI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.Shared.dll" size="884736">
-      <assemblyIdentity name="CrystalDecisions.Shared" version="13.0.3500.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.Windows.Forms.dll" size="524288">
+      <assemblyIdentity name="CrystalDecisions.Windows.Forms" version="13.0.2000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TgYkRgOuB/qjeXMGENZkE+hAGcaMX01MpJuQCLomwn8=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.Web.dll" size="446464">
-      <assemblyIdentity name="CrystalDecisions.Web" version="13.0.4000.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fkZ1ZjxFEkfjebnBuT7+5cz1Eljy81rKZ/s3eTINFFU=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.Windows.Forms.dll" size="552960">
-      <assemblyIdentity name="CrystalDecisions.Windows.Forms" version="13.0.3500.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DycOP7RVJF60hmLXs31iHfn2THJ2bfFDckpRcqJRE9I=</dsig:DigestValue>
+        <dsig:DigestValue>XG2iX+KkpuallcRZYmCnfDCSQx0GXQz1pQUWXOvP9u0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2467,6 +2455,30 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAPBusinessObjects.WPF.Viewer.dll" size="286720">
+      <assemblyIdentity name="SAPBusinessObjects.WPF.Viewer" version="13.0.3500.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>mjwJMrZ1Ufl9O7N9rxb98YsbscWqOoWz5kcwYOab1rQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAPBusinessObjects.WPF.ViewerShared.dll" size="135168">
+      <assemblyIdentity name="SAPBusinessObjects.WPF.ViewerShared" version="13.0.3500.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QlVN4axs8uUiNZPRZ/pBW/yUL0oLmjjGEubmAsyJlow=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.IdentityModel.Tokens.Jwt.dll" size="91248">
       <assemblyIdentity name="System.IdentityModel.Tokens.Jwt" version="5.2.4.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -2490,13 +2502,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="clothesStore.exe.config" size="8814">
+  <file name="clothesStore.exe.config" size="5317">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FybF5QPmb41i5rIJywtdMwAoARWleYXMF84BeSvtczk=</dsig:DigestValue>
+      <dsig:DigestValue>+KpB1AnX4gHmG1Kz41VeCr6hWZOFnsoIXNwhXcfDdgE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Paomedia-Small-N-Flat-Shop.ico" size="167067">

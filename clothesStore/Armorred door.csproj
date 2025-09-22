@@ -26,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>EGYX_SALES</ProductName>
     <PublisherName>EGYX_SALES</PublisherName>
-    <ApplicationRevision>98</ApplicationRevision>
+    <ApplicationRevision>99</ApplicationRevision>
     <ApplicationVersion>3.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -1735,7 +1735,6 @@
     <EmbeddedResource Include="PL\XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -1937,126 +1936,6 @@
     <Content Include="Resources\images.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
     <PublishFile Include="log4net">
       <Visible>False</Visible>
       <Group>

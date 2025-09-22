@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <configSections>
     <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System">
@@ -105,70 +105,12 @@
         <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
         <bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0" />
       </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
       <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.CommonObjectModel" publicKeyToken="692fbea5521e1304" culture="neutral" />
+        <assemblyIdentity name="CrystalDecisions.Shared" publicKeyToken="692fbea5521e1304" culture="neutral" />
         <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
       </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
       <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.Controllers" publicKeyToken="692fbea5521e1304" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.DataDefModel" publicKeyToken="692fbea5521e1304" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.DataSetConversion" publicKeyToken="692fbea5521e1304" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.ClientDoc" publicKeyToken="692fbea5521e1304" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.ReportDefModel" publicKeyToken="692fbea5521e1304" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.CommLayer" publicKeyToken="692fbea5521e1304" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.Prompting" publicKeyToken="692fbea5521e1304" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.XmlSerialize" publicKeyToken="692fbea5521e1304" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.CubeDefModel" publicKeyToken="692fbea5521e1304" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="CrystalDecisions.ReportAppServer.ObjectFactory" publicKeyToken="692fbea5521e1304" culture="neutral" />
+        <assemblyIdentity name="CrystalDecisions.ReportSource" publicKeyToken="692fbea5521e1304" culture="neutral" />
         <bindingRedirect oldVersion="0.0.0.0-13.0.4000.0" newVersion="13.0.4000.0" />
       </dependentAssembly>
     </assemblyBinding>

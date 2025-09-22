@@ -275,6 +275,10 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.Row.Options.UseFont = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.id_item,
             this.gender,
@@ -295,6 +299,12 @@
             // 
             // id_item
             // 
+            this.id_item.AppearanceCell.Options.UseTextOptions = true;
+            this.id_item.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.id_item.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.id_item.AppearanceHeader.Options.UseTextOptions = true;
+            this.id_item.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.id_item.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.id_item.Caption = "رقم الصنف";
             this.id_item.FieldName = "رقم الصنف";
             this.id_item.Name = "id_item";
@@ -304,6 +314,12 @@
             // 
             // gender
             // 
+            this.gender.AppearanceCell.Options.UseTextOptions = true;
+            this.gender.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gender.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gender.AppearanceHeader.Options.UseTextOptions = true;
+            this.gender.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gender.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gender.Caption = "التصنيف";
             this.gender.FieldName = "النوع";
             this.gender.FilterMode = DevExpress.XtraGrid.ColumnFilterMode.DisplayText;
@@ -326,6 +342,12 @@
             // 
             // Quant
             // 
+            this.Quant.AppearanceCell.Options.UseTextOptions = true;
+            this.Quant.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Quant.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Quant.AppearanceHeader.Options.UseTextOptions = true;
+            this.Quant.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Quant.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Quant.Caption = "الكمية";
             this.Quant.FieldName = "الكمية";
             this.Quant.Name = "Quant";
@@ -336,18 +358,30 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn2.Caption = "سعر الشراء";
             this.gridColumn2.FieldName = "سعر الشراء";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Buy_Price", "{0:0.##}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "سعر الشراء", "{0:0.##}")});
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 5;
             this.gridColumn2.Width = 100;
             // 
             // Price
             // 
+            this.Price.AppearanceCell.Options.UseTextOptions = true;
+            this.Price.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Price.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Price.AppearanceHeader.Options.UseTextOptions = true;
+            this.Price.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Price.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Price.Caption = "سعر البيع";
             this.Price.FieldName = "سعر البيع";
             this.Price.Name = "Price";
@@ -360,6 +394,12 @@
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn1.Caption = "الباركود";
             this.gridColumn1.FieldName = "رقم الباركود";
             this.gridColumn1.Name = "gridColumn1";
@@ -413,6 +453,7 @@
             this.RightToLeftLayout = true;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "شاشة كل الاصناف";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();

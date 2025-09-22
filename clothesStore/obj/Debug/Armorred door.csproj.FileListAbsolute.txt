@@ -2454,7 +2454,6 @@ C:\EGYX_SALES\clothesStore\bin\Debug\de\DevExpress.Diagram.v19.2.Core.resources.
 C:\EGYX_SALES\clothesStore\bin\Debug\es\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\ja\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
-C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csprojAssemblyReference.cache
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.PL.CountOrderCustomer.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.PL.Debit.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.PL.Form1.resources
@@ -2597,7 +2596,6 @@ C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.application
 C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csproj.CopyComplete
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.pdb
-C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe.licenses
 C:\EGYX_SALES\clothesStore\bin\Debug\AxShockwaveFlashObjects.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll

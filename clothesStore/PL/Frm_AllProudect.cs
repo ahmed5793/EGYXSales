@@ -52,6 +52,7 @@ namespace clothesStore.PL
             {
                 if (gridView1.RowCount > 0)
                 {
+                    DataSet1 ds = new DataSet1();
 
                     if ((bool)checkEdit1.EditValue == true)
                     {
@@ -59,7 +60,7 @@ namespace clothesStore.PL
                         {
                             return;
                         }
-
+                    
                         for (int i = 0; i < gridView1.DataRowCount; i++)
                         {
 
@@ -67,13 +68,14 @@ namespace clothesStore.PL
                             {
 
 
-                                DataSet1 ds = new DataSet1(); DataRow row = gridView1.GetDataRow(i);
+                                
+                                DataRow row = gridView1.GetDataRow(i);
 
                                 if (Properties.Settings.Default.BarcodeSize == "مقاس كبير ")
                                 {
 
                                     Rpt.Rpt_Large_Barcode cr = new Rpt.Rpt_Large_Barcode();
-                                    ds.Tables[0].Rows.Add(row[1].ToString(), "*" + row[8].ToString().Trim() + "*", row[8].ToString(), row[4].ToString());
+                                    ds.Tables[0].Rows.Add(row[1].ToString(), "*" + row[9].ToString().Trim() + "*", row[9].ToString(), row[6].ToString());
                                     cr.SetDataSource(ds);
                                     Rpt.FrmSingleReport frm = new Rpt.FrmSingleReport();
                                     frm.crystalReportViewer1.ReportSource = cr;
@@ -88,7 +90,7 @@ namespace clothesStore.PL
 
 
                                     Rpt.Rpt_MidBarcode cr = new Rpt.Rpt_MidBarcode();
-                                    ds.Tables[0].Rows.Add(row[1].ToString(), "*" + row[8].ToString().Trim() + "*", row[8].ToString(), row[4].ToString());
+                                    ds.Tables[0].Rows.Add(row[1].ToString(), "*" + row[9].ToString().Trim() + "*", row[9].ToString(), row[6].ToString());
                                     cr.SetDataSource(ds);
                                     Rpt.FrmSingleReport frm = new Rpt.FrmSingleReport();
                                     frm.crystalReportViewer1.ReportSource = cr;
@@ -121,14 +123,20 @@ namespace clothesStore.PL
                                 DataRow row = gridView1.GetDataRow(i);
 
 
-                                DataSet1 ds = new DataSet1();
+                               
 
                                 if (Properties.Settings.Default.BarcodeSize == "مقاس كبير ")
                                 {
 
 
                                     Rpt.Rpt_Large_Barcode cr = new Rpt.Rpt_Large_Barcode();
-                                    ds.Tables[0].Rows.Add(row[1].ToString(), "*" + row[8].ToString().Trim() + "*", row[8].ToString(), row[4].ToString());
+
+                                  //  ds.Tables["PrintBarcode"].Rows.Add(txtProName.Text, "*" + Txt_Barcode.Text.Trim() + "*", Txt_Barcode.Text, Txt_SellPrice.Text);
+
+                                    ds.Tables[0].Rows.Add(row[1].ToString(), "*" + row[9].ToString().Trim() + "*", row[9].ToString(), row[6].ToString());
+
+
+
                                     cr.SetDataSource(ds);
                                     Rpt.FrmSingleReport frm = new Rpt.FrmSingleReport();
                                     frm.crystalReportViewer1.ReportSource = cr;
@@ -143,7 +151,7 @@ namespace clothesStore.PL
 
 
                                     Rpt.Rpt_MidBarcode cr = new Rpt.Rpt_MidBarcode();
-                                    ds.Tables[0].Rows.Add(row[1].ToString(), "*" + row[8].ToString().Trim() + "*", row[8].ToString(), row[4].ToString());
+                                    ds.Tables[0].Rows.Add(row[1].ToString(), "*" + row[9].ToString().Trim() + "*", row[9].ToString(), row[6].ToString());
                                     cr.SetDataSource(ds);
                                     Rpt.FrmSingleReport frm = new Rpt.FrmSingleReport();
                                     frm.crystalReportViewer1.ReportSource = cr;
