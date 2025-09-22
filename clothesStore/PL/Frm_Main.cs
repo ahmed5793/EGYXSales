@@ -727,5 +727,33 @@ namespace clothesStore.PL
             FormStatues frmstuta = new FormStatues();
             frmstuta.Show();
         }
+
+        private void BtnSalesImage_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                Frm_Sales frm = new Frm_Sales();
+                frm.Show();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void BtnPhrshaesImage_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                Frm_Purchases frm = new Frm_Purchases();
+                frm.Show();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

@@ -723,7 +723,7 @@ namespace clothesStore.Bl
             return ds;
         }
 
-        internal void Add_MoveProduct(int Id_Product, int IncomeQty, decimal InComePrice, int OutComeQty,
+        internal void Add_MoveProduct(int Id_Product, decimal IncomeQty, decimal InComePrice, decimal OutComeQty,
                                   decimal OutComePrice, decimal LastQty, decimal LastInComePrice, decimal LastOutComePrice,
                                   string Bayan, DateTime MoveDate, string SalesMan, string Type)
         {

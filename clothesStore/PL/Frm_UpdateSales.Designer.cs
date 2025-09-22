@@ -365,6 +365,7 @@
             this.txt_Service.TabIndex = 6;
             this.txt_Service.Text = "0.0";
             this.txt_Service.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Service.Visible = false;
             this.txt_Service.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Service_KeyPress);
             this.txt_Service.Leave += new System.EventHandler(this.txt_Service_Leave);
             // 
@@ -379,6 +380,7 @@
             this.label12.Size = new System.Drawing.Size(53, 24);
             this.label12.TabIndex = 78;
             this.label12.Text = "تركيب";
+            this.label12.Visible = false;
             // 
             // label11
             // 
@@ -391,6 +393,7 @@
             this.label11.Size = new System.Drawing.Size(74, 24);
             this.label11.TabIndex = 76;
             this.label11.Text = "خدمة نقل";
+            this.label11.Visible = false;
             // 
             // txt_Na2l
             // 
@@ -406,6 +409,7 @@
             this.txt_Na2l.TabIndex = 65;
             this.txt_Na2l.Text = "0.0";
             this.txt_Na2l.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Na2l.Visible = false;
             this.txt_Na2l.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Na2l_KeyPress);
             this.txt_Na2l.Leave += new System.EventHandler(this.txt_Na2l_Leave);
             // 

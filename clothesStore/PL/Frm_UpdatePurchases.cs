@@ -151,6 +151,9 @@ namespace clothesStore.PL
             {
                 TEXT = (Convert.ToDecimal(txt_invo.Text) - Convert.ToDecimal(txt_Discount.Text));
                 txt_AfterDisc.Text = TEXT.ToString();
+
+
+
             }
 
             else
@@ -164,11 +167,9 @@ namespace clothesStore.PL
         {
             for (int i = 0; i < gridView2.RowCount; i++)
             {
-
                 DataRow row = gridView2.GetDataRow(i);
                 decimal mins = Convert.ToDecimal(row[3]) * Convert.ToInt32(row[4]);
                 row[5] = mins.ToString();
-            
             }
         }
         public void totaldirect()
@@ -178,9 +179,20 @@ namespace clothesStore.PL
                 DataRow row = gridView2.GetDataRow(i);
                 decimal amount = Convert.ToDecimal(row[5]);
                 decimal discount = Convert.ToDecimal(row[6]);
-                decimal total = amount - discount;
-                row[7] = amount.ToString();
+                decimal total = amount;
+                row[7] = total.ToString();
             }
+        }
+
+        public void calctotalinvoOrder()
+        {
+            decimal total = 0;
+            for (int i = 0; i < gridView2.RowCount; i++)
+            {
+                DataRow row = gridView2.GetDataRow(i);
+                total += Convert.ToDecimal(row[7]);
+            }
+            txt_invo.Text = Math.Round(total, 1).ToString();
         }
         public void pay()
         {          
@@ -197,16 +209,7 @@ namespace clothesStore.PL
                 }
        
         }
-        public void calctotalinvoOrder()
-        {
-            decimal total = 0;
-            for (int i = 0; i < gridView2.RowCount; i++)
-            {
-                DataRow row = gridView2.GetDataRow(i);
-                total += Convert.ToDecimal(row[7]);
-            }
-            txt_invo.Text = Math.Round(total, 1).ToString();
-        }
+    
         void SelectdataTable()
         {
             dt.Columns.Add("رقم الصنف");//0
@@ -218,11 +221,10 @@ namespace clothesStore.PL
             dt.Columns.Add("الخصم");//6
             dt.Columns.Add("الاجمالي بعد الخصم");//7
             dt.Columns.Add("رقم الباركود");//8
-            dt.Columns.Add("سعر البيع");//9
             gridControl2.DataSource = dt;
         }
 
-
+     
 
      
 
@@ -928,6 +930,7 @@ namespace clothesStore.PL
                         r[3] = dt51.Rows[0][3];
                         r[4] = 1.00;
                         r[6] = 0;
+                        r[8] = dt51.Rows[0][5];
                         dt.Rows.Add(r);
                         Console.Beep();
                         gridControl2.DataSource = dt;
@@ -986,7 +989,7 @@ namespace clothesStore.PL
                 Update_QtyUnit();
             }
 
-            if (e.Column.Caption == "neg")
+            if (e.Column.Name == "neg")
             {
                 for (int i = 0; i < gridView2.RowCount; i++)
                 {
@@ -1020,7 +1023,7 @@ namespace clothesStore.PL
                 }
             }
 
-            if (e.Column.Caption == "Post")
+            if (e.Column.Name == "Post")
             {
                 for (int i = 0; i < gridView2.RowCount; i++)
                 {
@@ -1062,7 +1065,7 @@ namespace clothesStore.PL
 
                 }
             }
-            if (e.Column.Caption == "remove")
+            if (e.Column.Name == "remove")
             {
 
                 gridView2.DeleteSelectedRows();
@@ -1308,17 +1311,27 @@ namespace clothesStore.PL
 
                     }
 
-                    //if (dt51.Rows.Count>0)
-                    //{
+                    //dt.Columns.Add("رقم الصنف");//0
+                    //dt.Columns.Add("اسم الصنف");//1
+                    //dt.Columns.Add("النوع");//2
+                    //dt.Columns.Add("السعر");//3
+                    //dt.Columns.Add("الكميه"); //4
+                    //dt.Columns.Add("الأجمالي");//5
+                    //dt.Columns.Add("الخصم");//6
+                    //dt.Columns.Add("الاجمالي بعد الخصم");//7
+                    //dt.Columns.Add("رقم الباركود");//8
+                    //gridControl2.DataSource = dt;
+
                     DataRow r = dt.NewRow();
+
                     r[0] = dt51.Rows[0][0];
                     r[1] = dt51.Rows[0][1];
-                    r[2] = dt51.Rows[0][7];
+                    //r[2] =dt51.Rows[0][2];
                     r[3] = dt51.Rows[0][3];
                     r[4] = 1.00;
                     r[6] = 0;
                     r[8] = dt51.Rows[0][5];
-                    r[9] = dt51.Rows[0][6];
+                   
                     dt.Rows.Add(r);
                     Console.Beep();
                     gridControl2.DataSource = dt;

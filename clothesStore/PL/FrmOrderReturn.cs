@@ -377,10 +377,10 @@ namespace clothesStore.PL
 
                        decimal x =  Convert.ToDecimal(Dgv_Return.Rows[i].Cells[2].Value);
 
-                        int s = (int)x;
+                       // int s = (int)x;
 
 
-                        p.Add_MoveProduct(Convert.ToInt32(Dgv_Return.Rows[i].Cells[0].Value),s,
+                        p.Add_MoveProduct(Convert.ToInt32(Dgv_Return.Rows[i].Cells[0].Value), x,
                             Convert.ToDecimal(Dgv_Return.Rows[i].Cells[3].Value), 0, 0, 0, 0, 0,
                           $"{txt_IDOrder.Text} مرتجع مبيعات فاتورة رقم", dateTimePicker1.Value, Program.salesman, "دخول");
 

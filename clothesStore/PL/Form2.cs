@@ -285,7 +285,7 @@ namespace clothesStore.PL
 
 
 
-                    p.Add_MoveProduct(Convert.ToInt32(row[0]), Convert.ToInt32(row[4]), Convert.ToDecimal(row[3]), 0,
+                    p.Add_MoveProduct(Convert.ToInt32(row[0]), Convert.ToDecimal(row[4]), Convert.ToDecimal(row[3]), 0,
                          0, 0, Convert.ToDecimal(row[3]), 0, "فاتورة مشتريات رقم " + " " + txt_num.Text,
                          dateTimePicker1.Value, Program.salesman, "دخول");
                     //dt6.Clear();
@@ -329,7 +329,7 @@ namespace clothesStore.PL
                     Convert.ToDecimal(txt_pay.Text), "فاتورة مشتريات رقم " + " " + txt_num.Text, dateTimePicker1.Value, mno);
                 MessageBox.Show("تم اضافه الفاتوره بنجاح", "عمليه الاضافه", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
               //  data();
-                btn_save.Enabled = true;
+                btn_save.Enabled = false;
 
 
 

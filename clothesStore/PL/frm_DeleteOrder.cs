@@ -48,7 +48,7 @@ namespace clothesStore.PL
                         decimal qtyReturn = Convert.ToDecimal(dt51.Rows[0][4]);
                         decimal TotalQty = Convert.ToDecimal(dt.Rows[i][4]) - qtyReturn;
                         p.Update_ProductQuantityIncrease(Convert.ToInt32(dt.Rows[i][0]), TotalQty);
-                        p.Add_MoveProduct(Convert.ToInt32(dt.Rows[i][0]), Convert.ToInt32(TotalQty), Convert.ToDecimal(dt.Rows[i][3])
+                        p.Add_MoveProduct(Convert.ToInt32(dt.Rows[i][0]), Convert.ToDecimal(TotalQty), Convert.ToDecimal(dt.Rows[i][3])
                             , 0, 0, 0, 0, 0, "مسح فاتورة مبيعات رقم " + " " + Txt_IdOrder.Text, DateTime.Now,
                             Program.salesman, "دخول");
                     }

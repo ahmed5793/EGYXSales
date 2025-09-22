@@ -165,7 +165,7 @@
             // 
             // Category_Name
             // 
-            this.Category_Name.AppearanceCell.Font = new System.Drawing.Font("Droid Arabic Kufi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Category_Name.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Category_Name.AppearanceCell.Options.UseFont = true;
             this.Category_Name.AppearanceHeader.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Category_Name.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -718,6 +718,7 @@
             this.label11.Size = new System.Drawing.Size(74, 24);
             this.label11.TabIndex = 76;
             this.label11.Text = "خدمة نقل";
+            this.label11.Visible = false;
             // 
             // label12
             // 
@@ -730,6 +731,7 @@
             this.label12.Size = new System.Drawing.Size(53, 24);
             this.label12.TabIndex = 78;
             this.label12.Text = "تركيب";
+            this.label12.Visible = false;
             // 
             // txt_Na2l
             // 
@@ -745,6 +747,7 @@
             this.txt_Na2l.TabIndex = 65;
             this.txt_Na2l.Text = "0";
             this.txt_Na2l.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Na2l.Visible = false;
             this.txt_Na2l.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Na2l_KeyPress);
             this.txt_Na2l.Leave += new System.EventHandler(this.txt_Na2l_Leave);
             // 
@@ -762,6 +765,7 @@
             this.txt_Service.TabIndex = 6;
             this.txt_Service.Text = "0";
             this.txt_Service.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Service.Visible = false;
             this.txt_Service.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Service_KeyPress);
             this.txt_Service.Leave += new System.EventHandler(this.txt_Service_Leave);
             // 
@@ -1081,7 +1085,7 @@
             this.gridItem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridItem.Font = new System.Drawing.Font("Droid Arabic Kufi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridItem.Location = new System.Drawing.Point(4, 169);
             this.gridItem.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             this.gridItem.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -1096,14 +1100,14 @@
             // 
             this.tileViewItem.Appearance.EmptySpace.ForeColor = System.Drawing.Color.Black;
             this.tileViewItem.Appearance.EmptySpace.Options.UseForeColor = true;
-            this.tileViewItem.Appearance.ItemHovered.Font = new System.Drawing.Font("Droid Arabic Kufi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tileViewItem.Appearance.ItemHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tileViewItem.Appearance.ItemHovered.Options.UseFont = true;
             this.tileViewItem.Appearance.ItemHovered.Options.UseTextOptions = true;
             this.tileViewItem.Appearance.ItemHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.tileViewItem.Appearance.ItemHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
             this.tileViewItem.Appearance.ItemNormal.BackColor = System.Drawing.Color.White;
             this.tileViewItem.Appearance.ItemNormal.BorderColor = System.Drawing.Color.Black;
-            this.tileViewItem.Appearance.ItemNormal.Font = new System.Drawing.Font("Droid Arabic Kufi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tileViewItem.Appearance.ItemNormal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tileViewItem.Appearance.ItemNormal.ForeColor = System.Drawing.Color.Black;
             this.tileViewItem.Appearance.ItemNormal.Options.UseBackColor = true;
             this.tileViewItem.Appearance.ItemNormal.Options.UseBorderColor = true;
@@ -1147,7 +1151,7 @@
             tileViewItemElement2.Appearance.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             tileViewItemElement2.Appearance.Normal.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
             tileViewItemElement2.Appearance.Normal.BorderColor = System.Drawing.Color.Black;
-            tileViewItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Arial", 23.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Arial", 25.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement2.Appearance.Normal.FontSizeDelta = 1;
             tileViewItemElement2.Appearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
             tileViewItemElement2.Appearance.Normal.ForeColor = System.Drawing.Color.White;
@@ -1169,7 +1173,7 @@
             tileViewItemElement3.Appearance.Normal.BackColor = System.Drawing.Color.Red;
             tileViewItemElement3.Appearance.Normal.BackColor2 = System.Drawing.Color.Yellow;
             tileViewItemElement3.Appearance.Normal.BorderColor = System.Drawing.Color.Red;
-            tileViewItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Droid Sans Arabic", 37.75F, System.Drawing.FontStyle.Bold);
+            tileViewItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 41.75F, System.Drawing.FontStyle.Bold);
             tileViewItemElement3.Appearance.Normal.FontSizeDelta = 2;
             tileViewItemElement3.Appearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
             tileViewItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.Black;
@@ -1240,7 +1244,7 @@
             tileViewItemElement6.Appearance.Normal.BackColor = System.Drawing.Color.Red;
             tileViewItemElement6.Appearance.Normal.BackColor2 = System.Drawing.Color.Yellow;
             tileViewItemElement6.Appearance.Normal.BorderColor = System.Drawing.Color.Red;
-            tileViewItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Arial", 11.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement6.Appearance.Normal.FontSizeDelta = 2;
             tileViewItemElement6.Appearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
             tileViewItemElement6.Appearance.Normal.ForeColor = System.Drawing.Color.Black;
@@ -1271,7 +1275,7 @@
             // 
             this.gridCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridCategory.Font = new System.Drawing.Font("Droid Arabic Kufi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridCategory.Location = new System.Drawing.Point(4, 12);
             this.gridCategory.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             this.gridCategory.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -1284,12 +1288,12 @@
             // 
             // tileViewcategory
             // 
-            this.tileViewcategory.Appearance.ItemHovered.Font = new System.Drawing.Font("Droid Arabic Kufi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tileViewcategory.Appearance.ItemHovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tileViewcategory.Appearance.ItemHovered.Options.UseFont = true;
             this.tileViewcategory.Appearance.ItemHovered.Options.UseTextOptions = true;
             this.tileViewcategory.Appearance.ItemHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.tileViewcategory.Appearance.ItemHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.tileViewcategory.Appearance.ItemNormal.Font = new System.Drawing.Font("Droid Arabic Kufi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tileViewcategory.Appearance.ItemNormal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tileViewcategory.Appearance.ItemNormal.Options.UseFont = true;
             this.tileViewcategory.Appearance.ItemNormal.Options.UseTextOptions = true;
             this.tileViewcategory.Appearance.ItemNormal.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1304,7 +1308,7 @@
             this.tileViewcategory.OptionsTiles.RowCount = 0;
             this.tileViewcategory.OptionsTiles.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
             tileViewItemElement7.Appearance.Normal.BackColor = System.Drawing.SystemColors.HotTrack;
-            tileViewItemElement7.Appearance.Normal.Font = new System.Drawing.Font("Droid Sans Arabic", 33.75F, System.Drawing.FontStyle.Bold);
+            tileViewItemElement7.Appearance.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.75F, System.Drawing.FontStyle.Bold);
             tileViewItemElement7.Appearance.Normal.FontSizeDelta = 2;
             tileViewItemElement7.Appearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
             tileViewItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.White;

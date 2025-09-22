@@ -133,7 +133,7 @@ namespace clothesStore.PL
 
                     p.Update_ProductQuantityIncrease(Convert.ToInt32(Cmb_product.SelectedValue),Convert.ToDecimal(Txt_Qty.Text));
                    
-                    p.Add_MoveProduct(Convert.ToInt32(Cmb_product.SelectedValue), Convert.ToInt32(Txt_Qty.Text), y, y,
+                    p.Add_MoveProduct(Convert.ToInt32(Cmb_product.SelectedValue), Convert.ToDecimal(Txt_Qty.Text), y, y,
                            y, x, y, y, "تسوية رصيد إضافة إلى الكمية", dateTimePicker1.Value, Program.salesman, "دخول");
                   
 

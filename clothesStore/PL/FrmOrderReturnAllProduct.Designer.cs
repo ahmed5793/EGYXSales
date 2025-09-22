@@ -289,7 +289,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(142, 119);
+            this.label5.Location = new System.Drawing.Point(138, 51);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 30);
@@ -303,7 +303,7 @@
             this.txt_totalinvoice.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_totalinvoice.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_totalinvoice.ForeColor = System.Drawing.Color.Yellow;
-            this.txt_totalinvoice.Location = new System.Drawing.Point(12, 118);
+            this.txt_totalinvoice.Location = new System.Drawing.Point(8, 50);
             this.txt_totalinvoice.Margin = new System.Windows.Forms.Padding(4);
             this.txt_totalinvoice.Multiline = true;
             this.txt_totalinvoice.Name = "txt_totalinvoice";
@@ -320,7 +320,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(142, 83);
+            this.label3.Location = new System.Drawing.Point(138, 15);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 30);
@@ -334,7 +334,7 @@
             this.txt_totaldiscount.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_totaldiscount.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_totaldiscount.ForeColor = System.Drawing.Color.Yellow;
-            this.txt_totaldiscount.Location = new System.Drawing.Point(12, 82);
+            this.txt_totaldiscount.Location = new System.Drawing.Point(8, 14);
             this.txt_totaldiscount.Margin = new System.Windows.Forms.Padding(4);
             this.txt_totaldiscount.Multiline = true;
             this.txt_totaldiscount.Name = "txt_totaldiscount";
@@ -364,13 +364,14 @@
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(142, 47);
+            this.label11.Location = new System.Drawing.Point(138, 121);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(138, 30);
             this.label11.TabIndex = 164;
             this.label11.Text = "تكلفة التركيب";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Visible = false;
             // 
             // txt_trkeb
             // 
@@ -378,7 +379,7 @@
             this.txt_trkeb.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_trkeb.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_trkeb.ForeColor = System.Drawing.Color.Yellow;
-            this.txt_trkeb.Location = new System.Drawing.Point(12, 46);
+            this.txt_trkeb.Location = new System.Drawing.Point(8, 120);
             this.txt_trkeb.Margin = new System.Windows.Forms.Padding(4);
             this.txt_trkeb.Multiline = true;
             this.txt_trkeb.Name = "txt_trkeb";
@@ -388,6 +389,7 @@
             this.txt_trkeb.TabIndex = 165;
             this.txt_trkeb.Text = "0";
             this.txt_trkeb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_trkeb.Visible = false;
             // 
             // label9
             // 
@@ -395,13 +397,14 @@
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(142, 12);
+            this.label9.Location = new System.Drawing.Point(138, 86);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(138, 31);
             this.label9.TabIndex = 162;
             this.label9.Text = "تكلفة النقل";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Visible = false;
             // 
             // txt_transport
             // 
@@ -409,7 +412,7 @@
             this.txt_transport.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_transport.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_transport.ForeColor = System.Drawing.Color.Yellow;
-            this.txt_transport.Location = new System.Drawing.Point(12, 11);
+            this.txt_transport.Location = new System.Drawing.Point(8, 85);
             this.txt_transport.Margin = new System.Windows.Forms.Padding(4);
             this.txt_transport.Multiline = true;
             this.txt_transport.Name = "txt_transport";
@@ -419,6 +422,7 @@
             this.txt_transport.TabIndex = 163;
             this.txt_transport.Text = "0";
             this.txt_transport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_transport.Visible = false;
             // 
             // label1
             // 

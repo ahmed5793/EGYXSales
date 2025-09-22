@@ -193,6 +193,7 @@
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSalesImage = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.Riboon_SaticData = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -263,6 +264,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tileI_Reb7 = new DevExpress.XtraEditors.TileItem();
             this.tileI_ManagmentSupplier = new DevExpress.XtraEditors.TileItem();
+            this.btnPhrshaesImage = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -393,10 +395,12 @@
             this.Btn_ReportsMoney,
             this.barButtonItem23,
             this.barButtonItem29,
-            this.barButtonItem30});
+            this.barButtonItem30,
+            this.btnSalesImage,
+            this.btnPhrshaesImage});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.ribbon.MaxItemId = 140;
+            this.ribbon.MaxItemId = 142;
             this.ribbon.MiniToolbars.Add(this.ribbonMiniToolbar1);
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -2489,6 +2493,16 @@
             this.barButtonItem30.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick_1);
             // 
+            // btnSalesImage
+            // 
+            this.btnSalesImage.Caption = "فاتورة مبيعات سريعه";
+            this.btnSalesImage.Id = 140;
+            this.btnSalesImage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSalesImage.ImageOptions.Image")));
+            this.btnSalesImage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSalesImage.ImageOptions.LargeImage")));
+            this.btnSalesImage.Name = "btnSalesImage";
+            this.btnSalesImage.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSalesImage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnSalesImage_ItemClick);
+            // 
             // ribbonMiniToolbar1
             // 
             this.ribbonMiniToolbar1.ParentControl = this;
@@ -2678,6 +2692,7 @@
             // Ribon_SalesInnvoice
             // 
             this.Ribon_SalesInnvoice.ItemLinks.Add(this.Btn_SalesInnvoice);
+            this.Ribon_SalesInnvoice.ItemLinks.Add(this.btnSalesImage);
             this.Ribon_SalesInnvoice.Name = "Ribon_SalesInnvoice";
             // 
             // Ribon_ReturnSales
@@ -2725,6 +2740,7 @@
             // Ribon_PurshasingInnvoice
             // 
             this.Ribon_PurshasingInnvoice.ItemLinks.Add(this.Btn_PurshasingInnvoice);
+            this.Ribon_PurshasingInnvoice.ItemLinks.Add(this.btnPhrshaesImage);
             this.Ribon_PurshasingInnvoice.Name = "Ribon_PurshasingInnvoice";
             // 
             // Ribon_PurshasingReturn
@@ -3448,6 +3464,15 @@
             this.tileI_ManagmentSupplier.Name = "tileI_ManagmentSupplier";
             this.tileI_ManagmentSupplier.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem11_ItemClick);
             // 
+            // btnPhrshaesImage
+            // 
+            this.btnPhrshaesImage.Caption = "قاتورة مشتريات سريعه";
+            this.btnPhrshaesImage.Id = 141;
+            this.btnPhrshaesImage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem31.ImageOptions.Image")));
+            this.btnPhrshaesImage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem31.ImageOptions.LargeImage")));
+            this.btnPhrshaesImage.Name = "btnPhrshaesImage";
+            this.btnPhrshaesImage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPhrshaesImage_ItemClick);
+            // 
             // Frm_Main
             // 
             this.Appearance.BackColor = System.Drawing.Color.Black;
@@ -3676,5 +3701,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
         private DevExpress.XtraBars.BarButtonItem barButtonItem29;
         private DevExpress.XtraBars.BarButtonItem barButtonItem30;
+        private DevExpress.XtraBars.BarButtonItem btnSalesImage;
+        private DevExpress.XtraBars.BarButtonItem btnPhrshaesImage;
     }
 }

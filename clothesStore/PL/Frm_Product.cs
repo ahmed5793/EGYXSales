@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using clothesStore.Bl;
 using System.IO;
+using clothesStore.Rpt;
 
 namespace clothesStore.PL
 {
@@ -79,31 +80,17 @@ namespace clothesStore.PL
         {
             InitializeComponent();
 
-            //CrateBarcode();
-            //label5.Hide();
-          //  Txt_Barcode.Enabled=false;
-            //simpleButton2.Hide();
-            //Btn_PrintBarcode.Hide();
-
-            //gridView1.Columns[8].Visible = false;
-            //dataGridViewPR.Columns[6].Visible = false;
-            //dataGridViewPR.Columns[10].Visible = false;
-            //dataGridViewPR.Columns[12].Visible = false;
+          
             ComboCategory();
-            //ComboLargeUnit();
-            //ComboSmallUnit();
-            //Combo_Store();
+           
             btn_Update.Enabled = false;
             Btn_Delete.Enabled = false;
+            Txt_minimun.EditValue = 0;
+            Txt_SellPrice.EditValue = 0;
+            Txt_PhurshasingPrice.EditValue = 0;
+            Txt_Quantity.EditValue = 0;
         }
-        //void SelectdataTable()
-        //{
-        //    dt2.Columns.Add("رقم المخزن");//0
-        //    dt2.Columns.Add("اسم المخزن");//1
-        //    dt2.Columns.Add("الكمية");//2
-        //    dt2.Columns.Add("سعر الشراء");//3
-        //    DgvStore.DataSource = dt2;
-        //}
+ 
         void ComboCategory()
         {
             Cursor = Cursors.WaitCursor;
@@ -498,7 +485,13 @@ namespace clothesStore.PL
                     }
 
                 }
-                if (Convert.ToDecimal(Txt_PhurshasingPrice.Text) > Convert.ToDecimal(Txt_SellPrice.Text))
+
+                Txt_SellPrice.EditValue =  !string.IsNullOrEmpty(Txt_SellPrice.Text) ? Convert.ToDecimal(Txt_SellPrice.EditValue) : default(decimal);
+                Txt_PhurshasingPrice.EditValue = !string.IsNullOrEmpty(Txt_PhurshasingPrice.Text) ? Convert.ToDecimal(Txt_PhurshasingPrice.EditValue) : default(decimal);
+
+                   
+
+                if (Convert.ToDecimal(Txt_PhurshasingPrice.EditValue) > Convert.ToDecimal(Txt_SellPrice.EditValue))
                 {
                     MessageBox.Show(" لا بد ان يكون سعر الشراء أقل من سعر البيع لعدم حدوث خسارة");
                     return;
@@ -527,9 +520,13 @@ namespace clothesStore.PL
                     {
                        // imagePath = Application.StartupPath + @"\Resources" + @"\image-not-found-scaled-1150x647.png";
                         //  imagePath = null;
-                        dtid = P.addproudect(txtProName.Text, Convert.ToInt32(Cmb_Category.EditValue),
-                         decimal.Parse(Txt_Quantity.Text), decimal.Parse(Txt_SellPrice.Text),
-                         Convert.ToDecimal(Txt_PhurshasingPrice.Text), Convert.ToDecimal(Txt_minimun.Text),
+                        dtid = P.addproudect(
+                            txtProName.Text,
+                            Convert.ToInt32(Cmb_Category.EditValue),
+                        !string.IsNullOrEmpty(Txt_Quantity.Text)? Convert.ToDecimal(Txt_Quantity.EditValue):default(decimal),
+                        !string.IsNullOrEmpty(Txt_SellPrice.Text) ? Convert.ToDecimal(Txt_SellPrice.EditValue) : default(decimal),
+                         !string.IsNullOrEmpty(Txt_PhurshasingPrice.Text) ? Convert.ToDecimal(Txt_PhurshasingPrice.EditValue) : default(decimal),
+                         !string.IsNullOrEmpty(Txt_minimun.Text)? Convert.ToDecimal(Txt_minimun.EditValue):default(decimal),
                          (Txt_Color.Text), Txt_Barcode.Text);
                     }
                     else
@@ -539,27 +536,32 @@ namespace clothesStore.PL
                         Byte[] bytestream = new Byte[filestream.Length];
                         filestream.Read(bytestream, 0, bytestream.Length);
                         filestream.Close();
-                        dtid = P.addproudect(txtProName.Text, Convert.ToInt32(Cmb_Category.EditValue),
-                              decimal.Parse(Txt_Quantity.Text), decimal.Parse(Txt_SellPrice.Text),
-                              Convert.ToDecimal(Txt_PhurshasingPrice.Text), Convert.ToDecimal(Txt_minimun.Text),
-                              (Txt_Color.Text), Txt_Barcode.Text, bytestream);
+   
+                        dtid = P.addproudect(
+                          txtProName.Text,
+                       Convert.ToInt32(Cmb_Category.EditValue),
+                      !string.IsNullOrEmpty(Txt_Quantity.Text) ? Convert.ToDecimal(Txt_Quantity.EditValue) : default(decimal),
+                      !string.IsNullOrEmpty(Txt_SellPrice.Text) ? Convert.ToDecimal(Txt_SellPrice.EditValue) : default(decimal),
+                       !string.IsNullOrEmpty(Txt_PhurshasingPrice.Text) ? Convert.ToDecimal(Txt_PhurshasingPrice.EditValue) : default(decimal),
+                       !string.IsNullOrEmpty(Txt_minimun.Text) ? Convert.ToDecimal(Txt_minimun.EditValue) : default(decimal),
+                       (Txt_Color.Text), Txt_Barcode.Text, bytestream);
                     }
 
                     RE.Text = dtid.Rows[0][0].ToString();
 
-                    S.Add_StoreProduct(Convert.ToInt32(RE.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text));
+                    S.Add_StoreProduct(Convert.ToInt32(RE.Text), Convert.ToDecimal(Txt_PhurshasingPrice.EditValue));
 
-                    P.Add_MoveProduct(Convert.ToInt32(RE.Text), Convert.ToInt32(Txt_Quantity.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text),
+                    P.Add_MoveProduct(Convert.ToInt32(RE.Text), Convert.ToDecimal(Txt_Quantity.EditValue), Convert.ToDecimal(Txt_PhurshasingPrice.EditValue),
                         0,
-                      decimal.Parse(Txt_SellPrice.Text), Convert.ToDecimal(Txt_Quantity.Text), Convert.ToDecimal(Txt_PhurshasingPrice.Text), decimal.Parse(Txt_SellPrice.Text), 
+                      Convert.ToDecimal(Txt_SellPrice.EditValue), Convert.ToDecimal(Txt_Quantity.EditValue), Convert.ToDecimal(Txt_PhurshasingPrice.EditValue), Convert.ToDecimal(Txt_SellPrice.EditValue), 
                       "مخزون اول المدة", DateTime.Now,
                     Program.salesman, "دخول");
 
-                    if (Convert.ToDecimal(Txt_Quantity.Text)>0)
+                    if (Convert.ToDecimal(Txt_Quantity.EditValue)>0)
                     {
                         P.AddItemsFirstTerm(Convert.ToInt32(RE.Text),txtProName.Text, Convert.ToInt32(Cmb_Category.EditValue),
-                        decimal.Parse(Txt_Quantity.Text), decimal.Parse(Txt_SellPrice.Text),
-                        Convert.ToDecimal(Txt_PhurshasingPrice.Text));
+                        Convert.ToDecimal(Txt_Quantity.EditValue), Convert.ToDecimal(Txt_SellPrice.EditValue),
+                        Convert.ToDecimal(Txt_PhurshasingPrice.EditValue));
                     }
 
                     MessageBox.Show("تم اضافه الصنف بنجاح", "عمليه الاضافه", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
@@ -789,6 +791,8 @@ namespace clothesStore.PL
         {
             try
             {
+              //  if(string.IsNullOrEmpty(Txt_Quantity.Text)||(decimal)Txt_Quantity.EditValue <=0)
+            
 
                 if (txtProName.Text == "" || Txt_Barcode.Text == "" || Txt_SellPrice.Text == "")
                 {
@@ -813,12 +817,12 @@ namespace clothesStore.PL
                     System.Drawing.Printing.PrintDocument printDocument = new System.Drawing.Printing.PrintDocument();
                     cr.PrintOptions.PrinterName = Properties.Settings.Default.PrintBarcode;
                     //cr.PrintOptions.PrinterName = printDocument.PrinterSettings.PrinterName;
-                    cr.PrintToPrinter(Convert.ToInt32(Txt_Quantity.Text), true, 0, 0);
+                    cr.PrintToPrinter(Convert.ToInt32(Txt_Quantity.EditValue), true, 0, 0);
                 }
                else if (Properties.Settings.Default.BarcodeSize == "مقاس وسط ")
                 {
 
-                    Rpt.Rpt_MidBarcode cr = new Rpt.Rpt_MidBarcode();
+                    Rpt_MidBarcode cr = new Rpt_MidBarcode();
                     ds.Tables["PrintBarcode"].Rows.Add(txtProName.Text, "*" + Txt_Barcode.Text.Trim() + "*", Txt_Barcode.Text, Txt_SellPrice.Text);
                     cr.SetDataSource(ds);
                     Rpt.FrmSingleReport frm = new Rpt.FrmSingleReport();
@@ -827,7 +831,7 @@ namespace clothesStore.PL
                     System.Drawing.Printing.PrintDocument printDocument = new System.Drawing.Printing.PrintDocument();
                     cr.PrintOptions.PrinterName = Properties.Settings.Default.PrintBarcode;
                     //cr.PrintOptions.PrinterName = printDocument.PrinterSettings.PrinterName;
-                    cr.PrintToPrinter(int.Parse(Txt_Quantity.Text), true, 0, 0);
+                    cr.PrintToPrinter(Convert.ToInt32(Txt_Quantity.EditValue), true, 0, 0);
                 }
                 //frm.ShowDialog();
             }
@@ -848,7 +852,7 @@ namespace clothesStore.PL
                     Btn_save.Enabled = false;
                     btn_Update.Enabled = true;
                     Btn_Delete.Enabled = true;
-                  //  Txt_Quantity.Enabled = false;
+                    Txt_Quantity.Enabled = false;
                     //Txt_Barcode.Enabled = false;
                     if (gridView1.GetFocusedRowCellValue("Image").ToString() != "")
                     {

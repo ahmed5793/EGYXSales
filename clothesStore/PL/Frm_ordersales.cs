@@ -459,7 +459,7 @@ namespace clothesStore.PL
                         //dt6 = p.Select_NumberSmallInLargeUnit(Convert.ToInt32(DgvSale.Rows[i].Cells[0].Value), Convert.ToString(DgvSale.Rows[i].Cells[3].Value));
 
                         //decimal x = Convert.ToDecimal(DgvSale.Rows[i].Cells[5].Value) / Convert.ToDecimal(dt6.Rows[0][1]);
-                        p.Add_MoveProduct(Convert.ToInt32(row[0]), 0, 0, Convert.ToInt32(row[4]),
+                        p.Add_MoveProduct(Convert.ToInt32(row[0]), 0, 0, Convert.ToDecimal(row[4]),
                         Convert.ToDecimal(row[3]), 0, 0, 0, "مبيعات رقم " + " " + txt_num.Text, dateTimePicker1.Value,
                         Program.salesman, "خروج");
 

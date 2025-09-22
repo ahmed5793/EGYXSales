@@ -334,7 +334,7 @@ namespace clothesStore.PL
                                 dt51.Rows[i][3], dt51.Rows[i][4], (dt51.Rows[i][5]), (dt51.Rows[i][6])
                                   , (dt51.Rows[i][7]), (dt51.Rows[i][8]), (dt51.Rows[i][9]),
                                   (dt51.Rows[i][10]), dt51.Rows[i][11], (dt51.Rows[i][12]), (dt51.Rows[i][13])
-                                 , (dt51.Rows[i][14]), (dt51.Rows[i][15]), (dt51.Rows[i][16]), (dt51.Rows[i][17]));
+                                 , (dt51.Rows[i][14]), (dt51.Rows[i][15]));
                             }
                             SettingPrint sts = new SettingPrint();
                             DataTable dt = new DataTable();
@@ -368,7 +368,7 @@ namespace clothesStore.PL
                                 dt51.Rows[i][3], dt51.Rows[i][4], (dt51.Rows[i][5]), (dt51.Rows[i][6])
                                   , (dt51.Rows[i][7]), (dt51.Rows[i][8]), (dt51.Rows[i][9]),
                                   (dt51.Rows[i][10]), dt51.Rows[i][11], (dt51.Rows[i][12]), (dt51.Rows[i][13])
-                                 , (dt51.Rows[i][14]), (dt51.Rows[i][15]), (dt51.Rows[i][16]), (dt51.Rows[i][17]));
+                                 , (dt51.Rows[i][14]), (dt51.Rows[i][15]));
                             }
 
                             SettingPrint st = new SettingPrint();
