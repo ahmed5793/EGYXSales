@@ -397,12 +397,12 @@ namespace clothesStore.PL
                         }
 
 
-
+                        
                         DataRow r = dt.NewRow();
                         r[0] = dt51.Rows[0][0];
                         r[1] = dt51.Rows[0][1];
                         r[2] = dt51.Rows[0][2];
-                        r[3] = dt51.Rows[0][3];
+                        r[3] = dt51.Rows[0][7];
                         r[4] = 1.00;
                         r[8] = dt51.Rows[0][5];
                         r[6] = 0;

@@ -2621,7 +2621,6 @@ C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.Serila.Generate.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.Serila.Home.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.Serila.Regeistration.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csproj.GenerateResource.cache
-C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe.licenses
 C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csproj.CoreCompileInputs.cache
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe.manifest
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.application
