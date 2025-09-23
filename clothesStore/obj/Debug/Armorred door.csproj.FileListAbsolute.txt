@@ -2218,6 +2218,14 @@ C:\EGYX_SALES\clothesStore\bin\Debug\clothesStore.exe.manifest
 C:\EGYX_SALES\clothesStore\bin\Debug\clothesStore.application
 C:\EGYX_SALES\clothesStore\bin\Debug\clothesStore.exe
 C:\EGYX_SALES\clothesStore\bin\Debug\clothesStore.pdb
+C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.Shared.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.VSDesigner.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.Web.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.Charts.v19.2.Core.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.CodeParser.v19.2.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.Data.v19.2.dll
@@ -2243,15 +2251,26 @@ C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraNavBar.v19.2.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraPrinting.v19.2.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraReports.v19.2.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraReports.v19.2.Extensions.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\FlashControlV71.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\log4net.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.IdentityModel.Logging.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.IdentityModel.Tokens.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.TeamFoundation.Common.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.Services.Common.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.Services.WebApi.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\Newtonsoft.Json.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\System.Net.Http.Formatting.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\CRVsPackageLib.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\EnvDTE.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\VSLangProj.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\VsWebSite.Interop.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\EnvDTE80.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraTreeList.v19.2.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraRichEdit.v19.2.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraVerticalGrid.v19.2.dll
@@ -2259,8 +2278,16 @@ C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.DataAccess.v19.2.UI.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraCharts.v19.2.Wizard.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraPivotGrid.v19.2.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraCharts.v19.2.Extensions.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\ShockwaveFlashObjects.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\stdole.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraDiagram.v19.2.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.Diagram.v19.2.Core.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.MSXML.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.Data.v19.2.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.DataAccess.v19.2.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.Office.v19.2.Core.xml
@@ -2282,6 +2309,7 @@ C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraNavBar.v19.2.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraPrinting.v19.2.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraReports.v19.2.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraReports.v19.2.Extensions.xml
+C:\EGYX_SALES\clothesStore\bin\Debug\log4net.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
 C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.IdentityModel.Logging.pdb
@@ -2295,6 +2323,8 @@ C:\EGYX_SALES\clothesStore\bin\Debug\Newtonsoft.Json.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
 C:\EGYX_SALES\clothesStore\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\System.Net.Http.Formatting.xml
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\EGYX_SALES\clothesStore\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraTreeList.v19.2.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraRichEdit.v19.2.xml
 C:\EGYX_SALES\clothesStore\bin\Debug\DevExpress.XtraVerticalGrid.v19.2.xml
@@ -2454,6 +2484,7 @@ C:\EGYX_SALES\clothesStore\bin\Debug\de\DevExpress.Diagram.v19.2.Core.resources.
 C:\EGYX_SALES\clothesStore\bin\Debug\es\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\ja\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\EGYX_SALES\clothesStore\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
+C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe.config
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.PL.CountOrderCustomer.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.PL.Debit.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.PL.Form1.resources
@@ -2590,19 +2621,11 @@ C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.Serila.Generate.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.Serila.Home.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.Serila.Regeistration.resources
 C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csproj.GenerateResource.cache
+C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe.licenses
 C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csproj.CoreCompileInputs.cache
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe.manifest
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.application
 C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csproj.CopyComplete
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.pdb
-C:\EGYX_SALES\clothesStore\bin\Debug\AxShockwaveFlashObjects.dll
-C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
-C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.Shared.dll
-C:\EGYX_SALES\clothesStore\bin\Debug\CrystalDecisions.Windows.Forms.dll
-C:\EGYX_SALES\clothesStore\bin\Debug\log4net.dll
-C:\EGYX_SALES\clothesStore\bin\Debug\SAPBusinessObjects.WPF.Viewer.dll
-C:\EGYX_SALES\clothesStore\bin\Debug\SAPBusinessObjects.WPF.ViewerShared.dll
-C:\EGYX_SALES\clothesStore\bin\Debug\log4net.xml
+C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csprojAssemblyReference.cache
