@@ -49,6 +49,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,19 +66,39 @@
             this.rpbtnUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.Btn_Delete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpbtnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.DateFrom = new System.Windows.Forms.DateTimePicker();
             this.btn_Search = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.DateTo = new DevExpress.XtraEditors.DateEdit();
             this.Btn_Print = new DevExpress.XtraEditors.SimpleButton();
-            this.DateTo = new System.Windows.Forms.DateTimePicker();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.DateFrom = new DevExpress.XtraEditors.DateEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpbtnPrint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpbtnShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpbtnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpbtnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DateTo.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateFrom.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateFrom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -86,7 +107,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridControl1.Location = new System.Drawing.Point(3, 63);
+            this.gridControl1.Location = new System.Drawing.Point(12, 90);
             this.gridControl1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControl1.MainView = this.gridView1;
@@ -97,7 +118,7 @@
             this.rpbtnDelete,
             this.rpbtnUpdate});
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(1383, 576);
+            this.gridControl1.Size = new System.Drawing.Size(1364, 540);
             this.gridControl1.TabIndex = 130;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -115,28 +136,24 @@
             this.gridView1.Appearance.FocusedCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.FocusedCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
             this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.FocusedRow.FontSizeDelta = 1;
-            this.gridView1.Appearance.FocusedRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
             this.gridView1.Appearance.FocusedRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.FocusedRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.FocusedRow.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.FooterPanel.FontSizeDelta = 1;
-            this.gridView1.Appearance.FooterPanel.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.FooterPanel.Options.UseFont = true;
             this.gridView1.Appearance.FooterPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.FooterPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.FooterPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Arial", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.GroupRow.FontSizeDelta = 1;
             this.gridView1.Appearance.GroupRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.GroupRow.Options.UseFont = true;
             this.gridView1.Appearance.GroupRow.Options.UseTextOptions = true;
             this.gridView1.Appearance.GroupRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 16.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.HeaderPanel.FontSizeDelta = 1;
             this.gridView1.Appearance.HeaderPanel.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
@@ -145,9 +162,7 @@
             this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.Row.FontSizeDelta = 1;
-            this.gridView1.Appearance.Row.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.Row.Options.UseFont = true;
             this.gridView1.Appearance.Row.Options.UseTextOptions = true;
             this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -167,6 +182,7 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
+            this.gridColumn12,
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
@@ -199,11 +215,12 @@
             this.gridColumn1.Caption = "رقم الفاتوره";
             this.gridColumn1.FieldName = "رقم الفاتوره";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "رقم الفاتوره", "العدد={0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 100;
+            this.gridColumn1.Width = 120;
             // 
             // gridColumn2
             // 
@@ -211,72 +228,93 @@
             this.gridColumn2.FieldName = "اسم العميل";
             this.gridColumn2.FilterMode = DevExpress.XtraGrid.ColumnFilterMode.DisplayText;
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 150;
+            this.gridColumn2.Width = 200;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "تاريخ الفاتوره";
+            this.gridColumn3.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn3.FieldName = "تاريخ الفاتوره";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 120;
+            this.gridColumn3.Width = 130;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "وقت الفاتورة";
+            this.gridColumn12.DisplayFormat.FormatString = "hh:mm tt";
+            this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn12.FieldName = "تاريخ الفاتوره";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.ReadOnly = true;
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 3;
+            this.gridColumn12.Width = 120;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "اجمالي الفاتوره";
             this.gridColumn4.FieldName = "اجمالي الفاتوره";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 180;
+            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.Width = 140;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "الخصم";
             this.gridColumn5.FieldName = "الخصم";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 110;
+            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.Width = 90;
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "الاجمالي بعد الخصم";
+            this.gridColumn6.Caption = "اجمالي.ب.خ";
             this.gridColumn6.FieldName = "الاجمالي بعد الخصم";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 170;
+            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn6.Width = 120;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "المدفوع";
             this.gridColumn7.FieldName = "المدفوع";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 150;
+            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.Width = 120;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "الباقى";
             this.gridColumn8.FieldName = "الباقى";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.VisibleIndex = 8;
             this.gridColumn8.Width = 120;
             // 
             // gridColumn9
@@ -285,8 +323,9 @@
             this.gridColumn9.FieldName = "المستخدم";
             this.gridColumn9.FilterMode = DevExpress.XtraGrid.ColumnFilterMode.DisplayText;
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 8;
+            this.gridColumn9.VisibleIndex = 9;
             this.gridColumn9.Width = 150;
             // 
             // gridColumn11
@@ -294,8 +333,9 @@
             this.gridColumn11.Caption = "تعديل المستخدم";
             this.gridColumn11.FieldName = "تعديل المستخدم";
             this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 9;
+            this.gridColumn11.VisibleIndex = 10;
             this.gridColumn11.Width = 170;
             // 
             // gridColumn10
@@ -303,8 +343,9 @@
             this.gridColumn10.Caption = "تاريخ التعديل";
             this.gridColumn10.FieldName = "تاريخ التعديل";
             this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.OptionsColumn.ReadOnly = true;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 10;
+            this.gridColumn10.VisibleIndex = 11;
             this.gridColumn10.Width = 150;
             // 
             // btn_prints
@@ -312,10 +353,11 @@
             this.btn_prints.Caption = "طباعه";
             this.btn_prints.ColumnEdit = this.rpbtnPrint;
             this.btn_prints.Name = "btn_prints";
+            this.btn_prints.OptionsColumn.ReadOnly = true;
             this.btn_prints.OptionsFilter.AllowAutoFilter = false;
             this.btn_prints.OptionsFilter.AllowFilter = false;
             this.btn_prints.Visible = true;
-            this.btn_prints.VisibleIndex = 11;
+            this.btn_prints.VisibleIndex = 12;
             // 
             // rpbtnPrint
             // 
@@ -330,10 +372,11 @@
             this.btn_show.Caption = "معاينة";
             this.btn_show.ColumnEdit = this.rpbtnShow;
             this.btn_show.Name = "btn_show";
+            this.btn_show.OptionsColumn.ReadOnly = true;
             this.btn_show.OptionsFilter.AllowAutoFilter = false;
             this.btn_show.OptionsFilter.AllowFilter = false;
             this.btn_show.Visible = true;
-            this.btn_show.VisibleIndex = 12;
+            this.btn_show.VisibleIndex = 13;
             // 
             // rpbtnShow
             // 
@@ -348,10 +391,11 @@
             this.Btn_Update.Caption = "تعديل";
             this.Btn_Update.ColumnEdit = this.rpbtnUpdate;
             this.Btn_Update.Name = "Btn_Update";
+            this.Btn_Update.OptionsColumn.ReadOnly = true;
             this.Btn_Update.OptionsFilter.AllowAutoFilter = false;
             this.Btn_Update.OptionsFilter.AllowFilter = false;
             this.Btn_Update.Visible = true;
-            this.Btn_Update.VisibleIndex = 13;
+            this.Btn_Update.VisibleIndex = 14;
             // 
             // rpbtnUpdate
             // 
@@ -367,10 +411,11 @@
             this.Btn_Delete.Caption = "مسح";
             this.Btn_Delete.ColumnEdit = this.rpbtnDelete;
             this.Btn_Delete.Name = "Btn_Delete";
+            this.Btn_Delete.OptionsColumn.ReadOnly = true;
             this.Btn_Delete.OptionsFilter.AllowAutoFilter = false;
             this.Btn_Delete.OptionsFilter.AllowFilter = false;
             this.Btn_Delete.Visible = true;
-            this.Btn_Delete.VisibleIndex = 14;
+            this.Btn_Delete.VisibleIndex = 15;
             // 
             // rpbtnDelete
             // 
@@ -380,55 +425,14 @@
             this.rpbtnDelete.Name = "rpbtnDelete";
             this.rpbtnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(759, 14);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(49, 26);
-            this.label4.TabIndex = 147;
-            this.label4.Text = "إلى :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(989, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 25);
-            this.label3.TabIndex = 146;
-            this.label3.Text = " : من";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // DateFrom
-            // 
-            this.DateFrom.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.DateFrom.CustomFormat = "   dd/MM/yyyy       *      tt  mm:hh    ";
-            this.DateFrom.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateFrom.Location = new System.Drawing.Point(847, 13);
-            this.DateFrom.Name = "DateFrom";
-            this.DateFrom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DateFrom.Size = new System.Drawing.Size(138, 26);
-            this.DateFrom.TabIndex = 144;
-            this.DateFrom.Value = new System.DateTime(2020, 2, 23, 0, 0, 0, 0);
-            // 
             // btn_Search
             // 
             this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_Search.Appearance.BackColor = System.Drawing.Color.Navy;
+            this.btn_Search.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.btn_Search.Appearance.BackColor2 = System.Drawing.Color.Aqua;
             this.btn_Search.Appearance.BorderColor = System.Drawing.Color.White;
             this.btn_Search.Appearance.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_Search.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btn_Search.Appearance.Options.UseBackColor = true;
             this.btn_Search.Appearance.Options.UseBorderColor = true;
             this.btn_Search.Appearance.Options.UseFont = true;
@@ -464,13 +468,47 @@
             this.btn_Search.AppearancePressed.Options.UseTextOptions = true;
             this.btn_Search.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
             this.btn_Search.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.ImageOptions.Image")));
-            this.btn_Search.Location = new System.Drawing.Point(481, 10);
+            this.btn_Search.Location = new System.Drawing.Point(606, 45);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_Search.Size = new System.Drawing.Size(118, 36);
+            this.btn_Search.Size = new System.Drawing.Size(110, 29);
+            this.btn_Search.StyleController = this.layoutControl1;
             this.btn_Search.TabIndex = 149;
             this.btn_Search.Text = "بحث";
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.DateTo);
+            this.layoutControl1.Controls.Add(this.Btn_Print);
+            this.layoutControl1.Controls.Add(this.btn_Search);
+            this.layoutControl1.Controls.Add(this.DateFrom);
+            this.layoutControl1.Controls.Add(this.gridControl1);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(793, 380, 650, 400);
+            this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(1388, 642);
+            this.layoutControl1.TabIndex = 150;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // DateTo
+            // 
+            this.DateTo.EditValue = null;
+            this.DateTo.Location = new System.Drawing.Point(720, 45);
+            this.DateTo.Name = "DateTo";
+            this.DateTo.Properties.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTo.Properties.Appearance.Options.UseFont = true;
+            this.DateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateTo.Properties.Mask.EditMask = "g";
+            this.DateTo.Size = new System.Drawing.Size(247, 28);
+            this.DateTo.StyleController = this.layoutControl1;
+            this.DateTo.TabIndex = 132;
             // 
             // Btn_Print
             // 
@@ -514,95 +552,132 @@
             this.Btn_Print.AppearancePressed.Options.UseTextOptions = true;
             this.Btn_Print.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
             this.Btn_Print.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Print.ImageOptions.Image")));
-            this.Btn_Print.Location = new System.Drawing.Point(60, 10);
+            this.Btn_Print.Location = new System.Drawing.Point(12, 12);
             this.Btn_Print.Name = "Btn_Print";
             this.Btn_Print.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Btn_Print.Size = new System.Drawing.Size(200, 36);
+            this.Btn_Print.Size = new System.Drawing.Size(175, 29);
+            this.Btn_Print.StyleController = this.layoutControl1;
             this.Btn_Print.TabIndex = 148;
             this.Btn_Print.Text = "طباعة تقرير المبيعات";
             this.Btn_Print.Click += new System.EventHandler(this.Btn_Print_Click);
             // 
-            // DateTo
+            // DateFrom
             // 
-            this.DateTo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.DateTo.CustomFormat = "   dd/MM/yyyy       *      tt  mm:hh    ";
-            this.DateTo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTo.Location = new System.Drawing.Point(624, 14);
-            this.DateTo.Name = "DateTo";
-            this.DateTo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DateTo.Size = new System.Drawing.Size(134, 26);
-            this.DateTo.TabIndex = 145;
-            this.DateTo.Value = new System.DateTime(2020, 2, 23, 0, 0, 0, 0);
+            this.DateFrom.EditValue = null;
+            this.DateFrom.Location = new System.Drawing.Point(1053, 45);
+            this.DateFrom.Name = "DateFrom";
+            this.DateFrom.Properties.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateFrom.Properties.Appearance.Options.UseFont = true;
+            this.DateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateFrom.Properties.Mask.EditMask = "g";
+            this.DateFrom.Size = new System.Drawing.Size(229, 28);
+            this.DateFrom.StyleController = this.layoutControl1;
+            this.DateFrom.TabIndex = 131;
             // 
-            // simpleButton1
+            // Root
             // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Navy;
-            this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.Aqua;
-            this.simpleButton1.Appearance.BorderColor = System.Drawing.Color.White;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseBorderColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.Appearance.Options.UseTextOptions = true;
-            this.simpleButton1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.simpleButton1.AppearanceDisabled.BackColor = System.Drawing.Color.White;
-            this.simpleButton1.AppearanceDisabled.BackColor2 = System.Drawing.Color.White;
-            this.simpleButton1.AppearanceDisabled.BorderColor = System.Drawing.Color.Black;
-            this.simpleButton1.AppearanceDisabled.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.AppearanceDisabled.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.simpleButton1.AppearanceDisabled.Options.UseBackColor = true;
-            this.simpleButton1.AppearanceDisabled.Options.UseBorderColor = true;
-            this.simpleButton1.AppearanceDisabled.Options.UseFont = true;
-            this.simpleButton1.AppearanceDisabled.Options.UseTextOptions = true;
-            this.simpleButton1.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.simpleButton1.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.simpleButton1.AppearanceHovered.BackColor2 = System.Drawing.Color.White;
-            this.simpleButton1.AppearanceHovered.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton1.AppearanceHovered.Options.UseFont = true;
-            this.simpleButton1.AppearanceHovered.Options.UseTextOptions = true;
-            this.simpleButton1.AppearanceHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.simpleButton1.AppearancePressed.BackColor2 = System.Drawing.Color.Black;
-            this.simpleButton1.AppearancePressed.BorderColor = System.Drawing.Color.White;
-            this.simpleButton1.AppearancePressed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.AppearancePressed.ForeColor = System.Drawing.Color.Black;
-            this.simpleButton1.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton1.AppearancePressed.Options.UseBorderColor = true;
-            this.simpleButton1.AppearancePressed.Options.UseFont = true;
-            this.simpleButton1.AppearancePressed.Options.UseForeColor = true;
-            this.simpleButton1.AppearancePressed.Options.UseTextOptions = true;
-            this.simpleButton1.AppearancePressed.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(348, 10);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.simpleButton1.Size = new System.Drawing.Size(74, 36);
-            this.simpleButton1.TabIndex = 150;
-            this.simpleButton1.Text = "بحث";
-            this.simpleButton1.Visible = false;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem5,
+            this.layoutControlGroup1,
+            this.emptySpaceItem1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1388, 642);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.gridControl1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 78);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1368, 544);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.Btn_Print;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(179, 78);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3,
+            this.layoutControlItem2,
+            this.layoutControlItem4});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(582, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(786, 78);
+            this.layoutControlGroup1.Text = "بحث";
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem3.Control = this.DateTo;
+            this.layoutControlItem3.Location = new System.Drawing.Point(114, 0);
+            this.layoutControlItem3.MaxSize = new System.Drawing.Size(333, 32);
+            this.layoutControlItem3.MinSize = new System.Drawing.Size(333, 32);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(333, 33);
+            this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem3.Text = "الي تاريخ :";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(79, 24);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.Control = this.DateFrom;
+            this.layoutControlItem2.Location = new System.Drawing.Point(447, 0);
+            this.layoutControlItem2.MaxSize = new System.Drawing.Size(315, 32);
+            this.layoutControlItem2.MinSize = new System.Drawing.Size(315, 32);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(315, 33);
+            this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem2.Text = "من تاريخ :";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(79, 24);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(179, 0);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(403, 78);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.btn_Search;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem4.MaxSize = new System.Drawing.Size(114, 33);
+            this.layoutControlItem4.MinSize = new System.Drawing.Size(114, 33);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(114, 33);
+            this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
             // 
             // Form_OrderManagment
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1388, 642);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.DateFrom);
-            this.Controls.Add(this.btn_Search);
-            this.Controls.Add(this.Btn_Print);
-            this.Controls.Add(this.DateTo);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimumSize = new System.Drawing.Size(1017, 580);
             this.Name = "Form_OrderManagment";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "فواتير المبيعات";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -613,17 +688,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpbtnShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpbtnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpbtnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DateTo.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateFrom.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateFrom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker DateFrom;
         public DevExpress.XtraEditors.SimpleButton btn_Search;
         public DevExpress.XtraEditors.SimpleButton Btn_Print;
-        private System.Windows.Forms.DateTimePicker DateTo;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
@@ -645,6 +730,17 @@
         public DevExpress.XtraGrid.Columns.GridColumn Btn_Delete;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
-        public DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraEditors.DateEdit DateTo;
+        private DevExpress.XtraEditors.DateEdit DateFrom;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
     }
 }

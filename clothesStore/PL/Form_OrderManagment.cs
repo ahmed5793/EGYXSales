@@ -55,7 +55,7 @@ namespace clothesStore.PL
               
             
             //ComboStore();
-            gridControl1.DataSource= o.SelectOrderManagment();
+           // gridControl1.DataSource= o.SelectOrderManagment();
             //calc();
             DateFrom.Text = DateTime.Now.ToShortDateString();
             DateTo.Text = DateTime.Now.ToShortDateString();
@@ -157,9 +157,11 @@ namespace clothesStore.PL
         {
             try
             {
+                var dateFrom = DateFrom.EditValue != null ? Convert.ToDateTime(DateFrom.EditValue) : default(DateTime?);
+                var dateTo = DateFrom.EditValue != null ? Convert.ToDateTime(DateTo.EditValue) : default(DateTime?);
                 DataTable dt = new DataTable();
                 dt.Clear();
-                dt = o.SearchOrderManagmentSystem(DateFrom.Value, DateTo.Value);
+                dt = o.SearchOrderManagmentSystem(dateFrom, dateTo);
                     gridControl1.DataSource = dt;
 
                 //calc();                  

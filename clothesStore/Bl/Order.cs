@@ -172,16 +172,16 @@ namespace clothesStore.Bl
             return dt;
         }
 
-        internal DataTable SearchOrderManagmentSystem(DateTime DateFrom , DateTime DateTo)
+        internal DataTable SearchOrderManagmentSystem(DateTime? DateFrom , DateTime? DateTo)
         {
             DataTable dt = new DataTable();
 
             DataAccessLayer da = new DataAccessLayer();
             da.open();
             SqlParameter[] param = new SqlParameter[2];
-            param[0] = new SqlParameter("@DateFrom", SqlDbType.Date);
+            param[0] = new SqlParameter("@DateFrom", SqlDbType.DateTime);
             param[0].Value = DateFrom;
-            param[1] = new SqlParameter("@DateTo", SqlDbType.Date);
+            param[1] = new SqlParameter("@DateTo", SqlDbType.DateTime);
             param[1].Value = DateTo;
           
             dt = da.selected("SearchOrderManagmentSystem", param);
