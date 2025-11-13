@@ -119,7 +119,7 @@ namespace clothesStore.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("db_a54a03_egyxsale")]
+        [global::System.Configuration.DefaultSettingValueAttribute("db_a54a03_egyxsales")]
         public string Database {
             get {
                 return ((string)(this["Database"]));

@@ -14,11 +14,21 @@ namespace clothesStore.PL
 {
     public partial class Form_Restore : Form
     {
-        SqlConnection con = new SqlConnection(@"server =.; database=master;integrated security = true");
+       // SqlConnection con = new SqlConnection(@"server =.; database=master;integrated security = true");
+
+        SqlConnection con=
+            Properties.Settings.Default.Mode == "SQL"
+        ?
+         new SqlConnection($"Data Source={Properties.Settings.Default.Server}; database={Properties.Settings.Default.Database};User Id={Properties.Settings.Default.ID};Password={Properties.Settings.Default.Password};MultipleActiveResultSets=True;Max Pool Size=200;")
+        :
+         new SqlConnection($"server ={Properties.Settings.Default.Server}; database={Properties.Settings.Default.Database};integrated security=true");
+
+
         SqlCommand cmd;
         public Form_Restore()
         {
             InitializeComponent();
+        
         }
         private void Form_Restore_Load(object sender, EventArgs e)
         {           
@@ -33,7 +43,7 @@ namespace clothesStore.PL
                 }
                 else
                 {
-                    string query = "  ALTER Database EasyPos SET OFFLINE WITH ROLLBACK IMMEDIATE;Restore Database EasyPos from Disk='" + textBox1.Text + "' WITH REPLACE";
+                    string query = $"ALTER Database {Properties.Settings.Default.Database} SET OFFLINE WITH ROLLBACK IMMEDIATE;Restore Database {Properties.Settings.Default.Database} from Disk='" + textBox1.Text + "' WITH REPLACE";
 
                     con.Open();
                     cmd = new SqlCommand(query, con);

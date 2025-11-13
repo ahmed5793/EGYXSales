@@ -32,7 +32,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Database" Type="System.String" Scope="User">
-      <Value Profile="(Default)">db_a54a03_egyxsale</Value>
+      <Value Profile="(Default)">db_a54a03_egyxsales</Value>
     </Setting>
     <Setting Name="Server" Type="System.String" Scope="User">
       <Value Profile="(Default)">SQL5088.site4now.net</Value>
