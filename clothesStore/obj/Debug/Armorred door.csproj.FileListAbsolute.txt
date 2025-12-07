@@ -2628,4 +2628,3 @@ C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csproj.CopyComplete
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe
 C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.pdb
 C:\EGYX_SALES\clothesStore\obj\Debug\Armorred door.csprojAssemblyReference.cache
-C:\EGYX_SALES\clothesStore\obj\Debug\clothesStore.exe.licenses

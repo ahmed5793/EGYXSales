@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="clothesStore.exe" size="6530048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="clothesStore.exe" size="6529536">
       <assemblyIdentity name="clothesStore" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IROG4b4E+K0CK3APIrJrfn6dvYryO3s4kv20fjKYMPQ=</dsig:DigestValue>
+        <dsig:DigestValue>4lgPaKKPQrTRkt1NNur7WQsgk2rLLJOdT+FV/e+Eg94=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
